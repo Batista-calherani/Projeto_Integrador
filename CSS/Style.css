@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo {
+    width: 150px;
+    height: auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+.Header{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    
+    gap: 10px;
+}
+body {
+    background-color: #7092BE;
+}
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+}
+
+footer {
+    background-color: gray;
+}
