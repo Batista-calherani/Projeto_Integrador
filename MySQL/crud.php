@@ -65,3 +65,13 @@ try {
 } catch (PDOException $e) {
     die("Erro de conexão: " . $e->getMessage());
 }
+
+$servername = "localhost";
+$username = "dev";
+$password = "123";
+$dbname2 = "Empresa";
+
+$conn = new mysqli($servername, $username, $password, $dbname2);
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
+}

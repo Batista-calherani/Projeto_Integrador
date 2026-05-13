@@ -1,17 +1,15 @@
 <?php
 require_once 'crud.php';
 
-$novoLivro = [
-    'titulo' => $_POST['titulo'],
-    'isbn' => $_POST['isbn'],
-    'autor' => $_POST['autor'],
-    'preco' => $_POST['preco'],
-    'situacao' => $_POST['situacao'],
-    'categoria' => $_POST['categoria'],
-    'capa' => ''
+$novoFun = [
+    'Nome' => $_POST['titulo'],
+    'cargo' => $_POST['isbn'],
+    'Agenda' => $_POST['autor'],
+    'contrato' => $_POST['preco'],
+    'Foto' => ''
 ];
 
-$idNovoLivro = create($pdo, 'livros', $novoLivro);
+$idNovoFun = create($pdo, 'profissionais', $novoFun);
 
 $tipo_permitido = ['image/jpeg','image/png','image/gif'];
 if(!in_array($_FILES['arquivo']['type'],$tipo_permitido)) {
@@ -37,9 +35,9 @@ if(!is_dir($caminho)) {
 
 if(move_uploaded_file($_FILES['arquivo']['tmp_name'],$file)){
     $capaUrl = $file;
-    update($pdo,'livros', ['capa' => $capaUrl],"id = $idNovoLivro");
-    echo "Livro inserido com sucesso com o ID: $idNovoLivro<br><br>";
-    echo "<a href='select.php?id=$idNovoLivro'>Ver Livro</a>";
+    update($pdo,'profissionais', ['capa' => $capaUrl],"id = $idNovoFun");
+    echo "Profissional inserido com sucesso com o ID: $idNovoFun<br><br>";
+    echo "<a href='select.php?id=$idNovoFun'>Ver Resumo</a>";
 } else {
     echo "erro em enviar imagem.";
 }

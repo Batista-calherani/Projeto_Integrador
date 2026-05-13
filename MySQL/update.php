@@ -1,17 +1,17 @@
 <?php
 require_once 'crud.php';
 
-$idMusica = $_GET['id'];
+$idFun = $_GET['id'];
 if ($_SERVER['REQUEST_METHOD'] === 'POST' ){
 $dadosAtualizados = [
-    'Titulo' => $_POST['Titulo'],
-    'autor' => $_POST['Autor'],
-    'Album' => $_POST['Album'],
-    'Duracao' => $_POST['Duracao'],
-    'Genero' => $_POST['Genero'],
+    'Nome' => $_POST['titulo'],
+    'cargo' => $_POST['isbn'],
+    'Agenda' => $_POST['autor'],
+    'contrato' => $_POST['preco'],
+    'Foto' => ''
 ];
 
-$linhasAfetadas = update($pdo, 'music',$dadosAtualizados, 'id =' .$idMusica);
+$linhasAfetadas = update($pdo, 'profissionais',$dadosAtualizados, 'id_Prof =' .$idFun);
 
 if($linhasAfetadas > 0) {
     echo 'Musica Atualizada com sucesso!';
@@ -20,7 +20,7 @@ if($linhasAfetadas > 0) {
 }
 }
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
-$Musicas = readAll($pdo, 'music');
+$Profissionais = readAll($pdo, 'Profissionais');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -71,7 +71,6 @@ $Musicas = readAll($pdo, 'music');
                         <input type="text" placeholder="Autor" name="Autor" required autocomplete="off">
                         <input type="text" placeholder="Album" name="Album"  autocomplete="off">
                         <input type="text" placeholder="Genêro" name="Genero" >
-                        <!-- <input type="file" placeholder="Link (Ex. audio/MusicaNome.mp3)" name="Audio" required> -->
                         <br>
                         <button id="btn" type="submit" >Send</button>
                         <p id="p">Preencha os campos do formulário</p>
@@ -83,6 +82,5 @@ $Musicas = readAll($pdo, 'music');
         </div>
 </form>
 <a href="index.php">Back</a>
-    <script src="Script/Script.js"></script>
 </body>
 </html>

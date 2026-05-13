@@ -3,7 +3,7 @@ require_once 'crud.php';
 
 $idFun = $_GET['id'];
 
-$deleted = delete($pdo, 'Empregados','id ='.$idFun);
+$deleted = delete($pdo, 'profissionais','id_Prof ='.$idFun);
 
 if ($deleted) {
     header("Location: select.php");
