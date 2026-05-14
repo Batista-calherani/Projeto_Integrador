@@ -12,7 +12,7 @@ require_once 'MySQL/crud.php';
 </head>
 <body>
 <?php include_once "Partials/header.php";?>
-<img src="Img/fundo.jpg" Style="width: 1900px; height: 900px; opacity: 20%  " />
+<img src="Img/fundo.jpg" Style="width: 1900px; height: 900px; opacity: 20%" />
 <?php include_once "Partials/footer.php";?>
 </body>
 </html>

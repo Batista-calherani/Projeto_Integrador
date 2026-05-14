@@ -11,13 +11,13 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #FFFFFF;
+    background-color: #000000;
+    
 }
 .Header{
     display: flex;
     list-style: none;
     flex-direction: row;
-    
     gap: 10px;
 }
 body {
@@ -25,7 +25,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: black;
+    color: #FFFFFF;
     font-size: 40px;
 }
 
