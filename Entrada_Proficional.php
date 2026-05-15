@@ -6,8 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
 </head>
 <body>
+    <?php include_once "Partials/header.php";?>
         <form action="MySQL/insert.php" method="POST" class="div" enctype="multipart/form-data">
                     <h1 class="Modo" >Entre na Espera por Trabalho</h1>
                     <div class="card">

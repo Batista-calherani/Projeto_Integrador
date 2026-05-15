@@ -32,3 +32,46 @@ a {
 footer {
     background-color: gray;
 }
+
+.col-apresent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title {
+    text-align: center;
+    color: crimson
+}
+
+.Servente{
+    background-image: url(../Img/servente.jpg);
+    width: 350px;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.Pedreiro{
+    background-image: url(../Img/pedreiro.jpg);
+    width: 350px;
+    height: 500px;
+    background-size: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Mestre{
+    background-image: url(../Img/mestre.jpg);
+    width: 350px;
+    height: 500px;
+    background-size: cover;
+}
+li{
+    text-align: center;
+}
+button {
+    width: 350px;
+    height: 500px;
+    opacity: 0;
+    z-index: 100;
+}

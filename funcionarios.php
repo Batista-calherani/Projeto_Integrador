@@ -9,22 +9,12 @@ $categoria = ['Servente','Pedreiro','Mestre']
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
 </head>
 <body>
+    <?php include_once "Partials/header.php";?>
      <div class="cont-consulta">
-        <?php 
-        print ' <p class="paragrafo"> Catálogo </p>
-        <ul class="col-apresent">';
-        print ' <li>
-                        <a class="button" href="funcionarios.php?cargo=" >Todos Funcionários</a>
-                </li>';
-        foreach($categoria as $kcat => $nome ) {
-            echo '<li>
-                        <a class="button" href="funcionarios.php?cargo='.$nome.'">'.$nome.'</a>
-                </li>';
-        }
-        echo '</ul>';
-?>
         
         <p class="paragrafo"></p>
             <?php
