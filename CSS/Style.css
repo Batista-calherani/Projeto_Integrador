@@ -23,12 +23,6 @@ header{
 body {
     background-color: #050120;
 }
-a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 40px;
-}
-
 footer {
     background-color: gray;
 }
@@ -69,9 +63,56 @@ footer {
 li{
     text-align: center;
 }
-button {
+.fun {
     width: 350px;
     height: 500px;
     opacity: 0;
     z-index: 100;
+}
+
+.card{
+    display: grid;
+    color: #FFFFFF;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #a52a2a71;
+    width: 400px;
+    border-radius: 1rem;
+}
+
+.Modo{
+    color: #FFFFFF;
+    text-align: center;
+    margin: 20px 0;
+}
+
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+.img {
+    width: auto;
+    height: 500px;
+}
+.item{
+    background-color: gray;
+    width: fit-content;
+    border-radius: 1rem;
+}
+.legend{
+    text-align: center;
+}
+.grid2{
+    display: grid;
+}
+.div {
+    width: 100%;
+    min-height: calc(100vh - 140px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
