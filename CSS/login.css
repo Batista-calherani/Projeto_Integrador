@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-image: url('../Img/img_login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    padding-right: 280px;
+
+}
+
+.login{
+    box-shadow: 0px 10px 15px rgba(219, 99, 0, 0.747);
+    height: 750px;
+    width: 580px;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    
+}
+
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h1, h2{
+    color: white;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+
+.campo{
+    height: 40px;
+    width: 450px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 25px;
+    color: white;
+}
+
+p,a{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: #ff751f;
+    margin-top:0;
+}
+
+.formulario h2{
+    margin: 0;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     gap: 10px;
+    
+}
+
+.linha{
+    margin: 15px;
+    height: 2px;
+    width: 450px;
+    background: #ff751f;
+}
+
+.botao_accss{
+    width: 450px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    color: white;
+
+    background-color: #ff751f;
+
+    border: none;
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+.botoes button:hover {
+    transform: scale(1.0);
+    background: #b65200e0;
+}
+
+.botao_cadastrar{
+    width: 450px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size:25px;
+    color: white;
+
+    border: 2px solid #ff751f;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.img{
+    height: 80px;
+}
