@@ -38,12 +38,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="Img/logo.bran.ico">
 </head>
 <body>
     <form method="post">
+        <div class="card">
         <input type="text" name="user" placeholder="Usuário" required>
         <input type="password" name="password" placeholder="Senha" required>
         <button type="submit">Entrar</button>
+        </div>
     </form>
 </body>
 </html>
