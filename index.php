@@ -1,4 +1,5 @@
 <?php
+require_once 'Partials/access.php';
 require_once 'MySQL/crud.php';
 ?>
 <!DOCTYPE html>

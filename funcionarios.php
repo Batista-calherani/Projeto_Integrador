@@ -1,4 +1,5 @@
 <?php
+require_once 'Partials/access.php';
 require_once 'MySQL/crud.php';
 $profissionais = readAll($pdo, 'profissionais');
 $categoria = ['Servente','Pedreiro','Mestre']
@@ -17,7 +18,19 @@ $categoria = ['Servente','Pedreiro','Mestre']
 <body>
     <?php include_once "Partials/header.php";?>
      <div class="cont-consulta">
-        
+        <?php 
+        print ' <p class="paragrafo"> Catálogo </p>
+        <ul class="col-apresent">';
+        print ' <li>
+                        <a class="button" href="funcionarios.php?cargo=" >Todos Profissionais</a>
+                </li>';
+        foreach($categoria as $kcat => $nome ) {
+            echo '<li>
+                        <a class="button" href="funcionarios.php?cargo='.$nome.'">'.$nome.'</a>
+                </li>';
+        }
+        echo '</ul>';
+?>
         <p class="paragrafo"></p>
             <?php
             echo '<div class="grid2">';

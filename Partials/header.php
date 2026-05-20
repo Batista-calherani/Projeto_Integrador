@@ -11,12 +11,12 @@
 </header> -->
 
 <header>
-        <div class="inicio"><img class="logo" src="./Img/logo.bran.png" onclick="window.location.href='index.php'" alt=""></div>
+        <div class="inicio"><img class="logo" src="./Img/logo_laranja.png" onclick="window.location.href='index.php'" alt=""></div>
         <div class="cabecalho">
             <a class="HeadBut" href="index.php">Home</a>
             <a class="HeadBut" href="#AboutUs">Quem somos</a>
             <a class="HeadBut" href="buttons.php">Serviços</a>
-            <a class="HeadBut" href="login.php"><img class="perfil" src="./Img/perfil.png" alt="">Test</a>
+            <a class="HeadBut" href="login.php"><img class="perfil" src="./Img/perfil.png" alt=""><?php echo $_SESSION['user'] ?? 'Default'  ?></a>
         </div>
     </header>
 
