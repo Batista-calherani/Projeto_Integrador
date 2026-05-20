@@ -97,7 +97,7 @@ body {
 }
 
 .linha {
-    height: 450px;
+    height: 650px;
     width: 100%;
     /* background: yellow; */
     display: flex;
@@ -107,7 +107,7 @@ body {
 }
 
 .quadrado_ {
-    height: 400px;
+    height: 650px;
     width: 500px;
     /* background: #8b09e2; */
     border-radius: 25px;
@@ -166,11 +166,10 @@ body {
 } */
 
 img {
-    height: 450px;
+    height: 650px;
     width: 550px;
     object-fit: cover;
     border-radius: 25px;
-
 }
 
 .titulo {
