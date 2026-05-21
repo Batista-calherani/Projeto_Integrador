@@ -12,7 +12,7 @@ $imgs = ['card1','card2','card3']
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/servicos.css">
     <link rel="stylesheet" href="CSS/Header.css">
-    <link rel="icon" type="image/x-icon" href="Img/logo.bran.ico">
+    <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
     <title>Seleção</title>
 </head>

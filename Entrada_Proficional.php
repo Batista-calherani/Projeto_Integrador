@@ -9,7 +9,7 @@ require_once 'Partials/access.php';
     <title>Cadastra-se</title>
     <link rel="stylesheet" href="CSS/Style.css">
     <link rel="stylesheet" href="CSS/Header.css">
-    <link rel="icon" type="image/x-icon" href="Img/logo.bran.ico">
+    <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 </head>
 <body>
     <?php include_once "Partials/header.php";?>
