@@ -1,0 +1,14 @@
+.cor_fundo{
+    
+.cor_fundo {
+    /* a seção cresce automaticamente conforme adicionar conteúdo. */
+    min-height: 1250px;
+    width: 100%;
+    background: linear-gradient(-45deg, #000000, #494949, #000000);
+    background-size: 400% 400%;
+    animation: moverGradiente 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}

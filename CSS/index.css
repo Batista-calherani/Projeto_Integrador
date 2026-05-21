@@ -181,7 +181,7 @@ span {
 
 .cor_fundo {
     /* a seção cresce automaticamente conforme adicionar conteúdo. */
-    min-height: 1100px;
+    min-height: 1250px;
     width: 100%;
     background: linear-gradient(-45deg, #000000, #494949, #000000);
     background-size: 400% 400%;
@@ -189,10 +189,6 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 @keyframes moverGradiente {
@@ -245,6 +241,7 @@ span {
     display: flex;
     flex-direction: row-reverse;
     gap: 80px;
+    
 }
 
 .quadrado_laranja {
@@ -254,6 +251,8 @@ span {
     width: 3px;
     margin-bottom: 100PX;
     background: #ff751f;
+    
+ 
 }
 
 .rodape {
@@ -271,8 +270,16 @@ span {
     top: 1500px;
     left: 200px;
     z-index: 1;
+    display: flex;
+    justify-content: flex-start;
 
+}
 
+.linha_{
+    display: flex;
+    height: 350px;
+    width: 500;
+    background:red; 
 }
 /* Testes feitos Por Gustavo 👍 */
 
