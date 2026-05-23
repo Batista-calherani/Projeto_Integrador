@@ -1,13 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .cor_fundo {
     /* a seção cresce automaticamente conforme adicionar conteúdo. */
-    min-height: 1200px;
+    min-height: 100vh;
     width: 100%;
     background: linear-gradient(-45deg, #000000, #494949, #000000);
     background-size: 400% 400%;
     animation: moverGradiente 10s ease infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
 }
 
 a {
@@ -88,12 +92,13 @@ header {
 }
 
 .espaco{
-    height: 350px;
-    width: 100%;
+   
+    width: 98%;
     /* background: #ff751f; */
     display: flex;
-    /* justify-content: space-between; */
-    gap: 75px;
+   
+     flex-wrap: wrap;
+    
 }
 
 .perfil_profissional{
@@ -104,7 +109,7 @@ header {
     margin-top:50px;
     display: flex;
     border-radius: 30px;
-    gap: 15px;
+    
    
 }
 
@@ -121,9 +126,18 @@ header {
 .informarcao{
     height: 250px;
     width: 250px;
+    gap: 10px;
     /* background: #ff751f; */
 }
 
+.informarcao h3{
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.cargo{
+    margin-top: 10px;
+}
 
 .botao{
     display: flex;
