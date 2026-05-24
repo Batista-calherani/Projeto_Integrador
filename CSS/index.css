@@ -1,74 +1,7 @@
-/* header {
-    display: flex;
-    justify-content: flex-end;
-    height: 100px;
-    width: 100%;
-    background: black;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.linha_laranja {
-    height: 5px;
-    width: 100%;
-    /* background: #ff751f; 
-    background: linear-gradient(-45deg, #ff751f, #e9e9e9, #ff751f);
-    background-size: 400% 400%;
-    animation: moverGradiente 10s ease infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    position: sticky;
-    top: 100px;
-    /* altura do header 
-    z-index: 999;
-}
-
-@keyframes moverGradiente {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.cabecalho {
-    display: flex;
-    align-items: center;
-}
-
-.perfil {
-    transform: scale(1.1);
-    margin-right: 25px;
-    width: 50px;
-    height: 50px;
-}
-
-.inicio {
-    height: inherit;
-    width: inherit;
-    flex-shrink: 2;
-}
-
-.logo {
-    height: 95px;
-    width: 150px;
-    display: flex;
-} */
-
 body {
     margin: 0;
 }
+
 a {
     transform: scale(1.2);
     margin: 50px;
@@ -91,16 +24,6 @@ a {
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.534);
 }
 
-
-
-
-/* .banner img{
-    width: 100%;
-    height: calc(100vh - 110px);
-    object-fit: cover;
-    display: block;
-} */
-
 .banner::after {
     content: "";
     position: absolute;
@@ -114,7 +37,7 @@ a {
     height: 400px;
     width: 15px;
     background: #ff751f;
-    margin-right: 15px; 
+    margin-right: 15px;
 }
 
 .conteudo {
@@ -181,7 +104,7 @@ span {
 
 .cor_fundo {
     /* a seção cresce automaticamente conforme adicionar conteúdo. */
-    min-height: 1250px;
+    min-height: 1100px;
     width: 100%;
     background: linear-gradient(-45deg, #000000, #494949, #000000);
     background-size: 400% 400%;
@@ -241,7 +164,7 @@ span {
     display: flex;
     flex-direction: row-reverse;
     gap: 80px;
-    
+
 }
 
 .quadrado_laranja {
@@ -251,8 +174,8 @@ span {
     width: 3px;
     margin-bottom: 100PX;
     background: #ff751f;
-    
- 
+
+
 }
 
 .rodape {
@@ -261,7 +184,7 @@ span {
     background: #000000;
 }
 
-.cor_laranja{
+.cor_laranja {
     height: 350px;
     width: 850px;
     background: #ff751f5b;
@@ -275,12 +198,194 @@ span {
 
 }
 
-.linha_{
-    display: flex;
+.linha_ {
+
     height: 350px;
     width: 500;
-    background:red; 
+    background: rgb(255, 255, 255);
 }
+
+.valores {
+    height: 380px;
+    width: 100%;
+    background: #ff971fef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: red; */
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.icones img {
+    height: 200px;
+    width: 200px;
+
+}
+
+.valor {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.linha_ {
+    margin: 0px;
+    margin-bottom: 25px;
+    height: 2px;
+    width: 350px;
+    background: #000000;
+
+}
+
+/* _______________________________________________________ */
+
+.cor_fundo2 {
+    min-height: 105vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #000000, #494949, #000000);
+    background-size: 400% 400%;
+    animation: moverGradiente 10s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 95px;
+    
+}
+
+.texto {
+    color: white;
+    text-align: center;
+    width: 750px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+
+}
+
+.texto p {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.linha_servicos {
+    height: 650px;
+    width: 100%;
+    /* background: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.quadrado_ {
+    height: 650px;
+    width: 500px;
+    /* background: #8b09e2; */
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quadrado_ p {
+    color: white;
+    width: 80%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    opacity:0;
+    transition: 1s;
+    font-size: 25px;
+}
+
+.quadrado_ h3{
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    color: white;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    z-index: 2;
+
+    transition: 0.5s;
+}
+
+.quadrado_ h3:hover{
+    top: 40px;
+    opacity: 0.7;
+}
+
+.quadrado_:hover p{
+    opacity: 1;
+    top: 50%;
+}
+
+.quadrado_:hover img{
+      filter: blur(5px) brightness(0.5);
+}
+
+.quadrado_:hover{
+    transform: scale(1.05);
+}
+
+.imagem_servicos{
+     height: 650px;
+    width: 550px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.titulo_servicos{
+     color: white;
+    font-size: 30px;
+    text-align: center;
+    height: 100px;
+}
+
+.rodape{
+    height: 150px;
+    width: 100%;
+    background: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Testes feitos Por Gustavo 👍 */
 
 /* html {

@@ -12,6 +12,10 @@
     background: linear-gradient(-45deg, #000000, #494949, #000000);
     background-size: 400% 400%;
     animation: moverGradiente 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 a {
@@ -92,42 +96,42 @@ header {
 }
 
 .espaco{
-   
     width: 98%;
     /* background: #ff751f; */
     display: flex;
-   
-     flex-wrap: wrap;
     
 }
 
 .perfil_profissional{
     height: 300px;
-    width: 400px;
+    width: 100%;
     background: #e9e9e9;
-    margin-left: 50px;
-    margin-top:50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top:15px;
     display: flex;
+
     border-radius: 30px;
-    
-   
 }
 
 .foto{
-    height: 120px;
-    width: 120px;
+    height: 200px;
+    width: 200px;
     border-radius: 100%;
     /* background: rebeccapurple; */
     bottom: 50px;
-    margin: 20px;
+    margin: 50px;
     border: 5px solid;
 }
 
 .informarcao{
+    
+    margin-top: 15px;
     height: 250px;
     width: 250px;
-    gap: 10px;
-    /* background: #ff751f; */
+    gap: 150px;
+    display: flex;
+    background: #ff751f;
 }
 
 .informarcao h3{
@@ -146,7 +150,7 @@ header {
     height: 28px;
     width: 95px;
     border: none;
-    background: #494949;
+    background: #e90000;
     color: #e9e9e9;
     border-radius: 10px;
     cursor: pointer;
@@ -155,4 +159,16 @@ header {
 .botao:hover{
       transform: scale(1.05);
       background: #ff751f;
+}
+
+.sobre{
+    height: 300px;
+    width: 100%;
+    background: #e9e9e9;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top:15px;
+    display: flex;
+   
+
 }
