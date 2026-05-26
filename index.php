@@ -15,7 +15,7 @@ require_once 'MySQL/crud.php';
 
 <body>
     <?php include_once "Partials/header.php"; ?>
-    <div class="banner">
+    <div id="home" class="banner">
         <img src="./Img/index.png" alt="">
         <div class="conteudo">
             <div class="linha"></div>
@@ -34,7 +34,7 @@ require_once 'MySQL/crud.php';
     </div>
 
 
-    <div class="cor_fundo">
+    <div id="quemsomos" class="cor_fundo">
         <div class="espaco">
             <div class="inform" id="AboutUs" >
                 <h1>Quem <span>Somos</span></h1>
