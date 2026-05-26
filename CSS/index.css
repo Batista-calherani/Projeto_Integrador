@@ -373,6 +373,19 @@ span {
     background: #000000;
 }
 
+#home {
+    scroll-margin-top: 100px;
+    scroll-behavior:smooth;
+}
+
+#quemsomos {
+    scroll-behavior:smooth;
+}
+
+#servicos {
+    scroll-behavior:smooth;
+}
+
 /* teste card */
 
 /* .link-card{
