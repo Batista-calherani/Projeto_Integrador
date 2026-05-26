@@ -41,6 +41,15 @@ try {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    function readOne($pdo, $table,$column, $where = null) {
+        $sql = "SELECT $column FROM $table";
+        if ($where) {
+            $sql .= " WHERE $where";
+        }
+        $stmt = $pdo->query($sql);
+        return $stmt->fetchColumn();
+    }
+
     // Função para atualizar um registro
     function update($pdo, $table, array $data, $where) {
         $set = [];

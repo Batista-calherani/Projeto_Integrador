@@ -21,8 +21,14 @@ id_user int auto_increment,
 user varchar(100) not null,
 email varchar(50) not null,
 pass varchar(255) not null,
+Foto_perfil Varchar(255) default null,
+Telefone varchar(20) default null,
+localizacao varchar(100) default null,
 primary key(id_user)
 );
+
+
+
 drop table access;
 truncate table profissionais;
 SELECT * from access;
