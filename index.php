@@ -47,14 +47,101 @@ require_once 'MySQL/crud.php';
                     Lorem Ipsum Lorem Ipsum Lorem Ipsum </h3>
             </div>
 
-            <img class="imagem" src="./Img/img_infor.png" alt="">
-
-            
+            <img class="imagem" src="../Img/img_infor.png" alt="">
 
 
         </div>
+
+
         <div class="quadrado_laranja"></div>
+
         <div class="cor_laranja"></div>
+
+
+
+    </div>
+
+    <div class="valores">
+        <div class="titulo">Nossos Valores
+            <div class="linha_"></div>
+        </div>
+
+        <div class="icones">
+            <div class="valor">
+                <img src="../Img/agilidade.png" alt="">
+                <h3>Agilidade</h3>
+            </div>
+            <div class="valor">
+                <img src="../Img/confiança.png" alt="">
+                <h3>Confiança</h3>
+
+            </div>
+            <div class="valor">
+                <img src="../Img/quality.png" alt="">
+                <h3>Qualidade</h3>
+            </div>
+
+            <div class="valor">
+                <img src="../Img/trasparencia.png" alt="">
+                <h3>Transparência</h3>
+            </div>
+
+            <div class="valor">
+                <img src="../Img/responsibility.png" alt="">
+                <h3>Responsabilidade</h3>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="servicos" class="cor_fundo2">
+
+        <div class="titulo_servicos">
+            <h2>Nossos <span>Profissionais</span></h2>
+        </div>
+        <div class="texto">
+            <p>Encontre profissionais experientes e preparados para garantir qualidade, segurança e
+                eficiência em cada etapa da sua construção. Escolha o serviço ideal para transformar
+
+                seu projeto em realidade. </p>
+        </div>
+
+        <div class="linha_servicos">
+
+            <div class="quadrado_">
+                <img class="imagem_servicos" src="../Img/servente.png" alt="">
+                <h3>Servente</h3>
+                <p>Nossos serventes atuam com responsabilidade, agilidade e disposição, oferecendo
+                    todo o suporte necessário para o bom andamento da obra. São profissionais essenciais
+                    que contribuem diretamente para um ambiente organizado e produtivo.
+                </p>
+            </div>
+
+            <!-- <a href="profissionais.html" class="link-card"> -->
+                <div class="quadrado_">
+                    <h3>Pedreiro</h3>
+                    <img class="imagem_servicos" src="../Img/pedreiro.png" alt="">
+                    <p>Contamos com pedreiros qualificados e dedicados, preparados para
+                        executar serviços com precisão, qualidade e acabamento impecável.
+                        Seu compromisso e experiência fazem toda a diferença para transformar
+                        projetos em realidade.
+                    </p>
+                </div>
+            <!-- </a> -->
+
+            <div class="quadrado_">
+                <h3>Mestre de Obra</h3>
+                <img class="imagem_servicos" src="../Img/mestre de obra.png" alt="">
+                <p>Nossos mestres de obra são profissionais experientes e comprometidos,
+                    responsáveis por garantir organização, qualidade e eficiência em cada
+                    etapa da construção. Com liderança e atenção aos detalhes, asseguram que
+                    sua obra seja realizada com segurança e excelência.
+                </p>
+            </div>
+        </div>
 
 
     </div>
