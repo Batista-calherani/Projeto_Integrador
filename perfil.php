@@ -37,7 +37,8 @@ $id = readOne($pdo, 'access','id_user',$where);
                 <h1>Inform Login</h1>
                 <?php foreach($information as $info){
                     echo "<h3>User: ". $info['user'] ."<br>
-                    Email: ".$info['email']."
+                    Email: ".$info['email']."<br>
+                    Acesso: ".$info['acesso']."
                     </h3>";
                 };  ?>
                 

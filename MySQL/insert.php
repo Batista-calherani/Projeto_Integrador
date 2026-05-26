@@ -4,9 +4,9 @@ require_once 'crud.php';
 $novoFun = [
     'Nome' => $_POST['Nome'],
     'cargo' => $_POST['cargo'],
-    'Agenda' => $_POST['Agenda'],
+    'Local' => $_POST['Local'],
     'contrato' => $_POST['Contrato'],
-    'Statos' => '',
+    'Status' => '',
     'Salario' => $_POST['Salario'],
     'Tefone' => $_POST['tefone'],
     'Email' => $_POST['email'],

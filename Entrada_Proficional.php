@@ -22,8 +22,8 @@ require_once 'Partials/access.php';
                         <input type="radio" name="cargo" value="Pedreiro"> <p class="Modo" > Pedreiro </p>
                         <input type="radio" name="cargo" value="Servente"> <p class="Modo" > Servente </p>
                         <input type="radio" name="cargo" value="Mestre"> <p class="Modo" > Mestre de Obra </p>
-                        <label> Selecione os dias que estiver livre. </label>
-                        <input type="date" name="Agenda" required autocomplete="off" maxlength="12" minlength="8" id="pass">
+                        <label> Indique sua cidade. </label>
+                        <input type="text" name="Local" required autocomplete="off" id="pass">
                         <input type="Hidden" name="Contrato" required value="0" id="user">
                         <input type="Hidden" name="Status" required value="Disponivel" id="user">
                         <label for="arquivo">Selecione uma imagem da capa:</label>

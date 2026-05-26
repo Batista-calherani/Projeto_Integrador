@@ -1,5 +1,6 @@
 <?php
 http_response_code(404);
+require_once 'Partials/access.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
