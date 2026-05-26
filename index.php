@@ -10,7 +10,7 @@ require_once 'MySQL/crud.php';
     <title>ConGroup</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/Header.css">
-    <link rel="icon" type="image/x-icon" href="Img/logo.bran.ico">
+    <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 </head>
 
 <body>
