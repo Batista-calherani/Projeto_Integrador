@@ -38,13 +38,10 @@ require_once 'MySQL/crud.php';
         <div class="espaco">
             <div class="inform" >
                 <h1>Quem <span>Somos</span></h1>
-                <h3>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                    Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                    Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                    Lorem Ipsum Lorem Ipsum Lorem Ipsum </h3>
+                <h3>A ConGroup é uma empresa especializada em conectar clientes a profissionais qualificados da construção civil, oferecendo soluções modernas para contratação e gerenciamento de serviços de obra, reforma e manutenção.<br>
+                    Nosso objetivo é tornar o processo mais rápido, seguro e organizado, utilizando tecnologia para facilitar a comunicação entre clientes e prestadores de serviço.<br>
+                    Buscamos oferecer uma experiência prática, transparente e eficiente, garantindo qualidade em cada etapa do atendimento.
+                    Na ConGroup, acreditamos que inovação, compromisso e confiança são fundamentais para transformar a forma como serviços de construção são contratados e gerenciados. </h3>
             </div>
 
             <img class="imagem" src="./Img/img_infor.png" alt="">
