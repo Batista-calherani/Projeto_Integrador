@@ -26,8 +26,8 @@ require_once 'MySQL/crud.php';
                     eficiente. Qualidade, confiança e compromisso
                     são a base de tudo o que construímos. </p>
                 <div class="botoes">
-                    <button onclick="window.location.href='buttons.php'">Serviços</button>
-                    <button onclick="window.location.href='Entrada_Proficional.php'" >Procurar Emprego</button>
+                    <button onclick="window.location.href='index.php#servicos'">Serviços</button>
+                    <button onclick="window.location.href='Entrada_Proficional.php'">Procurar Emprego</button>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@ require_once 'MySQL/crud.php';
 
     <div id="quemsomos" class="cor_fundo">
         <div class="espaco">
-            <div class="inform" id="AboutUs" >
+            <div class="inform" >
                 <h1>Quem <span>Somos</span></h1>
                 <h3>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                     Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
