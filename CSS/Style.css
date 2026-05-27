@@ -1,7 +1,24 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  cursor: none !important;
+}
+#cur-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform .12s ease, opacity .12s ease;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  will-change: transform, left, top;
+  opacity: 1;
+}
+/* scale/visual effect when hovering interactive elements */
+body.cursor-hover #cur-dot {
+  transform: translate(-50%, -50%);
+  transition: transform .08s ease;
 }
 .logo {
     width: 150px;

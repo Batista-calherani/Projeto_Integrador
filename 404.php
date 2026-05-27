@@ -9,7 +9,7 @@ require_once 'Partials/access.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found 404 </title>
     <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/Header.css">
+    <link rel="stylesheet" href="CSS/Global.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
     <style>
         /* Estilo rápido para o botão de som */
@@ -48,6 +48,7 @@ require_once 'Partials/access.php';
                 </div>
             </div>
         </div>
+    <?php include_once 'Partials/footer.php';?>
     <script>
         const audio = document.getElementById('meuJingle');
         const btn = document.getElementById('btnSom');

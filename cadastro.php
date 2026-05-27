@@ -23,9 +23,10 @@ if($good){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CADASTRE-SE</title>
     <link rel="stylesheet" href="CSS/cadastro.css">
+    <link rel="stylesheet" href="CSS/Global.css">
 </head>
 <body>
-
+    <img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif" data-click="Img/Enchanted_Stone_Pickaxe_click.gif" >
      <div class="login">
         <div class="line"><img class="img" src="./Img/logo_laranja.png" alt=""></div>
         <div class="imagem"></div>
@@ -53,6 +54,6 @@ if($good){
                         <button class="botao_accss" id="btn" type="submit" >Send</button>
                         </div>
     </form>
-    
+    <script src="Partials/Top.js"></script>
 </body>
 </html>

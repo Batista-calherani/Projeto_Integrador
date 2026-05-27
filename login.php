@@ -42,9 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/Global.css">
 </head>
 <body>
-
+    <img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif" data-click="Img/Enchanted_Stone_Pickaxe_click.gif">
     <div class="login">
         <div class="line"><img class="img" src="./Img/logo_laranja.png" alt=""></div>
         <div class="imagem"></div>
@@ -58,17 +59,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="input_grup">
             <h2>Senha</h2>
             <input class="campo" type="password" name="password" required maxlength="12" minlength="8" >
-            <p>Esqueceu sua senha?<a href="">Clique aqui</p></a>
+            <p>Esqueceu sua senha?<a href="confirmation.php">Clique aqui</p></a>
         </div>
 
         <div class="botoes">
             <button class="botao_accss">Entrar</button>
             <div class="linha"></div>
            <a href="cadastro.php" class="botao_cadastrar">Cadastre-se</a>
+           <a href="Entrada_Proficional.php" class="botao_cadastrar">Cadastro de Profissional</a>
         </div>
     </form>
        
     </div>
-    
+    <script src="Partials/Top.js"></script>
 </body>
 </html>

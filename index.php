@@ -9,8 +9,10 @@ require_once 'MySQL/crud.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConGroup</title>
     <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/Header.css">
+    <link rel="stylesheet" href="CSS/Global.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+     
 </head>
 
 <body>
@@ -47,7 +49,7 @@ require_once 'MySQL/crud.php';
                     Lorem Ipsum Lorem Ipsum Lorem Ipsum </h3>
             </div>
 
-            <img class="imagem" src="../Img/img_infor.png" alt="">
+            <img class="imagem" src="./Img/img_infor.png" alt="">
 
 
         </div>
@@ -68,26 +70,26 @@ require_once 'MySQL/crud.php';
 
         <div class="icones">
             <div class="valor">
-                <img src="../Img/agilidade.png" alt="">
+                <img src="./Img/agilidade.png" alt="">
                 <h3>Agilidade</h3>
             </div>
             <div class="valor">
-                <img src="../Img/confiança.png" alt="">
+                <img src="./Img/confiança.png" alt="">
                 <h3>Confiança</h3>
 
             </div>
             <div class="valor">
-                <img src="../Img/quality.png" alt="">
+                <img src="./Img/quality.png" alt="">
                 <h3>Qualidade</h3>
             </div>
 
             <div class="valor">
-                <img src="../Img/trasparencia.png" alt="">
+                <img src="./Img/trasparencia.png" alt="">
                 <h3>Transparência</h3>
             </div>
 
             <div class="valor">
-                <img src="../Img/responsibility.png" alt="">
+                <img src="./Img/responsibility.png" alt="">
                 <h3>Responsabilidade</h3>
             </div>
         </div>
@@ -111,8 +113,8 @@ require_once 'MySQL/crud.php';
 
         <div class="linha_servicos">
 
-            <div class="quadrado_">
-                <img class="imagem_servicos" src="../Img/servente.png" alt="">
+            <div onclick="window.location.href='funcionarios.php?cargo=Servente'" class="quadrado_">
+                <img class="imagem_servicos" src="./Img/servente.png" alt="">
                 <h3>Servente</h3>
                 <p>Nossos serventes atuam com responsabilidade, agilidade e disposição, oferecendo
                     todo o suporte necessário para o bom andamento da obra. São profissionais essenciais
@@ -121,9 +123,9 @@ require_once 'MySQL/crud.php';
             </div>
 
             <!-- <a href="profissionais.html" class="link-card"> -->
-                <div class="quadrado_">
+                <div onclick="window.location.href='funcionarios.php?cargo=Pedreiro'" class="quadrado_">
                     <h3>Pedreiro</h3>
-                    <img class="imagem_servicos" src="../Img/pedreiro.png" alt="">
+                    <img class="imagem_servicos" src="./Img/pedreiro.png" alt="">
                     <p>Contamos com pedreiros qualificados e dedicados, preparados para
                         executar serviços com precisão, qualidade e acabamento impecável.
                         Seu compromisso e experiência fazem toda a diferença para transformar
@@ -132,9 +134,9 @@ require_once 'MySQL/crud.php';
                 </div>
             <!-- </a> -->
 
-            <div class="quadrado_">
+            <div onclick="window.location.href='funcionarios.php?cargo=Mestre'" class="quadrado_">
                 <h3>Mestre de Obra</h3>
-                <img class="imagem_servicos" src="../Img/mestre de obra.png" alt="">
+                <img class="imagem_servicos" src="./Img/mestre de obra.png" alt="">
                 <p>Nossos mestres de obra são profissionais experientes e comprometidos,
                     responsáveis por garantir organização, qualidade e eficiência em cada
                     etapa da construção. Com liderança e atenção aos detalhes, asseguram que
@@ -150,6 +152,4 @@ require_once 'MySQL/crud.php';
 
 </body>
 
-</html>
-</body>
 </html>

@@ -10,8 +10,8 @@ $categoria = ['Servente','Pedreiro','Mestre']
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/Header.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/Global.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 
 </head>
@@ -43,6 +43,6 @@ $categoria = ['Servente','Pedreiro','Mestre']
             echo '</div></div>';
             ?>
             <a href="index.php" >Back</a>
-            
+    <?php include_once "Partials/footer.php";?>
 </body>
 </html>

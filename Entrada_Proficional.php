@@ -1,6 +1,3 @@
-<?php
-require_once 'Partials/access.php';
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,11 +5,11 @@ require_once 'Partials/access.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastra-se</title>
     <link rel="stylesheet" href="CSS/Style.css">
-    <link rel="stylesheet" href="CSS/Header.css">
+    <link rel="stylesheet" href="CSS/Global.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 </head>
 <body>
-    <?php include_once "Partials/header.php";?>
+<img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif" data-click="Img/Enchanted_Stone_Pickaxe_click.gif" >
     <h1 class="Modo">Entre na Espera por Trabalho</h1>
         <form action="MySQL/insert.php" method="POST" class="div" enctype="multipart/form-data">
                     <div class="card">
@@ -42,5 +39,6 @@ require_once 'Partials/access.php';
                         <p id="p">Preencha os campos do formulário</p>
                     </div>
 </form>
+<script src="Partials/Top.js"></script>
 </body>
 </html>
