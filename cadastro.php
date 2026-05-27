@@ -3,6 +3,7 @@ require_once "MySQL/crud.php";
 if(isset($_POST['user'])){
 $novoLogin = [
     'user' => $_POST['user'],
+    'acesso' => 'Cliente',
     'email' => $_POST['email'],
     'pass' => password_hash($_POST['pass'],PASSWORD_DEFAULT)
 ];

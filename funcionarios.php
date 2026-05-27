@@ -36,7 +36,7 @@ $categoria = ['Servente','Pedreiro','Mestre']
             echo '<div class="grid2">';
             foreach($profissionais as $funcionarios){
                 if($_GET['cargo'] == '' || $funcionarios['cargo'] == $_GET['cargo']  ){
-                echo '<div class="item" id="1" ><img src="'.$funcionarios['Foto'].'" class="img" id="produtos"><p class="legend" >Nome:'.$funcionarios['Nome'].' <br> Disponibilidade: <R1>'.$funcionarios['Agenda'].' </R1> <br> Categoria: '.$funcionarios['cargo'].'</div>';
+                echo '<div class="item" id="1" ><img src="'.$funcionarios['Foto'].'" class="img" id="produtos"><p class="legend" >Nome:'.$funcionarios['Nome'].' <br> Disponibilidade: '.$funcionarios['Local'].' <br> Categoria: '.$funcionarios['cargo'].'</div>';
             }
             };
             

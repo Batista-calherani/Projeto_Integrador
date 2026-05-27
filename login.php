@@ -18,10 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (password_verify($pass, $hash)) {
                 $_SESSION['user'] = $user;
-
+                if($_SESSION['user'] == 'Administrador'){
+                header('Location: coiso.php');
+                exit; 
+                }else{
                 header("Location: index.php");
                 exit;
-            } else {
+                }} else {
                 echo '<div style="color:red;">Usuário ou senha incorretos.</div>';
             }
         } else {

@@ -20,6 +20,7 @@ create table if not exists access(
 id_user int auto_increment,
 user varchar(100) not null,
 email varchar(50) not null,
+acesso varchar(20) not null,
 pass varchar(255) not null,
 Foto_perfil Varchar(255) default null,
 Telefone varchar(20) default null,
@@ -27,7 +28,7 @@ localizacao varchar(100) default null,
 primary key(id_user)
 );
 
-
+insert into access (acesso,user,email,pass) values ('ADM','Administrador','ADM@gmail.com','$2a$12$0D0MhlhdoUew8gqPDx4vGOgSI.08jLWG7Lj/RViyxeb9.31d4G.3i');
 
 drop table access;
 truncate table profissionais;
