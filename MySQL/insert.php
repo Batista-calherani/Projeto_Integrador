@@ -1,17 +1,19 @@
 <?php
 require_once 'crud.php';
+ini_set('smtp_port','587');
+ini_set('SMTP', 'smtp.gmail.com');
 
 $novoFun = [
     'Nome' => $_POST['Nome'],
     'cargo' => $_POST['cargo'],
     'Local' => $_POST['Local'],
     'contrato' => $_POST['Contrato'],
-    'Status' => '',
     'Salario' => $_POST['Salario'],
     'Tefone' => $_POST['tefone'],
     'Email' => $_POST['email'],
     'tempo' => $_POST['tempo'],
     'descri' => $_POST['descri'],
+    'Idade' => $_POST['Idade'],
     'Foto' => ''
 ];
 
@@ -45,7 +47,7 @@ $caminho = $dir."$idNovoFun/";
 $file = $caminho.$novonome;
     $capaUrl = $file;
     update($pdo,'profissionais', ['Foto' => $capaUrl],"id_Prof = $idNovoFun");
-    echo "Profissional inserido com sucesso com o ID: $idNovoFun<br><br>";
+    mail('gustavo.calherani@aluno.senai.br','Teste Muito Foda','Vamos Ver se funciona.');
     echo "<a href='../index.php'>Ver Resumo</a>";
 } else {
     echo "erro em enviar imagem.";

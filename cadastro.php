@@ -52,6 +52,8 @@ if($good){
                         <br>
                         <div class="botoes">
                         <button class="botao_accss" id="btn" type="submit" >Send</button>
+                        <div class="linha"></div>
+                        <a href="login.php" class="botao_cadastrar">Login</a>
                         </div>
     </form>
     <script src="Partials/Top.js"></script>

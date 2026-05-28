@@ -10,39 +10,83 @@ $categoria = ['Servente','Pedreiro','Mestre']
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/profissionais.css">
     <link rel="stylesheet" href="CSS/Global.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 
 </head>
 <body>
     <?php include_once "Partials/header.php";?>
-     <div class="cont-consulta">
-        <?php 
-        print ' <p class="paragrafo"> Catálogo </p>
-        <ul class="col-apresent">';
-        print ' <li>
-                        <a class="button" href="funcionarios.php?cargo=" >Todos Profissionais</a>
-                </li>';
-        foreach($categoria as $kcat => $nome ) {
-            echo '<li>
-                        <a class="button" href="funcionarios.php?cargo='.$nome.'">'.$nome.'</a>
-                </li>';
-        }
-        echo '</ul>';
-?>
-        <p class="paragrafo"></p>
-            <?php
-            echo '<div class="grid2">';
-            foreach($profissionais as $funcionarios){
-                if($_GET['cargo'] == '' || $funcionarios['cargo'] == $_GET['cargo']  ){
-                echo '<div class="item" id="1" ><img src="'.$funcionarios['Foto'].'" class="img" id="produtos"><p class="legend" >Nome:'.$funcionarios['Nome'].' <br> Disponibilidade: '.$funcionarios['Local'].' <br> Categoria: '.$funcionarios['cargo'].'</div>';
-            }
-            };
-            
-            echo '</div></div>';
-            ?>
-            <a href="index.php" >Back</a>
+     <div class="cor_fundo">
+        <div class="titulo">
+                <h1>Funcionários <span>disponíveis</span></h1>
+                <p>Encontre profissionais qualidicados para sua obra</p>
+            </div>
+
+<?php foreach($profissionais as $funcionarios){ 
+    if($funcionarios['cargo'] == '' || $funcionarios['cargo'] == $_GET['cargo']){
+    echo '
+        <div class="espaco">
+            <div class="perfil_profissional">
+                <div><img class="foto" src="'.$funcionarios['Foto'].'" alt=""></div>
+                <div class="informarcao">
+                    <h1><span>'.$funcionarios['Nome'].'</span></h1>
+                    <div class="cargo">
+                        <img class="cargo_img" src="./Img/cargo.png" alt="">
+                        <p>'.$funcionarios['cargo'].'</p>
+                    </div>
+                    <div class="descricao">
+                        <p>'.$funcionarios['descri'].'</p>
+                    </div>
+                </div>
+                <div class="espaco_linha">
+                    <div class="linha_separador"></div>
+                </div>
+
+                <div class="informarcao_contato">
+                    <div class="infor">
+                        <img class="icone" src="./Img/localização.png" alt="">
+                        <p>'.$funcionarios['Local'].'</p>
+                    </div>
+
+                    <div class="infor">
+                        <img class="icone" src="./Img/calendario.png" alt="">
+                        <p>'.$funcionarios['Idade'].' Anos</p>
+                    </div>
+
+                    <div class="infor">
+                        <img class="icone" src="./Img/telefone.png" alt="">
+                        <p>'.$funcionarios['Tefone'].'</p>
+                    </div>
+
+                    <div class="infor">
+                        <img class="icone" src="./Img/email.png" alt="">
+                        <p>'.$funcionarios['Email'].'</p>
+
+
+                    </div>
+                </div>
+
+                <div class="espaco_linha">
+                    <div class="linha_separador"></div>
+                </div>
+
+                <div class="informarcao_salario">
+                    <div class="infor_salario">
+                        <h2>Salário pretendido</h2>
+                        <h1><span>R$ '.$funcionarios['Salario'].'</span></h1>
+                    </div>
+
+                    <button onclick="window.location.href=\'detalhes.php?id_Prof='.$funcionarios['id_Prof'].'\'"class="btn-contratar">
+                        <img src="./Img/select.png" alt="">
+                        Contratar
+                    </button>
+                </div>
+        </div>
+    </div>
+';}};?>
+
+</div>
     <?php include_once "Partials/footer.php";?>
 </body>
 </html>

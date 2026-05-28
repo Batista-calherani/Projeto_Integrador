@@ -23,7 +23,9 @@
                         <input type="text" name="Local" required autocomplete="off" id="pass">
                         <input type="Hidden" name="Contrato" required value="0" id="user">
                         <input type="Hidden" name="Status" required value="Disponivel" id="user">
-                        <label for="arquivo">Selecione uma imagem da capa:</label>
+                        <label>Idade:</label>
+                        <input type="number" name="Idade" Placeholder="Ex. 10 anos" required>
+                        <label for="arquivo">Selecione uma imagem de perfil:</label>
                         <input type="file" name="arquivo" accept="image/*" required>
                         <label>Selecione uma média que deseja ganhar:</label>
                         <input type="number" step="0.01" name="Salario"  required>
@@ -34,7 +36,7 @@
                         <label>Escreva seu tempo de contribuição nesse cargo</label>
                         <input type="text" name="tempo" Placeholder="Ex. 10 anos" required>
                         <label for="arquivo">Escreva uma pequena descrição sua</label>
-                        <input type="text" name="descri"  required>
+                        <input type="text" name="descri" maxlegth='100' required>
                         <button type="submit" >Send</button>
                         <p id="p">Preencha os campos do formulário</p>
                     </div>

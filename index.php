@@ -110,11 +110,7 @@ require_once 'MySQL/crud.php';
 
         <div class="linha_servicos">
 
-<<<<<<< HEAD
             <div onclick="window.location.href='funcionarios.php?cargo=Servente'" class="quadrado_">
-=======
-            <div class="quadrado_">
->>>>>>> 93bf05d7df80b62dfcd723b0f127cd92545f1f4d
                 <img class="imagem_servicos" src="./Img/servente.png" alt="">
                 <h3>Servente</h3>
                 <p>Nossos serventes atuam com responsabilidade, agilidade e disposição, oferecendo
