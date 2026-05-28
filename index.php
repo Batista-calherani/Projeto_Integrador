@@ -28,8 +28,8 @@ require_once 'MySQL/crud.php';
                     eficiente. Qualidade, confiança e compromisso
                     são a base de tudo o que construímos. </p>
                 <div class="botoes">
-                    <button onclick="window.location.href='buttons.php'">Serviços</button>
-                    <button onclick="window.location.href='Entrada_Proficional.php'" >Procurar Emprego</button>
+                    <button onclick="window.location.href='index.php#servicos'">Serviços</button>
+                    <button onclick="window.location.href='Entrada_Proficional.php'">Procurar Emprego</button>
                 </div>
             </div>
         </div>
@@ -38,15 +38,12 @@ require_once 'MySQL/crud.php';
 
     <div id="quemsomos" class="cor_fundo">
         <div class="espaco">
-            <div class="inform" id="AboutUs" >
+            <div class="inform" >
                 <h1>Quem <span>Somos</span></h1>
-                <h3>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                    Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                    Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-                    Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                    Lorem Ipsum Lorem Ipsum Lorem Ipsum </h3>
+                <h3>A ConGroup é uma empresa especializada em conectar clientes a profissionais qualificados da construção civil, oferecendo soluções modernas para contratação e gerenciamento de serviços de obra, reforma e manutenção.<br>
+                    Nosso objetivo é tornar o processo mais rápido, seguro e organizado, utilizando tecnologia para facilitar a comunicação entre clientes e prestadores de serviço.<br>
+                    Buscamos oferecer uma experiência prática, transparente e eficiente, garantindo qualidade em cada etapa do atendimento.
+                    Na ConGroup, acreditamos que inovação, compromisso e confiança são fundamentais para transformar a forma como serviços de construção são contratados e gerenciados. </h3>
             </div>
 
             <img class="imagem" src="./Img/img_infor.png" alt="">
@@ -113,7 +110,11 @@ require_once 'MySQL/crud.php';
 
         <div class="linha_servicos">
 
+<<<<<<< HEAD
             <div onclick="window.location.href='funcionarios.php?cargo=Servente'" class="quadrado_">
+=======
+            <div class="quadrado_">
+>>>>>>> 93bf05d7df80b62dfcd723b0f127cd92545f1f4d
                 <img class="imagem_servicos" src="./Img/servente.png" alt="">
                 <h3>Servente</h3>
                 <p>Nossos serventes atuam com responsabilidade, agilidade e disposição, oferecendo
