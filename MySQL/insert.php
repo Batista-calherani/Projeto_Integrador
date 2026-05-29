@@ -1,13 +1,10 @@
 <?php
 require_once 'crud.php';
-ini_set('smtp_port','587');
-ini_set('SMTP', 'smtp.gmail.com');
 
 $novoFun = [
     'Nome' => $_POST['Nome'],
     'cargo' => $_POST['cargo'],
     'Local' => $_POST['Local'],
-    'contrato' => $_POST['Contrato'],
     'Salario' => $_POST['Salario'],
     'Tefone' => $_POST['tefone'],
     'Email' => $_POST['email'],
@@ -19,7 +16,7 @@ $novoFun = [
 
 $idNovoFun = create($pdo, 'profissionais', $novoFun);
 
-$tipo_permitido = ['image/jpeg','image/png','image/gif'];
+$tipo_permitido = ['image/jpeg','image/png','image/gif','image/jpg'];
 if(!in_array($_FILES['arquivo']['type'],$tipo_permitido)) {
     echo "Tipo de arquivo não permitido.";
     exit;
@@ -47,8 +44,7 @@ $caminho = $dir."$idNovoFun/";
 $file = $caminho.$novonome;
     $capaUrl = $file;
     update($pdo,'profissionais', ['Foto' => $capaUrl],"id_Prof = $idNovoFun");
-    mail('gustavo.calherani@aluno.senai.br','Teste Muito Foda','Vamos Ver se funciona.');
-    echo "<a href='../index.php'>Ver Resumo</a>";
+    echo "Agora espera fi.";
 } else {
     echo "erro em enviar imagem.";
 }
