@@ -29,81 +29,7 @@ a {
 }
 
 
-header {
-    display: flex;
-    justify-content: flex-end;
-    height: 100px;
-    width: 100%;
-    background: rgb(0, 0, 0);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
 
-.linha_laranja {
-    height: 5px;
-    width: 100%;
-    background: #ff751f;
-    background: linear-gradient(-45deg, #ff751f, #e9e9e9, #ff751f);
-    background-size: 400% 400%;
-    animation: moverGradiente 10s ease infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    position: sticky;
-    top: 100px;
-    /* altura do header  */
-    z-index: 999;
-}
-
-@keyframes moverGradiente {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.cabecalho {
-    display: flex;
-    align-items: center;
-}
-
-
-span {
-    color: #0099ff;
-}
-
-
-
-.perfil {
-    transform: scale(1.1);
-    margin-right: 25px;
-    width: 50px;
-    height: 50px;
-}
-
-.inicio {
-    height: inherit;
-    width: inherit;
-    flex-shrink: 2;
-}
-
-.logo {
-    margin-top: 10px;
-    height: 80px;
-    width: px;
-    display: flex;
-}
 
 /* formulario */
 
@@ -232,8 +158,3 @@ span {
     margin-top: 45px;
 }
 
-.rodape{
-    height: 134px;
-    width: 100%;
-    background: #000000;
-}
