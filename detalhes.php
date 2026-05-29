@@ -1,3 +1,10 @@
+<?php
+require_once 'Partials/access.php';
+require_once 'MySQL/crud.php';
+$id = $_GET['id_Prof'];
+$profissionais = read($pdo, 'profissionais','id_Prof='.$id);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,20 +12,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/contratar.css">
+    <link rel="stylesheet" href="CSS/contratar.css">
+    <link rel="stylesheet" href="CSS/Global.css">
 </head>
 
 <body>
-
-    <header>
-        <div class="inicio"><img class="logo" src="../Img/logo_laranja.png" alt=""></div>
-        <div class="cabecalho">
-            <a href="#">Home</a>
-            <a href="#">Quem somos</a>
-            <a href="#">Serviços</a>
-            <a href="#"><img class="perfil" src="../Img/perfil.png" alt=""></a>
-        </div>
-    </header>
+<?php include_once 'Partials/header.php';?>
     <div class="linha_laranja"></div>
 
     <div class="cor_fundo">
@@ -28,7 +27,7 @@
                 <p>Preencha os dados abaixo para solicitar a contratação deste Profissional</p>    
             </div>
             <div class="voltar">
-                <img class="img" src="../Img/seta.png" alt="">
+                <img class="img" src="Img/seta.png" alt="">
                 <a href="profissionais.html">Voltar para profissionais</a>
 
             </div>
@@ -37,14 +36,16 @@
         <div class="quadrado">
 
             <div class="perfil_profissional">
+            <?php
+            echo'
                 <div class="foto_nome">
-                    <img class="foto" src="../Img/Foto_perfil.png" alt="">
+                    <img class="foto" src="'.$profissionais['Foto'].'" alt="">
 
                     <div class="informa">
-                        <h2>Jorge</h2>
+                        <h2>'.$profissionais['Nome'].'</h2>
                         <div class="cargo">
-                            <img class="cargo_img" src="../Img/cargo.png" alt="">
-                            <p>Mestre de obra</p>
+                            <img class="cargo_img" src="Img/cargo.png" alt="">
+                            <p>'.$profissionais['cargo'].'</p>
                         </div>
                     </div>
                 </div>
@@ -52,28 +53,28 @@
                 <div class="dados">
 
                     <div class="infor">
-                        <img class="icone" src="../Img/localização.png" alt="">
-                        <p>São Paulo - SP</p>
+                        <img class="icone" src="Img/localização.png" alt="">
+                        <p>'.$profissionais['Local'].'</p>
                     </div>
 
                     <div class="infor">
-                        <img class="icone" src="../Img/calendario.png" alt="">
-                        <p>45 anos</p>
+                        <img class="icone" src="Img/calendario.png" alt="">
+                        <p>'.$profissionais['Idade'].'</p>
                     </div>
 
                     <div class="infor">
-                        <img class="icone" src="../Img/telefone.png" alt="">
-                        <p> (11) 999999-9999</p>
+                        <img class="icone" src="Img/telefone.png" alt="">
+                        <p>'.$profissionais['Tefone'].'</p>
                     </div>
 
                     <div class="infor">
-                        <img class="icone" src="../Img/email.png" alt="">
-                        <p>jorgesilva@gmail.com</p>
+                        <img class="icone" src="Img/email.png" alt="">
+                        <p>'.$profissionais['Email'].'</p>
                     </div>
-                </div>
-
+                </div>';
+                ?>
                 <div class="verificacao">
-                    <img class="icone_verificacao" src="../Img/security.png" alt="">
+                    <img class="icone_verificacao" src="Img/security.png" alt="">
                     <div>
                         <h3>Profissional verificado</h3>
                         <p>Todos os nossos profissionais passam por um processo de verificação</p>
@@ -153,7 +154,7 @@
 
                 <div class="botao">
                     <button class="servico_">
-                        <img src="../Img/select.png" alt="">
+                        <img src="./Img/select.png" alt="">
                         <p>Confirmar contratação</p>
                     </button>
                 </div>
@@ -161,7 +162,7 @@
 
         </div>
 
-
+<?php require_once 'Partials/footer.php';?>
 
 </body>
 

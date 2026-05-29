@@ -2,7 +2,8 @@
 require_once 'Partials/access.php';
 require_once 'MySQL/crud.php';
 $profissionais = readAll($pdo, 'profissionais');
-$categoria = ['Servente','Pedreiro','Mestre']
+$categoria = ['Servente','Pedreiro','Mestre'];
+$legal = 0
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,7 @@ $categoria = ['Servente','Pedreiro','Mestre']
             </div>
 
 <?php foreach($profissionais as $funcionarios){ 
-    if($funcionarios['cargo'] == '' || $funcionarios['cargo'] == $_GET['cargo']){
+    if($funcionarios['cargo'] == $_GET['cargo'] && $funcionarios['contrato'] == $legal){
     echo '
         <div class="espaco">
             <div class="perfil_profissional">
