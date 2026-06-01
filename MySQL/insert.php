@@ -5,6 +5,7 @@ $novoFun = [
     'Nome' => $_POST['Nome'],
     'cargo' => $_POST['cargo'],
     'Local' => $_POST['Local'],
+    'Agenda' => date('Y-m-d'),
     'Salario' => $_POST['Salario'],
     'Tefone' => $_POST['tefone'],
     'Email' => $_POST['email'],

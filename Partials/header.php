@@ -3,7 +3,7 @@ $foto = $_SESSION['foto'] ?? 'Img/perfil.png';
 $userText = $_SESSION['user'] ?? 'Default';
 ?>
 <header>
-        <div class="inicio"><img class="logo" src="./Img/logo_laranja.png" onclick="window.location.href='index.php'" alt=""></div>
+        <div class="inicio"><img class="logo" src="./Img/logo_laranja.png" onclick="window.location.href='index.php'" draggable="false" alt=""></div>
         <div class="cabecalho">
             <a class="HeadBut" href="index.php#home">Home</a>
             <a class="HeadBut" href="index.php#quemsomos">Quem somos</a>

@@ -379,3 +379,43 @@ h3{
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+* {
+  cursor: none !important;
+}
+#cur-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform .12s ease, opacity .12s ease;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  will-change: transform, left, top;
+  opacity: 1;
+}
+/* scale/visual effect when hovering interactive elements */
+body.cursor-hover #cur-dot {
+  transform: translate(-50%, -50%);
+  transition: transform .08s ease;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    height: 100px;
+    width: 100%;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.status_funcionario_inativo{
+    background: #f5d8d8;
+    color: #7d2f2f;
+    padding: 5px 12px;
+    border-radius: 20px;
+    width: fit-content;
+}

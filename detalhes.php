@@ -6,7 +6,7 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
