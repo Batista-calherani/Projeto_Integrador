@@ -9,13 +9,20 @@
 </head>
 
 <body>
-    
+
 
     <div class="cor_fundo">
         <div class="titulo">
             <h1>Contratar <span>profissionais</span></h1>
             <p>Preencha os dados abaixo para solicitar a contratação deste Profissional</p>
         </div>
+
+        <div class="botao_sair">
+            <div class="sair">
+                <a href="login.html"><h3>Sair</h3></a>
+            </div>
+        </div>
+
         <div class="form">
             <h1>Envie suas <span>informações</span></h1>
             <div class="nome_telefone">
@@ -42,18 +49,6 @@
                 </div>
             </div>
 
-            
-            <div class="email_endereco">
-                <div class="email">
-                    <p><b>Idade</b></p>
-                    <input class="campo_1" type="number" placeholder="Ex:30">
-                </div>
-
-                <div class="endereco">
-                    <p><b>Tempo de experiência</b></p>
-                    <input class="campo_1" type="text" placeholder="Ex:15 anos">
-                </div>
-            </div>
 
             <div class="email_endereco">
                 <div class="email">
@@ -67,25 +62,25 @@
                 </div>
             </div>
 
-            <div class="nome_telefone">
-
-                <p><b>Cargos</b></p>
-                <select class="campo_1" name="servicos" id="servicos">
-                    <option selected disabled>
-                        Escolha sua área
-                    </option>
-                    <option value="">Servente</option>
-                    <option value="">Pedreiro</option>
-                    <option value="">Mestre de Obra</option>
-                </select>
-
-                <div class="salario">
-                 <p>Expectativa Salarial</p>
-                 <input class="campo_1" type="number" placeholder="Ex:2500">
+            <div class="email_endereco">
+                <div class="email">
+                    <p><b>Cargos</b></p>
+                    <select class="campo_1" type="servicos" placeholder="Ex:30">
+                        <option selected disabled>
+                            Escolha sua área
+                        </option>
+                        <option value="">Servente</option>
+                        <option value="">Pedreiro</option>
+                        <option value="">Mestre de Obra</option>
+                    </select>
                 </div>
 
-               
+                <div class="endereco">
+                    <p><b>Salário</b></p>
+                    <input class="campo_1" type="text" placeholder="Ex:1500">
+                </div>
             </div>
+
 
             <div class="Descricao">
                 <p><b>Biografia</b></p>
@@ -100,13 +95,19 @@
                     <p>Confirmar contratação</p>
                 </button>
             </div>
+
+             <div class="botao">
+                <button class="servico_">
+                    <img src="../Img/select.png" alt="">
+                    <p>Confirmar contratação</p>
+                </button>
+            </div>
+
+
         </div>
 
     </div>
-    </div>
-
-    <footer class="rodape"></footer>
-
+    
 
 </body>
 
