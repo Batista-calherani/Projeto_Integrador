@@ -4,7 +4,7 @@
 $host = "127.0.0.1";
 $port = 3306;
 $dbname = "Empresa";
-$username = "dev";
+$username = "coiso";
 $password = "123";
 
 try {
@@ -49,6 +49,14 @@ try {
         $stmt = $pdo->query($sql);
         return $stmt->fetchColumn();
     }
+    function readTotal($pdo, $table, $where = null) {
+        $sql = "SELECT COUNT(*) as total FROM $table";
+        if ($where) {
+            $sql .= " WHERE $where";
+        }
+        $stmt = $pdo->query($sql);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 
     // Função para atualizar um registro
     function update($pdo, $table, array $data, $where) {
@@ -76,7 +84,7 @@ try {
 }
 
 $servername = "localhost";
-$username = "dev";
+$username = "coiso";
 $password = "123";
 $dbname2 = "Empresa";
 

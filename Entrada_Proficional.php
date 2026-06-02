@@ -83,7 +83,7 @@
 
 
             <div class="botao">
-                <button class="servico_">
+                <button  class="servico_">
                     <img src="../Img/select.png" alt="">
                     <p>Confirmar contratação</p>
                 </button>
