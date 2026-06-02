@@ -1,6 +1,7 @@
 <?php
 require_once 'MySQL/crud.php';
-$funcionarios = readAll($pdo, 'profissionais','contrato = 1 order by Agenda  limit 10');
+$cargo = $_GET['cargo'] ?? '';
+$funcionarios = readAll($pdo, 'profissionais','contrato = 1 or contrato = 0 order by Nome asc');
 session_start();
 if (!isset($_SESSION['user'])) {
     header('Location: login.php');
@@ -18,12 +19,11 @@ if($_SESSION['user'] != 'Administrador'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="./CSS/adm.css">
+    <title>Funcionáios</title>
+    <link rel="stylesheet" href="./CSS/pageFuncionarios.css">
 </head>
 <body>
     <img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif" data-click="Img/Enchanted_Stone_Pickaxe_click.gif">
-<body>
     <div class="espaco_dashboard">
         <aside>
             <div class="dentro">
@@ -36,16 +36,16 @@ if($_SESSION['user'] != 'Administrador'){
 
                 <ul class="forma">
 
-                    <li><a href="" class="botao">
+                    <li><a href="coiso.php" class="botao">
                             <img class="icone_" src="./Img/home.png" alt="">
                             <h3>Dashboard</h3>
                         </a>
                     </li>
 
 
-                    <li><a href="total.php" class="botao">
+                    <li><a href="" class="botao">
                             <img class="icone_" src="./Img/PESSOAS.png" alt="">
-                            <h3>Funcionáios</h3>
+                            <h3>Funcionários</h3>
                         </a>
                     </li>
 
@@ -99,7 +99,7 @@ if($_SESSION['user'] != 'Administrador'){
                     <img class="foto_perfil" src="./Img/perfil.png" alt="Foto do usuário">
 
                     <div class="dados_usuario">
-                        <h3><?php print $_SESSION['user'] ?></h3>
+                        <h3><?php print $_SESSION['user']?></h3>
                         <p>Administrador(a)</p>
                     </div>
                 </div>
@@ -110,59 +110,44 @@ if($_SESSION['user'] != 'Administrador'){
                 <P>Aqui está o resumo da gestão de funcionários e obras.</P>
             </div>
 
-            <div class="status">
-                <div class="funcionario_ativo">
-                    <img class="icone_funcionario" src="./Img/PESSOAS.png" alt="">
-                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1');?>
-                        <h1><span><?php echo $totalAtivos['total']; ?></span></h1>
-                        <p>Funcionáios ativos</p>
-                    </div>
+            <div class="filtro">
+                <div class="botao_filtro">
+                    <a href="total.php?cargo="><h3>Todos</h3></a>
                 </div>
 
-                <div class="funcionario_ativo">
-                    <img class="icone_funcionario" src="./Img/EPI.png" alt="">
-                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Pedreiro"');?>
-                        <h1><span><?php echo $totalAtivos['total']; ?></span></h1>
-                        <p>Pedreiros ativos</p>
-                    </div>
+                <div class="botao_filtro">
+                    <a href="total.php?cargo=Servente"><h3>Servente</h3></a>
                 </div>
-
-
-                <div class="funcionario_ativo">
-                    <img class="icone_funcionario" src="./Img/PRANCHETA.png" alt="">
-                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Mestre"');?>
-                        <h1><span><?php echo $totalAtivos['total']; ?></span></h1>
-                        <p>Mestres ativos</p>
-                    </div>
+                
+                <div class="botao_filtro">
+                    <a href="total.php?cargo=Pedreiro"><h3>Pedreiro</h3></a>
                 </div>
-
-                <div class="funcionario_ativo">
-                    <img class="icone_funcionario" src="./Img/user.png" alt="">
-                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Servente"');?>
-                        <h1><span><?php echo $totalAtivos['total']; ?></span></h1>Serventes ativos</p>
-                    </div>
+                
+                <div class="botao_filtro">
+                    <a href="total.php?cargo=Mestre"><h3>Mestre de obra</h3></a>
                 </div>
+                
 
             </div>
 
-
-            <div class="tabela">
+              <div class="tabela">
                 <div class="adicionados">
-                    <h3>Últimos funcionários adicionados</h3>
+                    <h3>Funcionários adicionados</h3>
                 </div>
                 <div class="linha_colunas">
                     <h3>Nome</h3>
                     <h3>Função</h3>
                     <h3>Obra</h3>
-                    <h3>Data de Cadastro</h3>
+                    <h3>Data de adimissão</h3>
                     <h3>Status</h3>
                     <h3>Ações</h3>
                 </div>
-
                 <?php
-                foreach ($funcionarios as $funcionario) {
+                foreach($funcionarios as $funcionario){
+                if($funcionario['cargo'] == $cargo || $cargo == '' ){
                 if($funcionario['contrato'] == 1){
-            echo '<div class="conteudo">
+                echo '
+                <div class="conteudo">
                     <div class="coluna_nome">
                         <img class="foto_profissional" src="'.$funcionario['Foto'].'" alt="">
                         <p>'.$funcionario['Nome'].'</p>
@@ -176,14 +161,14 @@ if($_SESSION['user'] != 'Administrador'){
                     </div>
 
                     <div class="acoes">
-                        <img src="./Img/OLHO.png" alt="">
+                       
                         <img src="./Img/edit.png" alt="">
-                        <img onclick=" if(confirm(\'Tem certeza que deseja excluir este funcionário?\')){window.location.href=\'MySQL/delete.php?id='.$funcionario['id_Prof'].'\';} 
-                        else {exit;};"  src="./Img/LIXO.png" alt="">
+                        <img src="./Img/LIXO.png" alt="">
                     </div>
-                </div><div>';}
-                elseif($funcionario['contrato'] == 0){
-                    echo '<div class="conteudo">
+                </div>';
+                }else {
+                    echo '
+                <div class="conteudo">
                     <div class="coluna_nome">
                         <img class="foto_profissional" src="'.$funcionario['Foto'].'" alt="">
                         <p>'.$funcionario['Nome'].'</p>
@@ -192,19 +177,16 @@ if($_SESSION['user'] != 'Administrador'){
                     <p>'.$funcionario['cargo'].'</p>
                     <p>'.$funcionario['Local'].'</p>
                     <p>'.$funcionario['Agenda'].'</p>
-                    <div class="status_funcionario_inativo">
+
+                    <div class="status_funcionario_Inativo">
                         Inativo
                     </div>
 
                     <div class="acoes">
-                        <img src="./Img/OLHO.png" alt="">
+                       
                         <img src="./Img/edit.png" alt="">
-                        <img onclick=" if(confirm(\'Tem certeza que deseja excluir este funcionário?\')){window.location.href=\'MySQL/delete.php?id='.$funcionario['id_Prof'].'\';} 
-                        else {exit;};"  src="./Img/LIXO.png" alt="">
-                    </div></div>';}};?>
-</body>
-
-</html>
-    <?php require_once 'Partials/footer.php';?>
-</body>
-</html>
+                        <img src="./Img/LIXO.png" alt="">
+                    </div>
+                </div>';
+                }}};?>
+                <?php require_once 'Partials/footer.php';?>
