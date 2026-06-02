@@ -1,6 +1,6 @@
-<?php
-$test = mail('admin@localhost','Teste Muito Foda','Vamos Ver se funciona.');
+<!--
+$test = mail('juliana.freitasMK2@gmail.com','Slk tá funcionando','Se liga na senha do cara: 123');
 
 if($test){
-    echo 'vai lá ver se foi';
-}
+    print 'foi';
+} 
