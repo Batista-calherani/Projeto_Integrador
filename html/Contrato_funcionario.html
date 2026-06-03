@@ -1,14 +1,232 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/contrato_funcionario.css">
 </head>
-<body>
-    
 
-    
+<body>
+
+    <div class="espaco_dashboard">
+        <aside>
+            <div class="dentro">
+                <div class="logo_nome">
+                    <img class="logo" src="../Img/logo_laranja.png">
+                    <h1>Con<span>Group</span></h1>
+                </div>
+
+                <div class="linha"></div>
+
+                <ul class="forma">
+
+                    <li><a href="adm.html" class="botao">
+                            <img class="icone_" src="../Img/home.png" alt="">
+                            <h3>Dashboard</h3>
+                        </a>
+                    </li>
+
+
+                    <li><a href="PageFuncionarios.html" class="botao">
+                            <img class="icone_" src="../Img/PESSOAS.png" alt="">
+                            <h3>Funcionários</h3>
+                        </a>
+                    </li>
+
+
+                    <li><a href="#" class="botao">
+                            <img class="icone_" src="../Img/contrato.png" alt="">
+                            <h3>Gestão de contratação</h3>
+                        </a>
+                    </li>
+
+
+                    <li><a href="" class="botao">
+                            <img class="icone_" src="../Img/telefone.png" alt="">
+                            <h3>Dashboard</h3>
+                        </a>
+                    </li>
+
+                    <li><a href="#" class="botao">
+                            <img class="icone_" src="../Img/telefone.png" alt="">
+                            <h3>Dashboard</h3>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="sair">
+                    <div class="user">
+                        <a href="#">
+                            <h1>sair</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <div class="espaco">
+            <div class="cabecalho">
+                <div class="linha_"></div>
+                <div class="pagina">
+                    <div class="page_select">
+                        <h3><span>Dashboard</span></h3>
+                    </div>
+
+                    <h3>Visão geral do sistema</h3>
+                    <div></div>
+
+                </div>
+
+                <div class="perfil">
+                    <img class="foto_perfil" src="../Img/perfil.png" alt="Foto do usuário">
+
+                    <div class="dados_usuario">
+                        <h3>Jorge Silva</h3>
+                        <p>Administradora</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="entrada">
+                <div class="texto">
+                    <h1>Gestão de <span>Contratação</span></h1>
+                    <P>Acompanhe e gerencie todas as solicitações de contratação.</P>
+                </div>
+
+                <div class="nova_contratacao">
+                    <div class="botao_contratacao">
+                        <a href="#">
+                            <h3>+ Nova contratação</h3>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="status">
+                <div class="funcionario_ativo">
+                    <img class="icone_funcionario" src="../Img/PESSOAS.png" alt="">
+                    <div class="informa">
+                        <h1><span>12</sapn>
+                        </h1>
+                        <h3>Pendente</h3>
+                        <p>Aguardando análise</p>
+
+                    </div>
+                </div>
+
+                <div class="funcionario_ativo">
+                    <img class="icone_funcionario" src="../Img/EPI.png" alt="">
+                    <div class="informa">
+                        <h1><span>3</sapn>
+                        </h1>
+                        <h3>Aprovado</h3>
+                        <p>Contratações aprovadas</p>
+                    </div>
+                </div>
+
+
+                <div class="funcionario_ativo">
+                    <img class="icone_funcionario" src="../Img/PRANCHETA.png" alt="">
+                    <div class="informa">
+                        <h1><span>20</sapn>
+                        </h1>
+                        <h3>Total</h3>
+                        <p>Total de solicitações</p>
+                    </div>
+                </div>
+
+                <div class="funcionario_ativo">
+                    <img class="icone_funcionario" src="../Img/user.png" alt="">
+                    <div class="informa">
+                        <h1><span>128</sapn>
+                        </h1>
+                        <p>Funcionáios ativos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filtro_funcionario">
+
+                <div class="filter">
+                    <div class="filtro_nome">
+                            <div class="campo_1">
+                                <p><b>Nome Funcionário</b></p>
+                                <input class="campo_2" type="text" placeholder="Ex:Jorge Silva">
+                            </div>
+                    </div>
+
+                    <div class="filtros">
+                        <p><b>Cargos</b></p>
+                        <select class="campo_1" type="servicos" placeholder="Ex:30">
+                            <option selected disabled>
+                                Escolha sua área
+                            </option>
+                            <option value="">Servente</option>
+                            <option value="">Pedreiro</option>
+                            <option value="">Mestre de Obra</option>
+                        </select>
+                    </div>
+
+                    <div class="filtros">
+                        <p><b>Status</b></p>
+                        <select class="campo_1" type="servicos" placeholder="Ex:30">
+                            <option selected disabled>
+                                Escolha sua área
+                            </option>
+                            <option value="">Servente</option>
+                            <option value="">Pedreiro</option>
+                            <option value="">Mestre de Obra</option>
+                        </select>
+                    </div>
+
+                    <div class="filtros">
+                        <p><b>Periodo</b></p>
+                        <select class="campo_1" type="servicos" placeholder="Ex:30">
+                            <option selected disabled>
+                                Escolha sua área
+                            </option>
+                            <option value="">Servente</option>
+                            <option value="">Pedreiro</option>
+                            <option value="">Mestre de Obra</option>
+                        </select>
+                    </div>
+
+                    <div class="buscar">
+                        <div class="botao_buscar">
+                            <a href="#">
+                                <h3>Buscar</h3>
+                                
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="buscar">
+                        <div class="botao_buscar">
+                            <a href="#">
+                                <h3>Limpar</h3>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
 </body>
+
 </html>
