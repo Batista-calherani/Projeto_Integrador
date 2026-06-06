@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/edicao.css">
+    <link rel="stylesheet" href="../CSS/edicao_perfil.css">
 </head>
+
 <body>
-     <div class="espaco_dashboard">
+    <div class="espaco_dashboard">
         <aside>
             <div class="dentro">
                 <div class="logo_nome">
@@ -19,7 +21,7 @@
 
                 <ul class="forma">
 
-                     <li><a href="adm.html" class="botao">
+                    <li><a href="adm.html" class="botao">
                             <img class="icone_" src="../Img/home.png" alt="">
                             <h3>Dashboard</h3>
                         </a>
@@ -89,9 +91,111 @@
             </div>
 
             <div class="entrada">
-                <h1>Bem-vindo, <span>Administrador!</span></h1>
-                <P>Aqui está o resumo da gestão de funcionários e obras.</P>
+                <div>
+                    <h1>Bem-vindo, <span>Administrador!</span></h1>
+                    <P>Aqui está o resumo da gestão de funcionários e obras.</P>
+                </div>
+
+                <div class="nova_contratacao">
+                    <div class="botao_cancelar">
+                        <a href="#">
+                            <h3>Cancelar</h3>
+                        </a>
+                    </div>
+
+                    <div class="nova_contratacao">
+                        <div class="botao_contratacao">
+                            <a href="#">
+                                <h3>Salvar alterações</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-    
+
+            <div class="informacoes">
+
+                <div class="parte_foto">
+                    <h3>Foto do Funcionários</h3>
+                    <img class="foto_funcionario" src="../Img/perfil.png" alt="">
+                    <input type="file"></input>
+                </div>
+
+                <div class="dados_profissional">
+                    <h3>Dados Pessoais</h3>
+
+                    <div class="campos">
+                        <div class="campo_nome">
+                            <b>
+                                <p>Nome completo</p>
+                            </b>
+                            <input class="nomeCompleto" type="text">
+                        </div>
+
+                        <div class="idade">
+                            <b>
+                                <p>Idade</p>
+                            </b>
+                            <input class="idade" type="text">
+                        </div>
+
+                    </div>
+
+                    <div class="campos">
+                        <div class="campo_nome">
+                            <b>
+                                <p>Endereço</p>
+                            </b>
+                            <input class="nomeCompleto" type="text">
+                        </div>
+
+                        <div class="idade">
+                            <b>
+                                <p>Telefone</p>
+                            </b>
+                            <input class="idade" type="number">
+                        </div>
+
+                    </div>
+
+
+                    <div class="campos">
+                        <div class="campo_nome">
+                            <b>
+                                <p>Email</p>
+                            </b>
+                            <input class="nomeCompleto" type="email">
+                        </div>
+
+                        <div class="idade">
+                            <b>
+                                <p>CPF</p>
+                            </b>
+                            <input class="idade" type="text">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="segundo_dados">
+                <div class="dados_servico">
+
+                </div>
+
+                <div class="dados_servico">
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
 </body>
+
 </html>

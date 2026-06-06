@@ -266,5 +266,134 @@ h3{
     /* background: #5f5d5b; */
     margin: 30px; 
     margin-left: 85px;
-    margin-top: 80px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.parte_foto{
+    height: 399px;
+    width: 300px;
+    /* background: #807c79; */
+    border: 2px solid rgba(70, 67, 67, 0.562);
+    margin-left: 120px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foto_funcionario{
+    width: 190px;
+    height: 200px;
+    margin-left: 50px;
+
+}
+
+.dados_profissional{
+    height: 375px;
+    width: 55%;
+    /* background: #807c79; */
+    border: 2px solid #807c79;
+    border-radius: 15px;
+    padding-left: 50px;
+    transform: scale(1.1);
+    margin-top: 23px;
+    margin-left: 10px;
+}
+
+.dados_profissional h3{
+    margin-top: 20px;
+
+}
+
+.informacoes{
+    display: flex;
+    gap: 50px;
+}
+
+
+.botao_contratacao{
+    height: 25px;
+    width: 200px;
+    padding: 5px;    
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff751f;
+}
+
+.botao_cancelar{
+    height: 25px;
+    width: 90px;
+    padding: 5px;    
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #a8a7a67c;
+}
+
+.botao_contratacao a{
+    text-decoration: none;
+}
+
+.botao_cancelar a{
+    text-decoration: none;
+}
+
+.botao_cancelar h3{
+    color: black;
+}
+
+.dados_profissional h3{
+    color: black;
+}
+
+.nova_contratacao{
+    display: flex;
+    gap: 25px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.campos{
+    margin:30px;
+    margin-top: 50px;
+    display: flex;
+    gap: 25px;
+    transform: scale(1.1);
+}
+
+.nomeCompleto{
+    height: 25px;
+    width: 400px;
+}
+
+.idade{
+    height: 25px;
+    width: 300px;
+}
+
+.parte_foto h3{
+    color: black;
+}
+
+.dados_servico{
+    height: 320px;
+    width: 45.6%;
+    background: #807c79;
+    margin-top: 20px;
+    /* margin-left: 120px;*/
+    border-radius: 10px;
+}
+
+.segundo_dados{
+    display: flex;
+    gap: 10px;
+    margin-left: 120px;
+       
 }
