@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
 }
 
-.dentro{
+.dentro {
     background-image: url(../Img/aside_adm.png);
     background-size: cover;
     background-position: center;
-    width:300px;
+    width: 300px;
     height: 100vh;
     position: relative;
     display: flex;
@@ -17,7 +17,7 @@
     position: fixed;
 }
 
-.logo_nome{
+.logo_nome {
     width: 100%;
     padding: 10px;
     display: flex;
@@ -25,7 +25,7 @@
 }
 
 
-.logo{
+.logo {
     /* position: absolute;
     top: 20px;
     left: 30%;
@@ -33,12 +33,12 @@
     width: 100px;
 }
 
-.dentro h1{
+.dentro h1 {
     /* position: absolute;
     top: 30px;
     left: 65%;
     transform: translateX(-100%); */
-    
+
     width: 100px;
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@ span {
     color: #ff751f;
 }
 
-.linha{
+.linha {
     /* position: absolute;
     top: 90px;
     left: 100%;
@@ -59,34 +59,36 @@ span {
     height: 2px;
     background: rgb(73, 73, 73);
     margin-bottom: 15px;
+    ;
 }
 
-.informarcao_contato{
+.informarcao_contato {
     height: 255px;
     width: 310px;
     /* background: #ff751f;  */
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     flex-direction: column;
     gap: 30px;
     padding: 35px;
 
 }
+
 /* 
 .icone{ */
-    /* position: absolute;
+/* position: absolute;
     top: 150px;
     left: 25%;
     transform: translateX(-100%); */
-    /* width: 100%;
+/* width: 100%;
     height: 2px; */
-    /* background: rgb(73, 73, 73); */
-    /* height: 25px;
+/* background: rgb(73, 73, 73); */
+/* height: 25px;
     width: 30px;
     filter: invert();
 } */
 
-.infor{
+.infor {
     padding: 50px;
     height: 25px;
     width: 50px;
@@ -95,7 +97,7 @@ span {
     color: white;
 }
 
-.forma{
+.forma {
     /* position: absolute;
     top: 100px;
     left: 85%; */
@@ -103,13 +105,13 @@ span {
     /* width: 85%; */
     /* background: #ff751f; */
     display: flex;
-    
+
     align-items: center;
     flex-direction: column;
     gap: 15px;
 }
 
-.botao{
+.botao {
     border-radius: 5px;
     /* background: #ff751f; */
     height: 50px;
@@ -124,18 +126,18 @@ span {
     text-decoration: none;
 }
 
-.botao:hover{
+.botao:hover {
     background-color: #ff7b00;
     transform: translateX(5px);
 }
 
-.icone_{
+.icone_ {
     height: 30px;
     width: 30px;
-    filter: invert();    
+    filter: invert();
 }
 
-h3{
+h3 {
     color: rgb(255, 249, 249);
 }
 
@@ -144,12 +146,12 @@ h3{
 }
 
 
-.sair{
+.sair {
     /* position: absolute; */
     /* top: 850px; */
     /* left: 215px; */
     /* transform: translateX(-80%); */
-    height:50px;
+    height: 50px;
     width: 230px;
     background: #5f5d5b;
     border-radius: 5px;
@@ -161,38 +163,38 @@ h3{
     transition: 0.3s ease;
     margin-top: auto;
     margin-bottom: 20px;
-    
+
 }
 
-.user{
+.user {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.sair a{
+.sair a {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
 
-.sair:hover{
+.sair:hover {
     background-color: #807c79;
-    
+
 }
 
-.espaco{
+.espaco {
     width: 100%;
     padding-left: 300px;
-    
+
     /* background: #ff7b00; */
 }
 
-.espaco_dashboard{
+.espaco_dashboard {
     display: flex;
 }
 
-.cabecalho{
+.cabecalho {
     height: 77px;
     width: calc(100% - 300px);
     background: black;
@@ -238,7 +240,7 @@ h3{
     margin: 0;
 }
 
-.pagina{
+.pagina {
     display: flex;
     /* gap: 5px; */
     /* background: #5f5d5b; */
@@ -247,36 +249,38 @@ h3{
 
 }
 
-.page_select{
-    padding-left:20px ;
-    padding-right:10px ;
+.page_select {
+    padding-left: 20px;
+    padding-right: 10px;
     /* background: #ff7b00; */
-    border-right:2px solid rgba(59, 56, 53, 0.5);
-    
+    border-right: 2px solid rgba(59, 56, 53, 0.5);
+
 }
 
-.linha_{
+.linha_ {
     height: 60px;
     width: 2px;
-    background:rgba(59, 56, 53, 0.5);
+    background: rgba(59, 56, 53, 0.5);
+  
 }
 
 
-.entrada{
+.entrada {
     /* background: #5f5d5b; */
-    margin: 30px; 
-    margin-left: 85px;
+    margin: 30px;
+    margin-left: 130px;
     margin-top: 90px;
+    margin-right: 130px;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
-.parte_foto{
+.parte_foto {
     height: 399px;
     width: 300px;
     /* background: #807c79; */
-    border: 2px solid rgba(70, 67, 67, 0.562);
+    border: 2px solid rgba(131, 126, 126, 0.253);
     margin-left: 120px;
     padding: 10px;
     border-radius: 15px;
@@ -285,18 +289,18 @@ h3{
     gap: 20px;
 }
 
-.foto_funcionario{
+.foto_funcionario {
     width: 190px;
     height: 200px;
     margin-left: 50px;
 
 }
 
-.dados_profissional{
+.dados_profissional {
     height: 375px;
-    width: 55%;
+    width: 55.5%;
     /* background: #807c79; */
-    border: 2px solid #807c79;
+    border: 2px solid #807c7941;
     border-radius: 15px;
     padding-left: 50px;
     transform: scale(1.1);
@@ -304,21 +308,21 @@ h3{
     margin-left: 10px;
 }
 
-.dados_profissional h3{
+.dados_profissional h3 {
     margin-top: 20px;
 
 }
 
-.informacoes{
+.informacoes {
     display: flex;
     gap: 50px;
 }
 
 
-.botao_contratacao{
+.botao_contratacao {
     height: 25px;
     width: 200px;
-    padding: 5px;    
+    padding: 5px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -326,74 +330,142 @@ h3{
     background: #ff751f;
 }
 
-.botao_cancelar{
+.botao_cancelar {
     height: 25px;
     width: 90px;
-    padding: 5px;    
+    padding: 5px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #a8a7a67c;
+    border: 2px solid #aaa49d52;
 }
 
-.botao_contratacao a{
+.botao_contratacao a {
     text-decoration: none;
 }
 
-.botao_cancelar a{
+.botao_cancelar a {
     text-decoration: none;
 }
 
-.botao_cancelar h3{
+.botao_cancelar h3 {
     color: black;
 }
 
-.dados_profissional h3{
+.dados_profissional h3 {
     color: black;
 }
 
-.nova_contratacao{
+.nova_contratacao {
     display: flex;
     gap: 25px;
     /* justify-content: center; */
     align-items: center;
 }
 
-.campos{
-    margin:30px;
+.campos {
+    margin: 30px;
     margin-top: 50px;
     display: flex;
     gap: 25px;
     transform: scale(1.1);
 }
 
-.nomeCompleto{
+
+
+.nomeCompleto {
     height: 25px;
     width: 400px;
+    border-radius: 5px;
+    border: 1px solid grey;
 }
 
-.idade{
+.idade {
     height: 25px;
     width: 300px;
 }
 
-.parte_foto h3{
+.idade_ {
+    height: 25px;
+    width: 360px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+
+
+.parte_foto h3 {
     color: black;
 }
 
-.dados_servico{
+.dados_servico {
     height: 320px;
     width: 45.6%;
-    background: #807c79;
-    margin-top: 20px;
+    /* background: #807c79;*/
+    border: 2px solid rgba(128, 128, 128, 0.192);
+    margin-top: 10px;
     /* margin-left: 120px;*/
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.segundo_dados{
+.dados_servico h3 {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.segundo_dados {
     display: flex;
     gap: 10px;
     margin-left: 120px;
-       
+}
+
+.job {
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.dados_funcionario {
+    margin-top: 20px;
+    margin-left: 35px;
+    display: flex;
+    gap: 25px;
+}
+
+.dados_funcionario h3 {
+    margin-top: 10px;
+}
+
+.obra_atual {
+    margin-left: 10px;
+}
+
+.dados_profissional h3 {
+    color: black;
+}
+
+.titulo_ {
+    color: rgb(0, 0, 0);
+    /* border-bottom: 2px solid rgba(53, 51, 51, 0.692); */
+    width: 50%;
+    
+}
+
+textarea{
+    margin-left: 30px;
+    width: 90%;
+    height: 250px;
+    resize: none;
+    border-radius: 5px;
+}
+
+.icone_dado{
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 0;
 }
