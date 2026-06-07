@@ -452,8 +452,9 @@ h3 {
 .titulo_ {
     color: rgb(0, 0, 0);
     /* border-bottom: 2px solid rgba(53, 51, 51, 0.692); */
-    width: 50%;
-    
+   
+    margin: 0 !important;
+    font-size: 20px;
 }
 
 textarea{
@@ -468,4 +469,12 @@ textarea{
     height: 30px;
     margin-right: 10px;
     margin-bottom: 0;
+}
+
+.biografia{
+    display: flex;
+   padding: 25px;
+   padding-top: 10px;
+   padding-bottom: 0px;
+    align-items: center;
 }
