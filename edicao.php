@@ -1,3 +1,9 @@
+<?php
+session_start();
+$id = $_GET['id'];
+include_once('MySQL/crud.php');
+$funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,16 +11,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../CSS/edicao.css">
-    <!-- <link rel="stylesheet" href="../CSS/adm.css"> -->
+    <link rel="stylesheet" href="./CSS/edicao.css">
+    <!-- <link rel="stylesheet" href="./CSS/adm.css"> -->
 </head>
 
 <body>
+    <img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif" data-click="Img/Enchanted_Stone_Pickaxe_click.gif">
     <div class="espaco_dashboard">
         <aside>
             <div class="dentro">
                 <div class="logo_nome">
-                    <img class="logo" src="../Img/logo_laranja.png">
+                    <img class="logo" src="./Img/logo_laranja.png">
                     <h1>Con<span>Group</span></h1>
                 </div>
 
@@ -23,35 +30,22 @@
                 <ul class="forma">
 
                     <li><a href="coiso.php" class="botao">
-                            <img class="icone_" src="../Img/home.png" alt="">
+                            <img class="icone_" src="./Img/home.png" alt="">
                             <h3>Dashboard</h3>
                         </a>
                     </li>
 
 
-                    <li><a href="PageFuncionarios.html" class="botao">
-                            <img class="icone_" src="../Img/PESSOAS.png" alt="">
+                    <li><a href="total.php" class="botao">
+                            <img class="icone_" src="./Img/PESSOAS.png" alt="">
                             <h3>Funcionários</h3>
                         </a>
                     </li>
 
 
                     <li><a href="Contrato_funcionario.html" class="botao">
-                            <img class="icone_" src="../Img/contrato.png" alt="">
+                            <img class="icone_" src="./Img/contrato.png" alt="">
                             <h3>Gestão de contratação</h3>
-                        </a>
-                    </li>
-
-
-                    <li><a href="" class="botao">
-                            <img class="icone_" src="../Img/telefone.png" alt="">
-                            <h3>Dashboard</h3>
-                        </a>
-                    </li>
-
-                    <li><a href="#" class="botao">
-                            <img class="icone_" src="../Img/telefone.png" alt="">
-                            <h3>Dashboard</h3>
                         </a>
                     </li>
 
@@ -59,7 +53,7 @@
 
                 <div class="sair">
                     <div class="user">
-                        <a href="#">
+                        <a href="login.php">
                             <h1>sair</h1>
                         </a>
                     </div>
@@ -82,29 +76,29 @@
                 </div>
 
                 <div class="perfil">
-                    <img class="foto_perfil" src="../Img/perfil.png" alt="Foto do usuário">
+                    <img class="foto_perfil" src="./Img/perfil.png" alt="Foto do usuário">
 
                     <div class="dados_usuario">
-                        <h3>Jorge Silva</h3>
+                        <h3><?php print $_SESSION['user'] ?>    </h3>
                         <p>Administradora</p>
                     </div>
                 </div>
             </div>
-
+<?php foreach($funcionarios as $funcionario){echo'
             <div class="perfil_profiissional">
                 <div class="foto">
-                    <img class="foto_profissional" src="../Img/perfil.png" alt="">
+                    <img class="foto_profissional" src="' . $funcionario['Foto'] . '" alt="">
                 </div>
 
                 <div class="dados_">
-                    <h1>Jorge Silva</h1>
+                    <h1>' . $funcionario['Nome'] . '</h1>
                     <p>Cargo desejado</p>
-                    <H3>Mestre de Obra</H3>
+                    <H3>' . $funcionario['cargo'] . '</H3>
                 </div>
 
                 <div class="dados_pessoais">
                     <p>Data de solicitação</p>
-                    <h3>26/05/2026</h3>
+                    <h3>' . $funcionario['Agenda'] . '</h3>
                 </div>
 
                 <div class="dados_pessoais">
@@ -116,16 +110,16 @@
 
                 <div class="contato">
                     <div class="fone">
-                        <img class="icone_contato" src="../Img/telefone.png" alt="">
-                        <P>99999999</P>
+                        <img class="icone_contato" src="./Img/telefone.png" alt="">
+                        <p>' . $funcionario['Tefone'] . '</p>
                     </div>
                     <div class="email">
-                        <img class="icone_contato" src="../Img/email.png" alt="">
-                        <p class="infor_">JorgeSilva@gmail.com</p>
+                        <img class="icone_contato" src="./Img/email.png" alt="">
+                        <p class="infor_">' . $funcionario['Email'] . '</p>
                     </div>
                     <div class="endereco">
-                        <img class="icone_contato" src="../Img/localização.png" alt="">
-                        <p>São Paulo - SP</p>
+                        <img class="icone_contato" src="./Img/localização.png" alt="">
+                        <p>' . $funcionario['Local'] . '</p>
                     </div>
                 </div>
             </div>
@@ -134,7 +128,7 @@
             <div class="quadrado">
                 <div class="informacoes_profissional">
                     <div class="categoria">
-                        <img class="icone_dados" src="../Img/PESSOAS.png" alt="">
+                        <img class="icone_dados" src="./Img/PESSOAS.png" alt="">
                         <h3 class="titulo_categoria">Dados Pessoais</h3>
                     </div>
                     <div class="nome_profissional">
@@ -160,7 +154,7 @@
 
                 <div class="informacoes_profissional">
                     <div class="categoria">
-                        <img class="icone_dados" src="../Img/PESSOAS.png" alt="">
+                        <img class="icone_dados" src="./Img/PESSOAS.png" alt="">
                         <h3 class="titulo_categoria">Dados Pessoais</h3>
                     </div>
                     <div class="nome_profissional">
@@ -186,30 +180,24 @@
 
                 <div class="informacoes_profissional">
                     <div class="categoria">
-                        <img class="icone_dados" src="../Img/PESSOAS.png" alt="">
+                        <img class="icone_dados" src="./Img/PESSOAS.png" alt="">
                         <h3 class="titulo_categoria">Dados Pessoais</h3>
                     </div>
 
                     <div class="sobre_mim">
                         <div class="bio">
                             <p>
-                                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                                aaaaaaaaaaaaaaaaaaaaaaaaa
-                                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                                aaaaaaaaaaaaa
-                                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                                aaaaaaaaaa
+                                '.$funcionario['descri'].'
                             </p>
                         </div>
                     </div>
                 </div>
 
             </div>
-
+            ';}?>
             <div class="escolha">
                 <div class="categoria_">
-                    <img class="icone_dados" src="../Img/PESSOAS.png" alt="">
+                    <img class="icone_dados" src="./Img/PESSOAS.png" alt="">
                     <h3 class="titulo_categoria">Dados Pessoais</h3>
                 </div>
                 <div class="botao_escolha">

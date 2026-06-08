@@ -1,19 +1,27 @@
 <?php
 require_once "MySQL/crud.php";
+$error = '';
 if(isset($_POST['user'])){
-$Senha = password_hash($_POST['pass'],PASSWORD_DEFAULT);
-$novoLogin = [
-    'user' => $_POST['user'],
-    'acesso' => 'Cliente',
-    'email' => $_POST['email'],
-    'pass' => $Senha
-];
+    // Verifica se confirmação de senha foi enviada e confere
+    if(!isset($_POST['Confpass']) || $_POST['pass'] !== $_POST['Confpass']){
+        $error = 'As senhas não conferem.';
+    } else {
+        $Senha = password_hash($_POST['pass'],PASSWORD_DEFAULT);
+        $novoLogin = [
+            'user' => $_POST['user'],
+            'acesso' => 'Cliente',
+            'email' => $_POST['email'],
+            'pass' => $Senha
+        ];
 
-$good = create($pdo, 'access', $novoLogin);
-if($good){
-    header("Location: login.php");
-    exit;
-}
+        $good = create($pdo, 'access', $novoLogin);
+        if($good){
+            header("Location: login.php");
+            exit;
+        } else {
+            $error = 'Erro ao cadastrar.';
+        }
+    }
 }
 ?>
 
@@ -31,7 +39,8 @@ if($good){
      <div class="login">
         <div class="line"><img class="img" src="./Img/logo_laranja.png" alt=""></div>
         <div class="imagem"></div>
-    <form class="formulario" action="" method="POST" id="meuFormulario" >
+        <form class="formulario" action="" method="POST" id="meuFormulario" >
+            <?php if(!empty($error)) echo '<p class="error">'.htmlspecialchars($error).'</p>'; ?>
             <div class="centro"><h1>CADASTRO<div class="linha"></div></h1><div>
          
                 <div class="input_grup">
@@ -48,7 +57,8 @@ if($good){
                 </div>
                 <div class="input_grup">
                  <h2>Confirmar Senha</h2>
-                 <input class="campo" type="password" maxlength="12" minlength="8" id="Confpass" autocomplete="off" required >
+                 <input class="campo" name="Confpass" type="password" maxlength="12" minlength="8" id="Confpass" autocomplete="off" required >
+                 <p id="msgSenha" style="color:#c00;display:none;margin:6px 0 0 0;">Senhas não conferem.</p>
                 </div>
                         <br>
                         <div class="botoes">
@@ -57,6 +67,26 @@ if($good){
                         <a href="login.php" class="botao_cadastrar">Login</a>
                         </div>
     </form>
+    <script>
+    // Validação cliente: impede envio se as senhas não conferirem
+    (function(){
+        const form = document.getElementById('meuFormulario');
+        const pass = document.getElementById('pass');
+        const conf = document.getElementById('Confpass');
+        const msg = document.getElementById('msgSenha');
+        form.addEventListener('submit', function(e){
+            if(pass.value !== conf.value){
+                e.preventDefault();
+                msg.style.display = 'block';
+                conf.focus();
+            }
+        });
+        // esconder mensagem quando o usuário corrige
+        conf.addEventListener('input', function(){
+            if(pass.value === conf.value) msg.style.display = 'none';
+        });
+    })();
+    </script>
     <script src="Partials/Top.js"></script>
 </body>
 </html>

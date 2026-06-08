@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'MySQL/crud.php';
 ?>
 <!DOCTYPE html>

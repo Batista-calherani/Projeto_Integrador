@@ -56,19 +56,6 @@ if($_SESSION['user'] != 'Administrador'){
                         </a>
                     </li>
 
-
-                    <li><a href="#" class="botao">
-                            <img class="icone_" src="./Img/telefone.png" alt="">
-                            <h3>Dashboard</h3>
-                        </a>
-                    </li>
-
-                    <li><a href="#" class="botao">
-                            <img class="icone_" src="./Img/telefone.png" alt="">
-                            <h3>Dashboard</h3>
-                        </a>
-                    </li>
-
                 </ul>
 
                 <div class="sair">
@@ -176,8 +163,7 @@ if($_SESSION['user'] != 'Administrador'){
                     </div>
 
                     <div class="acoes">
-                        <img src="./Img/OLHO.png" alt="">
-                        <img src="./Img/edit.png" alt="">
+                        <img onclick="window.location.href=\'edicaoPerfil.php?id='.$funcionario['id_Prof'].'\'" src="./Img/edit.png" alt="">
                         <img onclick=" if(confirm(\'Tem certeza que deseja excluir este funcionário?\')){window.location.href=\'MySQL/delete.php?id='.$funcionario['id_Prof'].'\';} 
                         else {exit;};"  src="./Img/LIXO.png" alt="">
                     </div>
@@ -197,14 +183,10 @@ if($_SESSION['user'] != 'Administrador'){
                     </div>
 
                     <div class="acoes">
-                        <img src="./Img/OLHO.png" alt="">
-                        <img src="./Img/edit.png" alt="">
+                        <img onclick="window.location.href=\'edicaoPerfil.php?id='.$funcionario['id_Prof'].'\'" src="./Img/edit.png" alt="">
                         <img onclick=" if(confirm(\'Tem certeza que deseja excluir este funcionário?\')){window.location.href=\'MySQL/delete.php?id='.$funcionario['id_Prof'].'\';} 
                         else {exit;};"  src="./Img/LIXO.png" alt="">
                     </div></div>';}};?>
-</body>
-
-</html>
-    <?php require_once 'Partials/footer.php';?>
+<script src="Partials/Top.js"></script>
 </body>
 </html>
