@@ -62,7 +62,7 @@ span {
 }
 
 .informarcao_contato{
-    height: 255px;
+    height: 500px;
     width: 310px;
     /* background: #ff751f;  */
     display: flex;
@@ -203,6 +203,7 @@ h3{
     align-items: center;
     position: fixed;
     border-bottom: 2px solid rgba(187, 182, 182, 0.842);
+
 }
 
 .perfil {
@@ -271,13 +272,23 @@ h3{
 .perfil_profiissional{
     height: 200px;
     width: 90%;
-    margin-top: 130px;
+    /* margin-top: 12px; */
     margin-left: 80px;
-    background: #c9c7c7c0;
+    /* background: #c9c7c7c0;*/
+    /* border: 2px solid rgba(128, 128, 128, 0.404);*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin-bottom: 30px;
     display: flex;
    
+}
+
+.dados_pessoais h3{
+    color: #000000;
+}
+
+.dados_ h3{
+    color: #000000;
 }
 
 .foto_profissional{
@@ -320,7 +331,7 @@ h3{
     height: 100px;
     width: 300px;
     /* background: #f8a100; */
-    border-left: 2px solid rgb(153, 152, 152);
+    border-left: 2px solid rgba(153, 152, 152, 0.397);
     display: flex;
     gap: 25px;
     flex-direction: column;
@@ -345,9 +356,11 @@ h3{
 }
 
 .informacoes_profissional{
-    height: 300px;
+    height: 320px;
     width: 100%;
-    background: #3a3838a9;
+    /* background: #3a3838a9 */
+    /* border: 2px solid #ffffff62; */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     filter: invert();
 }
@@ -363,13 +376,21 @@ h3{
     /* border-bottom: 2px solid white; */
     padding: 10px;
     display: flex;
+    /* color: #000000; */
+}
+
+.titulo_escolha{
+    /* border-bottom: 2px solid white; */
+    padding: 10px;
+    display: flex;
+    color: #000000;
 }
 
 .categoria{
     padding: 5px;
     margin-left: 10px;
-    width: 92.6%;
-    border-bottom:2px solid white ;
+    width: 50%;
+    border-bottom:2px solid rgba(0, 118, 228, 0.452) ;
     display: flex;
 }
 
@@ -380,13 +401,20 @@ h3{
     height: 30px;
 }
 
+.icone_dados_{
+    margin-left: 10px;
+    margin-top: 5px;
+    /* filter: invert(); */
+    height: 30px;
+}
+
 .nome_profissional{
     display: flex;
     gap: 10px;
     margin-left: 10px;  
     width: 88%;
     padding: 15px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgba(145, 140, 140, 0.5);
     
 }
 
@@ -399,7 +427,7 @@ h3{
     margin-top: 5px;
     height: 230px;
     width: 94%;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 .bio p{
@@ -408,25 +436,33 @@ h3{
 }
 
 .escolha{
-    height: 180px;
-    width: 90%;
-    margin-left: 80px;  
-    background: #5f5d5b;
+    height: 150px;
+    width: 50%;
+    
+    /* background: #5f5d5b;*/
+    /* border: 2px solid #00000067; */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     margin-top: 20px;
 }
 
+.botao_escolha{
+    display: flex;
+    gap: 25px;
+}
+
 .categoria_{
     padding: 5px;
-    margin-left: 10px;
-    width: 98%;
-    border-bottom:2px solid white ;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width: 60%;
+    border-bottom:2px solid rgba(250, 121, 0, 0.322) ;
     display: flex;
 }
 
 .botao_contratacao_aprovado{
     height: 25px;
-    width: 95%;
+    width: 100%;
     padding: 5px;    
     border-radius: 5px;
     display: flex;
@@ -436,11 +472,12 @@ h3{
     margin: 10px;
     margin-bottom: 20px;
     margin-left: 30px;   
+    text-decoration: none;
 }
 
 .nova_contratacao_rejeitado{
-     height: 25px;
-    width: 95%;
+    height: 25px;
+    width: 100%;
     padding: 5px;    
     border-radius: 5px;
     display: flex;
@@ -449,6 +486,11 @@ h3{
     background: #d33f25;
     margin: 10px;
     margin-left: 30px;  
+    text-decoration: none;
+}
+
+.nova_contratacao{
+    width: 100%;
 }
 
 .botao_contratacao_aprovado a{
@@ -458,3 +500,49 @@ h3{
 .botao_contratacao_rejeitado a{
     text-decoration: none;
 }
+
+textarea{
+    /* margin-left: 3px; */
+    margin-top: 10px;
+    width: 100%;
+    height: 90%;
+    resize: none;
+    border-radius: 5px;
+    background: white ;
+    color: #000000 ;
+    filter: invert();
+    font-size: 20px;
+    padding: 5px;
+}
+
+
+
+.parte_escolha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 8px; */
+}
+
+.nome_profissional .informacaos{
+    color: #807c79;
+}
+
+.entrada {
+    /* background: #5f5d5b; */
+    margin: 30px;
+    margin-left: 130px;
+    margin-top: 100px;
+    margin-right: 130px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.escolha{
+    height: 100%;
+    width: 29%;
+    padding: 5px;
+  
+}
+
