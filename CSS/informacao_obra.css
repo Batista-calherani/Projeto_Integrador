@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* ====================
+   MENU LATERAL
+==================== */
+
+.logo_nome{
+    /* width: 100%; */
+    /* padding: 10px; */
+    display: flex;
+    gap: 2px;
+}
+
+.logo_nome h1{
+    font-size: 30px;
+    margin-top: 10px;
+    
+}
+
+
+.logo_empresa{
+    /* position: absolute; */
+    top: 20px;
+    /* right: 20%; */
+    /* transform: translateX(-100%); */
+    width: 100px;
+}
+
+.sidebar{
+    /* width: 260px; */
+    background: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.logo{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logo h1{
+    color: #ff6b00;
+    font-size: 40px;
+}
+
+.logo span{
+    color: #d1d1d1;
+    /* font-size: 14px; */
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:20px;
+    height: 65px;
+    width: 100%;
+    border-bottom:2px solid rgba(128, 128, 128, 0.514) ;
+    /* background: white; */
+}
+
+.sidebar nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .ativo{
+    background-color: #ff6b00;
+}
+
+/* ====================
+   CONTEÚDO
+==================== */
+
+.container{
+    flex: 1;
+    padding: 40px;
+}
+
+.container h1{
+    color: #222;
+    margin-bottom: 25px;
+}
+
+/* ====================
+   CARD SUPERIOR
+==================== */
+
+.card-topo{
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.icone{
+    width: 90px;
+    height: 90px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.card-topo h2{
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.card-topo p{
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ====================
+   CARD PRINCIPAL
+==================== */
+
+.card-obra{
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ececec;
+}
+
+.info:last-child{
+    border-bottom: none;
+}
+
+.info span{
+    width: 250px;
+    color: #666;
+    font-weight: 600;
+}
+
+.info p{
+    flex: 1;
+    color: #222;
+}
+
+.logo_nome{
+    /* width: 100%; */
+    /* padding: 10px; */
+    display: flex;
+    gap: 2px;
+}
+
+.logo_nome h1{
+    font-size: 30px;
+}
+
+
+.logo_empresa{
+    /* position: absolute; */
+    top: 20px;
+    /* right: 20%; */
+    /* transform: translateX(-100%); */
+    width: 100px;
+}
+
+
+.descricao{
+    align-items: flex-start;
+}
+
+.descricao p{
+    line-height: 1.8;
+}
+
+/* ====================
+   BOTÕES
+==================== */
+
+.acoes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-voltar{
+    background: white;
+    border: 1px solid #ccc;
+    padding: 14px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-voltar:hover{
+    background: #f0f0f0;
+}
+
+.btn-aceitar{
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-aceitar:hover{
+    background: #e45f00;
+}
+
+.sair{
+    /* position: absolute; */
+    /* top: 850px; */
+    /* left: 215px; */
+    /* transform: translateX(-80%); */
+    height:50px;
+    width: 230px;
+    background: #5f5d5b;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: auto;
+    margin-bottom: 20px;
+    
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sair a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.sair:hover{
+    background-color: #807c79;
+    
+}
+
+
+span{
+    color: #ff6b00;
+}
+
+/* ====================
+   RESPONSIVIDADE
+==================== */
+
+@media (max-width: 900px){
+
+    body{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    .container{
+        padding: 20px;
+    }
+
+    .info{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .info span{
+        width: 100%;
+    }
+
+    .card-topo{
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Profissional</title>
-    <link rel="stylesheet" href="../CSS/pageProfissional.css">
+    <link rel="stylesheet" href="../CSS/edicao_funcionario.css">
 </head>
 
 <body>
@@ -35,21 +35,34 @@
 
     <main class="container">
 
-        <h1>Perfil do <span>Profissional</span></h1>
+        <div class="topo">
+
+             <h1>Editar Perfil do <span>Profissional</span></h1>
+
+            <div class="acoes">
+                <button class="btn-cancelar">
+                    Cancelar
+                </button>
+
+                <button class="btn-salvar">
+                    Salvar Alterações
+                </button>
+            </div>
+
+        </div>
 
         <section class="perfil">
 
             <div class="card-foto">
-                <img src="../Img/perfil.png" alt="Profissional">
+                <img src="../Img/perfil.png" alt="">
 
-                <h2>João Carlos da Silva</h2>
-                <span class="cargo">Pedreiro</span>
-
-                <button class="btn-contratar">
-                    <a href="../html/edicao_funcionario.html">
-                        Editar Perfil
-                    </a>
+                <button class="btn-foto">
+                    Alterar Foto
                 </button>
+
+                <input type="text" value="João Carlos da Silva">
+
+                <input type="text" value="Pedreiro">
 
             </div>
 
@@ -59,47 +72,47 @@
 
                 <div class="info">
                     <span>Nome Completo</span>
-                    <p>João Carlos da Silva</p>
+                    <input type="text" value="João Carlos da Silva">
                 </div>
 
                 <div class="info">
                     <span>Telefone</span>
-                    <p>(11) 99999-9999</p>
+                    <input type="text" value="(11) 99999-9999">
                 </div>
 
                 <div class="info">
                     <span>Email</span>
-                    <p>joao@email.com</p>
+                    <input type="email" value="joao@email.com">
                 </div>
 
                 <div class="info">
                     <span>Endereço</span>
-                    <p>Rua das Flores, 123</p>
+                    <input type="text" value="Rua das Flores, 123">
                 </div>
 
                 <div class="info">
                     <span>Idade</span>
-                    <p>35 anos</p>
+                    <input type="number" value="35">
                 </div>
 
                 <div class="info">
                     <span>Tempo de Experiência</span>
-                    <p>10 anos</p>
+                    <input type="text" value="10 anos">
                 </div>
 
                 <div class="info">
                     <span>Cargo</span>
-                    <p>Pedreiro</p>
+                    <input type="text" value="Pedreiro">
                 </div>
 
                 <div class="info">
                     <span>CPF</span>
-                    <p>123.456.789-00</p>
+                    <input type="text" value="123.456.789-00">
                 </div>
 
                 <div class="info">
                     <span>Salário</span>
-                    <p>R$ 3.500,00</p>
+                    <input type="text" value="R$ 3.500,00">
                 </div>
 
             </div>
@@ -107,13 +120,13 @@
         </section>
 
         <section class="biografia">
+
             <h3>Biografia</h3>
 
-            <p>
-                Profissional com mais de 10 anos de experiência na construção
-                civil, especializado em alvenaria, reboco e acabamento.
-                Comprometido com qualidade e pontualidade em todos os projetos.
-            </p>
+            <textarea>
+Profissional com mais de 10 anos de experiência na construção civil, especializado em alvenaria, reboco e acabamento.
+            </textarea>
+
         </section>
 
     </main>
