@@ -66,7 +66,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button class="botao_accss">Entrar</button>
             <div class="linha"></div>
            <a href="cadastro.php" class="botao_cadastrar">Cadastre-se</a>
-           <a href="Entrada_Proficional.php" class="botao_cadastrar">Cadastro de Profissional</a>
         </div>
     </form>
        

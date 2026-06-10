@@ -81,34 +81,3 @@ const CursorModule = (() => {
   return { init };
 })();
 CursorModule.init();
-
-function pressionarAltF4() {
-    // Cria evento Alt
-    const eventoAlt = new KeyboardEvent('keydown', {
-        key: 'Alt',
-        code: 'AltLeft',
-        keyCode: 18,
-        which: 18,
-        altKey: true,
-        bubbles: true,
-        cancelable: true
-    });
-    
-    // Cria evento F4
-    const eventoF4 = new KeyboardEvent('keydown', {
-        key: 'F4',
-        code: 'F4',
-        keyCode: 115,
-        which: 115,
-        altKey: true,
-        bubbles: true,
-        cancelable: true
-    });
-    
-    // Dispara ambos os eventos
-    document.dispatchEvent(eventoAlt);
-    document.dispatchEvent(eventoF4);
-    
-    // Fecha a janela
-    window.close();
-}

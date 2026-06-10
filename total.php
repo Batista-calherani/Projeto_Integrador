@@ -1,7 +1,7 @@
 <?php
 require_once 'MySQL/crud.php';
 $cargo = $_GET['cargo'] ?? '';
-$funcionarios = readAll($pdo, 'profissionais','contrato = 1 or contrato = 0 order by Nome asc');
+$funcionarios = readAll($pdo, 'profissionais','contrato = 1 or contrato = 0 and Ativo = 1 order by Nome asc');
 session_start();
 if (!isset($_SESSION['user'])) {
     header('Location: login.php');
@@ -19,7 +19,7 @@ if($_SESSION['user'] != 'Administrador'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funcionáios</title>
+    <title>Funcionários</title>
     <link rel="stylesheet" href="./CSS/pageFuncionarios.css">
 </head>
 <body>
@@ -50,7 +50,7 @@ if($_SESSION['user'] != 'Administrador'){
                     </li>
 
 
-                    <li><a href="#" class="botao">
+                    <li><a href="contrato_funcionario.php" class="botao">
                             <img class="icone_" src="./Img/contrato.png" alt="">
                             <h3>Gestão de contratação</h3>
                         </a>

@@ -28,6 +28,10 @@
                     <input class="campo_1" name="tefone" type="text" placeholder="(11) 99999-9999">
                 </div>
             </div>
+            <div class="telefone">
+                    <p><b>Cpf</b></p>
+                    <input class="campo_1" name="cpf" type="text" placeholder="000.000.000-11">
+                </div>
 
             <div class="email_endereco">
                 <div class="email">

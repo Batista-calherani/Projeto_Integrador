@@ -1,8 +1,8 @@
 <?php
 session_start();
 $id = $_GET['id'];
-include_once('MySQL/crud.php');
-$funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
+include_once 'MySQL/crud.php';
+$pedidos = readAll($pdo, 'profissionais','id_Prof = ' . $id);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,8 +11,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS/edicao.css">
-    <!-- <link rel="stylesheet" href="./CSS/adm.css"> -->
+    <link rel="stylesheet" href="./CSS/gestao.css">
 </head>
 
 <body>
@@ -43,7 +42,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                     </li>
 
 
-                    <li><a href="Contrato_funcionario.html" class="botao">
+                    <li><a href="Contrato_funcionario.php" class="botao">
                             <img class="icone_" src="./Img/contrato.png" alt="">
                             <h3>Gestão de contratação</h3>
                         </a>
@@ -53,7 +52,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
 
                 <div class="sair">
                     <div class="user">
-                        <a href="login.php">
+                        <a href="Login.php">
                             <h1>sair</h1>
                         </a>
                     </div>
@@ -76,29 +75,39 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                 </div>
 
                 <div class="perfil">
-                    <img class="foto_perfil" src="./Img/perfil.png" alt="Foto do usuário">
+                
+                    <img class="foto_perfil" src="" alt="Foto do usuário">
 
                     <div class="dados_usuario">
-                        <h3><?php print $_SESSION['user'] ?>    </h3>
+                        <h3></h3>
                         <p>Administradora</p>
                     </div>
                 </div>
             </div>
-<?php foreach($funcionarios as $funcionario){echo'
+
+            <div class="entrada">
+                <div>
+                    <h1>Bem-vindo, <span>Administrador!</span></h1>
+                    <P>Aqui está o resumo da gestão de funcionários e obras.</P>
+                </div>
+            </div>
+
             <div class="perfil_profiissional">
+                <?php foreach($pedidos as $pedido){
+                    echo '
                 <div class="foto">
-                    <img class="foto_profissional" src="' . $funcionario['Foto'] . '" alt="">
+                    <img class="foto_profissional" src="'.$pedido['Foto'].'" alt="">
                 </div>
 
                 <div class="dados_">
-                    <h1>' . $funcionario['Nome'] . '</h1>
+                    <h1>'.$pedido['Nome'].'</h1>
                     <p>Cargo desejado</p>
-                    <H3>' . $funcionario['cargo'] . '</H3>
+                    <H3>'.$pedido['cargo'].'</H3>
                 </div>
 
                 <div class="dados_pessoais">
                     <p>Data de solicitação</p>
-                    <h3>' . $funcionario['Agenda'] . '</h3>
+                    <h3>'.$pedido['Agenda'].'</h3>
                 </div>
 
                 <div class="dados_pessoais">
@@ -111,15 +120,15 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                 <div class="contato">
                     <div class="fone">
                         <img class="icone_contato" src="./Img/telefone.png" alt="">
-                        <p>' . $funcionario['Tefone'] . '</p>
+                        <P>'.$pedido['Tefone'].'</P>
                     </div>
                     <div class="email">
                         <img class="icone_contato" src="./Img/email.png" alt="">
-                        <p class="infor_">' . $funcionario['Email'] . '</p>
+                        <p class="infor_">'.$pedido['Email'].'</p>
                     </div>
                     <div class="endereco">
                         <img class="icone_contato" src="./Img/localização.png" alt="">
-                        <p>' . $funcionario['Local'] . '</p>
+                        <p>'.$pedido['Local'].'</p>
                     </div>
                 </div>
             </div>
@@ -128,103 +137,113 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
             <div class="quadrado">
                 <div class="informacoes_profissional">
                     <div class="categoria">
-                        <img class="icone_dados" src="./Img/PESSOAS.png" alt="">
+                        <img class="icone_dados" src="./Img/dados_pessoais.png" alt="">
                         <h3 class="titulo_categoria">Dados Pessoais</h3>
                     </div>
                     <div class="nome_profissional">
-                        <p>Nome completo:</p>
-                        <p>Jorge Silva</p>
+                        <p class="informacaos">NOME COMPLETO:</p>
+                        <p>'.$pedido['Nome'].'</p>
                     </div>
 
                     <div class="nome_profissional">
-                        <p>Nome completo:</p>
-                        <p>Jorge Silva</p>
+                        <p class="informacaos">TELEFONE:</p>
+                        <p>'.$pedido['Tefone'].'</p>
                     </div>
 
                     <div class="nome_profissional">
-                        <p>Nome completo:</p>
-                        <p>Jorge Silva</p>
+                        <p class="informacaos">IDADE:</p>
+                        <p>'.$pedido['Idade'].'</p>
                     </div>
 
                     <div class="nome_profissional">
-                        <p>Nome completo:</p>
-                        <p>Jorge Silva</p>
+                        <p class="informacaos">EMAIL:</p>
+                        <p>'.$pedido['Email'].'</p>
+                    </div>
+
+                    <div class="nome_profissional">
+                        <p class="informacaos">CPF:</p>
+                        <p>'.$pedido['cpf'].'</p>
                     </div>
                 </div>
 
                 <div class="informacoes_profissional">
                     <div class="categoria">
-                        <img class="icone_dados" src="./Img/PESSOAS.png" alt="">
-                        <h3 class="titulo_categoria">Dados Pessoais</h3>
-                    </div>
-                    <div class="nome_profissional">
-                        <p>Nome completo:</p>
-                        <p>Jorge Silva</p>
+                        <img class="icone_dados" src="./Img/pasta_trabalho.png" alt="">
+                        <h3 class="titulo_categoria">Dados Profissionais</h3>
                     </div>
 
                     <div class="nome_profissional">
-                        <p>Nome completo:</p>
-                        <p>Jorge Silva</p>
+                        <p class="informacaos">TEMPO DE EXPERIÊNCIA:</p>
+                        <p>'.$pedido['tempo'].'</p>
                     </div>
 
                     <div class="nome_profissional">
-                        <p>Nome completo:</p>
-                        <p>Jorge Silva</p>
+                        <p class="informacaos">ENDEREÇO:</p>
+                        <p>'.$pedido['Local'].'</p>
                     </div>
 
                     <div class="nome_profissional">
-                        <p>Nome completo:</p>
-                        <p>Jorge Silva</p>
+                        <p class="informacaos">SALÁRIO:</p>
+                        <p>'.$pedido['Salario'].'</p>
                     </div>
+
+                    <div class="nome_profissional">
+                        <p class="informacaos">CARGO:</p>
+                        <p>'.$pedido['cargo'].'</p>
+                    </div>
+
                 </div>
 
                 <div class="informacoes_profissional">
                     <div class="categoria">
-                        <img class="icone_dados" src="./Img/PESSOAS.png" alt="">
-                        <h3 class="titulo_categoria">Dados Pessoais</h3>
+                        <img class="icone_dados" src="./Img/file.png" alt="">
+                        <h3 class="titulo_categoria">Dados Biografia</h3>
                     </div>
 
                     <div class="sobre_mim">
                         <div class="bio">
-                            <p>
-                                '.$funcionario['descri'].'
-                            </p>
+                            <p id="">'.$pedido['descri'].'</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-            ';}?>
-            <div class="escolha">
-                <div class="categoria_">
-                    <img class="icone_dados" src="./Img/PESSOAS.png" alt="">
-                    <h3 class="titulo_categoria">Dados Pessoais</h3>
-                </div>
-                <div class="botao_escolha">
-                    <div class="nova_contratacao">
-                        <div class="botao_contratacao_aprovado">
-                            <a href="#">
-                                <h3>Aprovar</h3>
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="nova_contratacao_rejeitado">
-                        <div class="botao_contratacao">
-                            <a href="#">
-                                <h3>Rejeitar</h3>
-                            </a>
-                        </div>
-                    </div>
 
+            <div class="parte_escolha">
+                <div class="escolha">
+                    <div class="categoria_">
+                        <img class="icone_dados_" src="./Img/send.png" alt="">
+                        <h3 class="titulo_escolha">Documentos Enviados</h3>
+                    </div>
+                    <div class="botao_escolha">
+                        <div class="nova_contratacao">
+
+                            <a class="botao_contratacao_aprovado" href="MySQL/update_enter.php?id='.$pedido['id_Prof'].'">
+                                <div >
+                                    <h3>Aprovar</h3>
+                                </div>
+                            </a>
+
+                        </div>
+
+                        <div class="nova_contratacao_rejeitado">
+                                <a class="nova_contratacao_rejeitado" href="MySQL/delete.php?id='.$pedido['id_Prof'].'">
+                                    <div >
+                                        <h3>Rejeitar</h3>
+                                    </div>
+                                </a>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
 
+
+';};?>
         </div>
-
-
-
-
+<script src="Partials/Top.js"></script>
 </body>
 
 </html>

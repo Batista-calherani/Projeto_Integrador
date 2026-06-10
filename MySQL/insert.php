@@ -5,6 +5,7 @@ $novoFun = [
     'Nome' => $_POST['Nome'],
     'cargo' => $_POST['cargo'],
     'Local' => $_POST['Local'],
+    'cpf' => $_POST['cpf'],
     'Agenda' => date('Y-m-d'),
     'Salario' => $_POST['Salario'],
     'Tefone' => $_POST['tefone'],
@@ -45,7 +46,8 @@ $caminho = $dir."$idNovoFun/";
 $file = $caminho.$novonome;
     $capaUrl = $file;
     update($pdo,'profissionais', ['Foto' => $capaUrl],"id_Prof = $idNovoFun");
-    echo "Agora espera fi.";
+    header('Location: ../index.php');
+    exit;
 } else {
     echo "erro em enviar imagem.";
 }

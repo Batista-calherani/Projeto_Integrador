@@ -3,7 +3,7 @@ require_once 'Partials/access.php';
 require_once 'MySQL/crud.php';
 $profissionais = readAll($pdo, 'profissionais');
 $categoria = ['Servente','Pedreiro','Mestre'];
-$legal = 1
+$legal = 0
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

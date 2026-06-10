@@ -29,6 +29,7 @@ require_once 'MySQL/crud.php';
                     são a base de tudo o que construímos. </p>
                 <div class="botoes">
                     <button onclick="window.location.href='index.php#servicos'">Serviços</button>
+                    <button onclick="window.location.href='Entrada_Proficional.php'">Trabalhe conosco</button>
                 </div>
             </div>
         </div>

@@ -296,7 +296,8 @@ h3{
     width: 100%;
     /* background: #5f5d5b; */
     display: flex;
-    gap: 4px;
+    gap: 200px;
+
 }
 
 .funcionario_ativo{

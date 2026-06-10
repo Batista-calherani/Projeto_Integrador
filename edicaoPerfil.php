@@ -168,7 +168,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>CPF</p>
                             </b>
-                            <input class="idade_" placeholder="'.$funcionario['Status'].'" type="text" name="contrato" value="'.$funcionario['contrato'].'">
+                            <input class="idade_" placeholder="'.$funcionario['cpf'].'" type="text" name="cpf">
                         </div>
 
                     </div>
@@ -219,7 +219,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>Local Da Obra</p>
                             </b>
-                            <input class="idade" name="Local" placeholder="'.$funcionario['Local'].'" type="text">
+                            <input class="idade" name="Local" placeholder="null" type="text" name="Obra_Local">
                         </div>
 
                         <div class="idade">

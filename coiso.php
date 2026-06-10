@@ -45,12 +45,12 @@ if($_SESSION['user'] != 'Administrador'){
 
                     <li><a href="total.php" class="botao">
                             <img class="icone_" src="./Img/PESSOAS.png" alt="">
-                            <h3>Funcionáios</h3>
+                            <h3>Funcionários</h3>
                         </a>
                     </li>
 
 
-                    <li><a href="#" class="botao">
+                    <li><a href="contrato_funcionario.php" class="botao">
                             <img class="icone_" src="./Img/contrato.png" alt="">
                             <h3>Gestão de contratação</h3>
                         </a>
@@ -100,7 +100,7 @@ if($_SESSION['user'] != 'Administrador'){
             <div class="status">
                 <div class="funcionario_ativo">
                     <img class="icone_funcionario" src="./Img/PESSOAS.png" alt="">
-                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1');?>
+                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and Ativo = 1');?>
                         <h1><span><?php echo $totalAtivos['total']; ?></span></h1>
                         <p>Funcionáios ativos</p>
                     </div>
@@ -108,7 +108,7 @@ if($_SESSION['user'] != 'Administrador'){
 
                 <div class="funcionario_ativo">
                     <img class="icone_funcionario" src="./Img/EPI.png" alt="">
-                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Pedreiro"');?>
+                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Pedreiro" and Ativo= 1');?>
                         <h1><span><?php echo $totalAtivos['total']; ?></span></h1>
                         <p>Pedreiros ativos</p>
                     </div>
@@ -117,7 +117,7 @@ if($_SESSION['user'] != 'Administrador'){
 
                 <div class="funcionario_ativo">
                     <img class="icone_funcionario" src="./Img/PRANCHETA.png" alt="">
-                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Mestre"');?>
+                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Mestre" and Ativo = 1 ');?>
                         <h1><span><?php echo $totalAtivos['total']; ?></span></h1>
                         <p>Mestres ativos</p>
                     </div>
@@ -125,7 +125,7 @@ if($_SESSION['user'] != 'Administrador'){
 
                 <div class="funcionario_ativo">
                     <img class="icone_funcionario" src="./Img/user.png" alt="">
-                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Servente"');?>
+                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and cargo = "Servente" and Ativo = 1');?>
                         <h1><span><?php echo $totalAtivos['total']; ?></span></h1>Serventes ativos</p>
                     </div>
                 </div>
@@ -148,7 +148,7 @@ if($_SESSION['user'] != 'Administrador'){
 
                 <?php
                 foreach ($funcionarios as $funcionario) {
-                if($funcionario['contrato'] == 1){
+                if($funcionario['contrato'] == 1 && $funcionario['Ativo'] == 1){
             echo '<div class="conteudo">
                     <div class="coluna_nome">
                         <img class="foto_profissional" src="'.$funcionario['Foto'].'" alt="">
@@ -156,7 +156,7 @@ if($_SESSION['user'] != 'Administrador'){
                     </div>
 
                     <p>'.$funcionario['cargo'].'</p>
-                    <p>'.$funcionario['Local'].'</p>
+                    <p>'.$funcionario['Obra_Local'].'</p>
                     <p>'.$funcionario['Agenda'].'</p>
                     <div class="status_funcionario">
                         Ativo
@@ -168,7 +168,7 @@ if($_SESSION['user'] != 'Administrador'){
                         else {exit;};"  src="./Img/LIXO.png" alt="">
                     </div>
                 </div><div>';}
-                elseif($funcionario['contrato'] == 0){
+                elseif($funcionario['contrato'] == 0 && $funcionario['Ativo'] == 1){
                     echo '<div class="conteudo">
                     <div class="coluna_nome">
                         <img class="foto_profissional" src="'.$funcionario['Foto'].'" alt="">
