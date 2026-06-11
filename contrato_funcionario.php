@@ -1,11 +1,27 @@
+<?php
+require_once 'MySQL/crud.php';
+$cargo = $_GET['cargo'] ?? '';
+$pedidos = readAll($pdo, 'profissionais','Ativo = 0 order by Nome asc');
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    exit;
+    }
+if($_SESSION['user'] != 'Administrador'){
+    echo "<script> if(confirm('Somente pessoal autorizado, deseja retornar?')){
+        window.location.href = 'index.php';} else {
+        window.location.href = 'login.php';};</script>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/contrato_funcionario.css">
+    <title>Gestão de Contratações</title>
+    <link rel="stylesheet" href="./CSS/contrato_funcionario.css">
 </head>
 
 <body>
@@ -14,7 +30,7 @@
         <aside>
             <div class="dentro">
                 <div class="logo_nome">
-                    <img class="logo" src="../Img/logo_laranja.png">
+                    <img class="logo" src="./Img/logo_laranja.png">
                     <h1>Con<span>Group</span></h1>
                 </div>
 
@@ -22,22 +38,22 @@
 
                 <ul class="forma">
 
-                    <li><a href="adm.html" class="botao">
-                            <img class="icone_" src="../Img/home.png" alt="">
+                    <li><a href="coiso.php" class="botao">
+                            <img class="icone_" src="./Img/home.png" alt="">
                             <h3>Dashboard</h3>
                         </a>
                     </li>
 
 
-                    <li><a href="PageFuncionarios.html" class="botao">
-                            <img class="icone_" src="../Img/PESSOAS.png" alt="">
+                    <li><a href="total.php" class="botao">
+                            <img class="icone_" src="./Img/PESSOAS.png" alt="">
                             <h3>Funcionários</h3>
                         </a>
                     </li>
 
 
-                    <li><a href="#" class="botao">
-                            <img class="icone_" src="../Img/contrato.png" alt="">
+                    <li><a href="" class="botao">
+                            <img class="icone_" src="./Img/contrato.png" alt="">
                             <h3>Gestão de contratação</h3>
                         </a>
                     </li>
@@ -47,7 +63,7 @@
 
                 <div class="sair">
                     <div class="user">
-                        <a href="#">
+                        <a href="Login.php">
                             <h1>sair</h1>
                         </a>
                     </div>
@@ -69,7 +85,7 @@
                 </div>
 
                 <div class="perfil">
-                    <img class="foto_perfil" src="../Img/perfil.png" alt="Foto do usuário">
+                    <img class="foto_perfil" src="./Img/perfil.png" alt="Foto do usuário">
 
                     <div class="dados_usuario">
                         <h3>Jorge Silva</h3>
@@ -86,7 +102,7 @@
 
                 <div class="nova_contratacao">
                     <div class="botao_contratacao">
-                        <a href="nova_contratacao.html">
+                        <a href="#">
                             <h3>+ Nova contratação</h3>
                         </a>
                     </div>
@@ -96,42 +112,29 @@
 
             <div class="status">
                 <div class="funcionario_ativo">
-                    <img class="icone_funcionario" src="../Img/PESSOAS.png" alt="">
-                    <div class="informa">
-                        <h1><span>12</sapn>
-                        </h1>
+                    <img class="icone_funcionario" src="./Img/PESSOAS.png" alt="">
+                    <div class="informa"><?php $totalPendente = readTotal($pdo, 'profissionais', 'Ativo = 0');?>
+                        <h1><span><?php echo $totalPendente['total']; ?></span></h1>
                         <h3>Pendente</h3>
-                        <p>Aguardando análise</p>
-
-                    </div>
-                </div>
-
-                <div class="funcionario_ativo">
-                    <img class="icone_funcionario" src="../Img/epi_2.png" alt="">
-                    <div class="informa">
-                        <h1><span>3</sapn>
-                        </h1>
-                        <h3>Aprovado</h3>
-                        <p>Contratações aprovadas</p>
+                        <p>Funcionários Pendentes</p>
                     </div>
                 </div>
 
 
+
                 <div class="funcionario_ativo">
-                    <img class="icone_funcionario" src="../Img/PRANCHETA.png" alt="">
-                    <div class="informa">
-                        <h1><span>20</sapn>
-                        </h1>
-                        <h3>Total</h3>
-                        <p>Total de solicitações</p>
+                    <img class="icone_funcionario" src="./Img/PRANCHETA.png" alt="">
+                    <div class="informa"><?php $totalPendente = readTotal($pdo, 'profissionais', 'Ativo = 0');?>
+                        <h1><span><?php echo $totalPendente['total']; ?></span></h1>
+                        <h3>Pedidos</h3>
+                        <p>Pedidos Totais</p>
                     </div>
                 </div>
 
                 <div class="funcionario_ativo">
-                    <img class="icone_funcionario" src="../Img/user.png" alt="">
-                    <div class="informa">
-                        <h1><span>128</sapn>
-                        </h1>
+                    <img class="icone_funcionario" src="./Img/user.png" alt="">
+                    <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and Ativo = 1');?>
+                        <h1><span><?php echo $totalAtivos['total']; ?></span></h1>
                         <p>Funcionáios ativos</p>
                     </div>
                 </div>
@@ -186,7 +189,7 @@
                     <div class="buscar">
                         <div class="botao_buscar">
                             <a href="#">
-                                <img class="icone_buscar" src="../Img/buscar.png" alt="">
+                                <img class="icone_buscar" src="./Img/buscar.png" alt="">
                                 <h3>Buscar</h3>
                             </a>
                         </div>
@@ -195,7 +198,7 @@
                     <div class="buscar">
                         <div class="botao_buscar">
                             <a href="#">
-                                <img class="icone_buscar" src="../Img/limpar.png" alt="">
+                                <img class="icone_buscar" src="./Img/limpar.png" alt="">
                                 <h3>Limpar</h3>
                             </a>
                         </div>
@@ -219,132 +222,29 @@
                 </div>
 
                 <div class="conteudo">
+                    <?php foreach($pedidos as $pedido){
+                    echo '
                     <div class="coluna_nome">
-                        <img class="foto_profissional" src="../Img/perfil.png" alt="">
-                        <p>Jorge Silva</p>
+                        <img class="foto_profissional" src="'.$pedido['Foto'].'" alt="">
+                        <p>'.$pedido['Nome'].'</p>
                     </div>
 
-                    <p>Mestre de Obras</p>
-                    <p>Residencial Vitória</p>
-                    <p>26/05/2025</p>
-
-                    <div class="status_funcionario">
-                        Aprovado
-                    </div>
-
-                    <div class="acoes">
-
-                        <a href="edicao.html"><img src="../Img/OLHO.png" alt=""></a>
-
-                    </div>
-                </div>
-
-                <div class="conteudo">
-                    <div class="coluna_nome">
-                        <img class="foto_profissional" src="../Img/perfil.png" alt="">
-                        <p>Jorge Silva</p>
-                    </div>
-
-                    <p>Mestre de Obras</p>
-                    <p>Residencial Vitória</p>
-                    <p>26/05/2025</p>
+                    <p>'.$pedido['cargo'].'</p>
+                    <p>'.$pedido['cargo'].'</p>
+                    <p>'.$pedido['Agenda'].'</p>
 
                     <div class="status_funcionario_pendente">
-                        Pendente
+                        Pendentes
                     </div>
 
                     <div class="acoes">
 
-                        <a href="edicao.html"><img src="../Img/OLHO.png" alt=""></a>
+                        <a href="edicao.php?id='.$pedido['id_Prof'].'"><img src="./Img/OLHO.png" alt=""></a>
 
                     </div>
+                
+                    ';};?>
                 </div>
-
-                <div class="conteudo">
-                    <div class="coluna_nome">
-                        <img class="foto_profissional" src="../Img/perfil.png" alt="">
-                        <p>Jorge Silva</p>
-                    </div>
-
-                    <p>Mestre de Obras</p>
-                    <p>Residencial Vitória</p>
-                    <p>26/05/2025</p>
-
-                    <div class="status_funcionario_Inativo">
-                        Rejeitado
-                    </div>
-
-                    <div class="acoes">
-
-                        <a href="edicao.html"><img src="../Img/OLHO.png" alt=""></a>
-
-                    </div>
-                </div>
-
-                <div class="conteudo">
-                    <div class="coluna_nome">
-                        <img class="foto_profissional" src="../Img/perfil.png" alt="">
-                        <p>Jorge Silva</p>
-                    </div>
-
-                    <p>Mestre de Obras</p>
-                    <p>Residencial Vitória</p>
-                    <p>26/05/2025</p>
-
-                    <div class="status_funcionario">
-                        Aprovado
-                    </div>
-
-                    <div class="acoes">
-
-                        <a href="edicao.html"><img src="../Img/OLHO.png" alt=""></a>
-
-                    </div>
-                </div>
-
-                <div class="conteudo">
-                    <div class="coluna_nome">
-                        <img class="foto_profissional" src="../Img/perfil.png" alt="">
-                        <p>Jorge Silva</p>
-                    </div>
-
-                    <p>Mestre de Obras</p>
-                    <p>Residencial Vitória</p>
-                    <p>26/05/2025</p>
-
-                    <div class="status_funcionario_pendente">
-                        Pendente
-                    </div>
-
-                    <div class="acoes">
-
-                        <a href="edicao.html"><img src="../Img/OLHO.png" alt=""></a>
-
-                    </div>
-                </div>
-
-                <div class="conteudo">
-                    <div class="coluna_nome">
-                        <img class="foto_profissional" src="../Img/perfil.png" alt="">
-                        <p>Jorge Silva</p>
-                    </div>
-
-                    <p>Mestre de Obras</p>
-                    <p>Residencial Vitória</p>
-                    <p>26/05/2025</p>
-
-                    <div class="status_funcionario_Inativo">
-                        Rejeitado
-                    </div>
-
-                    <div class="acoes">
-
-                        <a href="edicao.html"><img src="../Img/OLHO.png" alt=""></a>
-
-                    </div>
-                </div>
-
-
 
 
             </div>

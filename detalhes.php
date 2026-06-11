@@ -82,7 +82,7 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
                 </div>
             </div>
 
-            <div class="form">
+            <form class="form" action='MySQL/update_good.php?id=<?php echo $id; ?>' method='POST' >
                 <h1>Solicitar <span>contratação</span></h1>
                 <div class="nome_telefone">
                     <div class="nome">
@@ -104,7 +104,7 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
 
                     <div class="endereco">
                         <p><b>Endereço da obra</b></p>
-                        <input class="campo_1" type="text" placeholder="Rua, número, bairro, cidade - UF">
+                        <input class="campo_1" type="text" name="Obra_Local" placeholder="Rua, número, bairro, cidade - UF">
                     </div>
                 </div>
 
@@ -153,14 +153,14 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
                 </div>
 
                 <div class="botao">
-                    <button class="servico_">
+                    <button  class="servico_" type='submit' >
                         <img src="./Img/select.png" alt="">
                         <p>Confirmar contratação</p>
                     </button>
                 </div>
             </div>
 
-        </div>
+        </form>
 
 <?php require_once 'Partials/footer.php';?>
 
