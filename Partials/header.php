@@ -8,7 +8,6 @@ $userText = $_SESSION['user'] ?? 'Default';
             <a class="HeadBut" href="index.php#home">Home</a>
             <a class="HeadBut" href="index.php#quemsomos">Quem somos</a>
             <a class="HeadBut" href="index.php#servicos">Serviços</a>
-            <a class="HeadBut" href="perfil.php">Perfil</a>
             <?php echo '<a class="HeadBut" href="login.php"><img class="perfil" src="'.$foto.'" alt="">'. $userText.'</a>'?>
         </div>
     </header>
