@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    height: 100vh;
+   min-height: 100vh;
     background-image: url('../Img/img_login.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,6 +8,25 @@ body{
     justify-content: flex-end;
     align-items:center;
     padding-right: 280px;
+}
+
+.nome_empresa{
+    /* height: 100px; */
+    width: 20%;
+    margin-right: 45%;
+    /* background: red; */
+    display: flex;
+    margin-bottom: 45%;
+    justify-content: flex-start;
+}
+
+.nome_empresa h1{
+  margin-top: 30px;
+  font-size: 50px;
+}
+
+span{
+    color: #ff751f;
 }
 
 .login{
@@ -119,4 +138,97 @@ p,a{
 
 .img{
     height: 80px;
+}
+
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 1200px) {
+    body {
+        padding-right: 100px;
+    }
+
+    .nome_empresa {
+        margin-right: 20%;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        justify-content: center;
+        padding-right: 0;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nome_empresa {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login {
+        width: 90%;
+        max-width: 580px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 95%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .campo,
+    .botao_accss,
+    .botao_cadastrar,
+    .linha {
+        width: 85%;
+    }
+
+    .formulario {
+        gap: 30px;
+    }
+
+    .nome_empresa h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nome_empresa h1 {
+        font-size: 32px;
+        margin-top: 15px;
+    }
+
+    .img {
+        height: 60px;
+    }
+
+    .campo {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .botao_accss,
+    .botao_cadastrar {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .linha {
+        width: 90%;
+    }
+
+    .formulario h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .formulario h2 {
+        font-size: 20px;
+    }
 }

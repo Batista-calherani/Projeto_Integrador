@@ -62,7 +62,7 @@ if(isset($_POST['user'])){
                 </div>
                         <br>
                         <div class="botoes">
-                        <button class="botao_accss" id="btn" type="submit" >Send</button>
+                        <button class="botao_accss" id="btn" type="submit" >Cadastrar</button>
                         <div class="linha"></div>
                         <a href="login.php" class="botao_cadastrar">Login</a>
                         </div>
