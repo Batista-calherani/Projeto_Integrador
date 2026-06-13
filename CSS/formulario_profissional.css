@@ -8,6 +8,7 @@
 .cor_fundo {
     /* a seção cresce automaticamente conforme adicionar conteúdo. */
     min-height: 100vh;
+     overflow-x: hidden;
     width: 100%;
     background: linear-gradient(-45deg, #000000, #494949, #000000);
     background-size: 400% 400%;
@@ -200,4 +201,82 @@ span{
 .sair:hover{
     /* background-color: #5e5d5c6e; */
     transform: translateX(5px);
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 1200px) {
+
+    .form {
+        width: 70%;
+    }
+
+    .titulo {
+        width: 70%;
+    }
+
+    .botao_sair {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .form {
+        width: 85%;
+    }
+
+    .titulo {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .form {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .titulo {
+        width: 95%;
+        text-align: center;
+    }
+
+    .nome_telefone,
+    .email_endereco,
+    .data_orcamento,
+    .tipo_servico {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .servico_,
+    .campo_1,
+    .servico {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .form {
+        padding: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 28px;
+    }
+
+    .titulo p {
+        font-size: 14px;
+    }
+
+    .servico_ p {
+        font-size: 16px;
+    }
+
+    .botao img {
+        height: 25px;
+    }
 }

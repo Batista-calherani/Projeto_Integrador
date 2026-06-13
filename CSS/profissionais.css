@@ -9,6 +9,7 @@
     /* a seção cresce automaticamente conforme adicionar conteúdo. */
     min-height: 100vh;
     width: 100%;
+    overflow-x: hidden;
     background: linear-gradient(-45deg, #000000, #494949, #000000);
     background-size: 400% 400%;
     animation: moverGradiente 10s ease infinite;
@@ -276,4 +277,97 @@ span {
     filter: invert();
     width: 28px;
     height: 35px;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 1200px) {
+
+    .perfil_profissional {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .espaco_linha {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .perfil_profissional {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto {
+        margin: 30px 0;
+    }
+
+    .informarcao,
+    .informarcao_contato,
+    .informarcao_salario {
+        width: 90%;
+        height: auto;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .titulo {
+        width: 95%;
+        text-align: center;
+    }
+
+    .perfil_profissional {
+        width: 95%;
+    }
+
+    .foto {
+        width: 180px;
+        height: 180px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .informarcao,
+    .informarcao_contato,
+    .informarcao_salario {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .btn-contratar {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .titulo h1 {
+        font-size: 28px;
+    }
+
+    .titulo p {
+        font-size: 14px;
+    }
+
+    .foto {
+        width: 140px;
+        height: 140px;
+    }
+
+    .btn-contratar {
+        font-size: 18px;
+        height: 50px;
+    }
+
+    .btn-contratar img {
+        width: 22px;
+        height: 22px;
+    }
 }

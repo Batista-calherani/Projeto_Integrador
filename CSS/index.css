@@ -61,7 +61,7 @@ a {
     width: 51%;
     text-align: start;
     color: white;
-     font-family: var(--fonte-principal);
+    font-family: var(--fonte-principal);
 }
 
 .conteudo h1 {
@@ -79,7 +79,8 @@ a {
 
 
 .conteudo button {
-    padding: 15px 89px;
+    height: 50px;
+    padding: 15px 50px;
     border: none;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.644);
@@ -253,12 +254,15 @@ span {
     /* background: red; */
     font-size: 50px;
     margin-bottom: 0px;
+     font-family: var(--fonte-principal);
 }
 
 .icones {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+
 
 }
 
@@ -268,7 +272,7 @@ span {
 
 }
 
-.valor {
+.valor{
     color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
@@ -280,9 +284,8 @@ span {
     margin: 0px;
     margin-bottom: 25px;
     height: 2px;
-    width: 350px;
-    background: #000000;
-
+    /* width: 350px; */
+    /* background: #000000; */
 }
 
 /* _______________________________________________________ */
@@ -417,37 +420,190 @@ span {
     scroll-behavior: smooth;
 }
 
-/* teste card */
 
-/* .link-card{
-    text-decoration: none;
-    color: inherit;
+/* ================= RESPONSIVIDADE ================= */
+
+@media (max-width: 1200px) {
+
+    .conteudo {
+        width: 70%;
+        left: 40%;
+    }
+
+    .espaco {
+        gap: 30px;
+    }
+
+    .imagem {
+        width: 500px;
+        height: 500px;
+    }
+
+    .inform {
+        width: 350px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .linha_servicos {
+        gap: 20px;
+    }
+
+    .quadrado_ {
+        width: 350px;
+    }
+
+    .imagem_servicos {
+        width: 100%;
+    }
 }
 
-.quadrado_ a{
-    text-decoration: none;
-    color: inherit;
+@media (max-width: 992px) {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .conteudo {
+        width: 85%;
+        left: 50%;
+    }
 
-    height: 650px;
-    width: 500px;
-} */
+    .conteudo h1 {
+        font-size: 38px;
+    }
 
+    .conteudo p {
+        font-size: 18px;
+    }
 
+    .espaco {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 50px 0;
+    }
 
+    .inform {
+        width: 80%;
+        height: auto;
+    }
 
+    .imagem {
+        width: 80%;
+        height: auto;
+    }
 
+    .quadrado_laranja,
+    .cor_laranja {
+        display: none;
+    }
 
+    .icones {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
 
+    .linha_servicos {
+        flex-wrap: wrap;
+        height: auto;
+        padding-bottom: 50px;
+    }
+}
 
+@media (max-width: 768px) {
 
+    .banner {
+        height: auto;
+        min-height: 800px;
+    }
 
+    .conteudo {
+        width: 90%;
+        flex-direction: column;
+    }
 
-/* Testes feitos Por Gustavo 👍 */
+    .linha {
+        display: none;
+    }
 
-/* html {
-  scroll-behavior: auto;
-} */
+    .conteudo h1 {
+        font-size: 32px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .botoes button {
+        width: 100%;
+    }
+
+    .titulo {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .texto {
+        width: 90%;
+    }
+
+    .quadrado_ {
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .conteudo h1 {
+        font-size: 26px;
+    }
+
+    .conteudo p {
+        font-size: 16px;
+    }
+
+    .inform {
+        width: 85%;
+        padding: 30px;
+    }
+
+    .inform h1 {
+        margin-left: 0;
+        transform: none;
+        text-align: center;
+    }
+
+    .inform h3 {
+        transform: none;
+        font-size: 16px;
+    }
+
+    .imagem {
+        width: 90%;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .icones img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .titulo_servicos {
+        font-size: 24px;
+    }
+
+    .quadrado_ {
+        height: 500px;
+    }
+
+    .imagem_servicos {
+        height: 500px;
+    }
+
+    .quadrado_ p {
+        font-size: 18px;
+    }
+}
+

@@ -21,7 +21,7 @@ $legal = 0
      <div class="cor_fundo">
         <div class="titulo">
                 <h1>Funcionários <span>disponíveis</span></h1>
-                <p>Encontre profissionais qualidicados para sua obra</p>
+                <p>Encontre profissionais qualificados para sua obra</p>
             </div>
 
 <?php foreach($profissionais as $funcionarios){ 

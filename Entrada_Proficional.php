@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="telefone">
-                    <p><b>Cpf</b></p>
+                    <p><b>CPF</b></p>
                     <input class="campo_1" name="cpf" type="text" placeholder="000.000.000-11">
                 </div>
 
