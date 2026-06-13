@@ -1,3 +1,7 @@
+:root{
+    --fonte-principal: Arial, sans-serif;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -13,7 +17,7 @@ a {
     text-decoration: none;
     color: white;
     cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--fonte-principal);
 }
 
 .banner {
@@ -42,7 +46,7 @@ a {
     height: 400px;
     width: 15px;
     background: #ff751f;
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 .conteudo {
@@ -57,6 +61,7 @@ a {
     width: 51%;
     text-align: start;
     color: white;
+     font-family: var(--fonte-principal);
 }
 
 .conteudo h1 {
@@ -69,7 +74,7 @@ a {
     text-align: start;
     font-size: 22px;
     margin-bottom: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--fonte-principal);
 }
 
 
@@ -83,7 +88,7 @@ a {
     font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--fonte-principal);
 }
 
 
@@ -151,11 +156,13 @@ span {
     transform: scale(2.2);
     margin-bottom: 80px;
     color: white;
+     font-family: var(--fonte-principal);
 }
 
 .inform h3 {
     transform: scale(1.2);
     color: white;
+     font-family: var(--fonte-principal);
 }
 
 .imagem {
@@ -300,12 +307,13 @@ span {
     width: 750px;
     margin-top: -10px;
     margin-bottom: 30px;
+     font-family: var(--fonte-principal);
 
 }
 
 .texto p {
     font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--fonte-principal);
 }
 
 .linha_servicos {
@@ -338,6 +346,8 @@ span {
     opacity: 0;
     transition: 1s;
     font-size: 25px;
+     font-family: var(--fonte-principal);
+
 }
 
 .quadrado_ h3 {
@@ -348,14 +358,14 @@ span {
 
     color: white;
     font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-principal);
 
     z-index: 2;
 
     transition: 0.5s;
 }
 
-.quadrado_ h3:hover {
+.quadrado_:hover h3 {
     top: 40px;
     opacity: 0.7;
 }
@@ -385,6 +395,7 @@ span {
     font-size: 30px;
     text-align: center;
     height: 100px;
+     font-family: var(--fonte-principal);
 }
 
 .rodape {
