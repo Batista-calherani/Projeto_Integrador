@@ -4,7 +4,7 @@ $userText = $_SESSION['user'] ?? 'Default';
 ?>
 <header>
     <div class="inicio"><img class="logo" src="./Img/logo_laranja.png" onclick="window.location.href='index.php'"
-            draggable="false" alt=""></div>
+            draggable="false" alt=""> <div class="empresa_nome">Con<span>Group</span></div></div>
     <div class="cabecalho">
         <a class="HeadBut" href="index.php#home">Home</a>
         <a class="HeadBut" href="index.php#quemsomos">Quem somos</a>

@@ -22,6 +22,7 @@
         <div class="botoes">
             <button class="botao_accss">Confirmar</button>
             <div class="linha"></div>
+             <button class="botao_accss">Voltar</button>
         </div>
     </form>
        
