@@ -49,8 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif"
-        data-click="Img/Enchanted_Stone_Pickaxe_click.gif">
 
     <div class="nome_empresa">
         <img class="img" src="./Img/logo_laranja.png" alt="">

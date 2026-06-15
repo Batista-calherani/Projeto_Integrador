@@ -23,7 +23,6 @@ if($_SESSION['user'] != 'Administrador'){
     <link rel="stylesheet" href="./CSS/pageFuncionarios.css">
 </head>
 <body>
-    <img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif" data-click="Img/Enchanted_Stone_Pickaxe_click.gif">
     <div class="espaco_dashboard">
         <aside>
             <div class="dentro">
@@ -177,4 +176,3 @@ if($_SESSION['user'] != 'Administrador'){
                     </div>
                 </div>';
                 }}};?>
-                <?php require_once 'Partials/footer.php';?>

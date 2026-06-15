@@ -7,7 +7,9 @@ cargo varchar(100) default 'Servente',
 Agenda date not null,
 Local varchar(100) not null,
 Idade int not null,
+cpf varchar(14) not null,
 contrato bool not null default 0,
+Ativo bool not null default 0,
 Foto varchar(255),
 Status varchar(100) default "Disponivel",
 Salario decimal(10,2) default '1518.05',
@@ -15,6 +17,7 @@ Tefone varchar(20),
 Email varchar(100),
 tempo varchar(10),
 descri varchar(500),
+Obra_Local varchar(100),
 primary key(id_Prof)
 );
 

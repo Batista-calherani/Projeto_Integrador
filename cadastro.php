@@ -36,7 +36,6 @@ if(isset($_POST['user'])){
     <link rel="stylesheet" href="./CSS/footer.css">
 </head>
 <body>
-    <img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif" data-click="Img/Enchanted_Stone_Pickaxe_click.gif" >
      <div class="login">
         <div class="line"><img class="img" src="./Img/logo_laranja.png" alt=""></div>
         <div class="imagem"></div>

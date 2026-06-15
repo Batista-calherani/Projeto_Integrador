@@ -249,8 +249,6 @@ if($_SESSION['user'] != 'Administrador'){
 
 
             </div>
-            
-    <?php include_once "Partials/footer.php";?>
 
 </body>
 
