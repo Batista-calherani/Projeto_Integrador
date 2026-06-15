@@ -10,6 +10,7 @@ require_once 'Partials/access.php';
     <title>Page Not Found 404 </title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/Global.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
     <style>
         /* Estilo rápido para o botão de som */
@@ -70,6 +71,7 @@ require_once 'Partials/access.php';
             }
         });
     </script>
+    <?php include_once "Partials/footer.php";?>
 </html>
 </body>
 </html>

@@ -10,6 +10,7 @@ require_once 'MySQL/crud.php';
     <title>ConGroup</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/Global.css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
      

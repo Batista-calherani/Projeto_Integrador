@@ -6,6 +6,7 @@
     <title>Cadastra-se</title>
     <link rel="stylesheet" href="CSS/formulario_profissional.css">
     <link rel="stylesheet" href="CSS/Global.css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 </head>
 <body>
@@ -99,5 +100,6 @@
 
     <footer class="rodape"></footer>
 <script src="Partials/Top.js"></script>
+<?php include_once "Partials/footer.php";?>
 </body>
 </html>

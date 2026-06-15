@@ -13,6 +13,7 @@ $legal = 0
     <title>Catálogo</title>
     <link rel="stylesheet" href="CSS/profissionais.css">
     <link rel="stylesheet" href="CSS/Global.css">
+    <link rel="stylesheet" href="CSS/footer.css">
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 
 </head>

@@ -20,6 +20,7 @@ if($_SESSION['user'] != 'Administrador'){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="./CSS/adm.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
 </head>
 <body>
     <img src="Img/Stone_Pickaxe.png" id="cur-dot" data-hover="Img/Stone_Pickaxe_hover.gif" data-click="Img/Enchanted_Stone_Pickaxe_click.gif">
@@ -188,5 +189,6 @@ if($_SESSION['user'] != 'Administrador'){
                         else {exit;};"  src="./Img/LIXO.png" alt="">
                     </div></div>';}};?>
 <script src="Partials/Top.js"></script>
+    <?php include_once "Partials/footer.php";?>
 </body>
 </html>

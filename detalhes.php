@@ -14,6 +14,8 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
     <title>Document</title>
     <link rel="stylesheet" href="CSS/contratar.css">
     <link rel="stylesheet" href="CSS/Global.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    
 </head>
 
 <body>

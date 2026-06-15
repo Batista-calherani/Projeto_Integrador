@@ -244,6 +244,7 @@ $pedidos = readAll($pdo, 'profissionais','id_Prof = ' . $id);
 ';};?>
         </div>
 <script src="Partials/Top.js"></script>
+<?php include_once "Partials/footer.php";?>
 </body>
 
 </html>

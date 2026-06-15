@@ -12,6 +12,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./CSS/edicao_perfil.css">
+    <link rel="stylesheet" href="CSS/footer.css">
 </head>
 
 <body>
@@ -280,6 +281,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
 
 </div>
 <script src="Partials/Top.js"></script>
+<?php include_once "Partials/footer.php";?>
 </body>
 
 </html>

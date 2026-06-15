@@ -22,6 +22,7 @@ if($_SESSION['user'] != 'Administrador'){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de Contratações</title>
     <link rel="stylesheet" href="./CSS/contrato_funcionario.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
 </head>
 
 <body>
@@ -248,14 +249,8 @@ if($_SESSION['user'] != 'Administrador'){
 
 
             </div>
-
-
-
-
-
-
-
-
+            
+    <?php include_once "Partials/footer.php";?>
 
 </body>
 

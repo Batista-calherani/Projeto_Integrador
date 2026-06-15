@@ -9,6 +9,7 @@ require_once "MySQL/crud.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edite seu Dados</title>
+    <link rel="stylesheet" href="CSS/footer.css">
 </head>
 <body>
 
@@ -39,6 +40,7 @@ require_once "MySQL/crud.php";
                         <button class="botao_accss" id="btn" type="submit" >Send</button>
                         </div>
     </form>
-    
+    <?php include_once "Partials/footer.php";?>
 </body>
+
 </html>
