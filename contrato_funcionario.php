@@ -103,7 +103,7 @@ if($_SESSION['user'] != 'Administrador'){
 
                 <div class="nova_contratacao">
                     <div class="botao_contratacao">
-                        <a href="#">
+                        <a href="novo_funcionario.php">
                             <h3>+ Nova contratação</h3>
                         </a>
                     </div>

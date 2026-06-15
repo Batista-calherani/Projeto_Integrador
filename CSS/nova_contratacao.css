@@ -4,6 +4,7 @@
     /* box-sizing: border-box; */
 }
 
+
 .dentro{
     background-image: url(../Img/aside_adm.png);
     background-size: cover;
@@ -649,3 +650,171 @@ h3{
     @media (max-width: 560px) {
       .row-2, .row-3 { grid-template-columns: 1fr; }
     }
+/* Responsividade geral */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe,
+table {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  form,
+  .container,
+  .conteudo,
+  .espaco,
+  .quadrado {
+    max-width: 100%;
+  }
+}
+
+/* Responsividade especifica da tela novo_funcionario.php */
+.espaco {
+  min-width: 0;
+}
+
+.main {
+  margin-left: 0;
+  padding-top: 77px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.form-layout {
+  width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .row-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  aside,
+  .dentro {
+    display: none;
+  }
+
+  .espaco {
+    padding-left: 0;
+  }
+
+  .cabecalho {
+    width: 100%;
+    left: 0;
+  }
+
+  .main {
+    padding-top: 77px;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .form-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-section {
+    order: -1;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .photo-label {
+    align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .cabecalho {
+    height: auto;
+    min-height: 77px;
+    padding: 12px 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .pagina {
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+
+  .perfil {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    justify-content: flex-start;
+    border-left: 0;
+    border-top: 1px solid rgba(59, 56, 53, 0.5);
+  }
+
+  .main {
+    padding-top: 130px;
+  }
+
+  .content {
+    padding: 18px 14px;
+  }
+
+  .card {
+    padding: 18px 14px;
+    border-radius: 10px;
+  }
+
+  .row-2,
+  .row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-submit,
+  .btn-foto {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+  }
+}

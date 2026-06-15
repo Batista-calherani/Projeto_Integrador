@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 .dentro {
     background-image: url(../Img/aside_adm.png);
     background-size: cover;
@@ -463,4 +464,48 @@ textarea{
    padding-top: 10px;
    padding-bottom: 0px;
     align-items: center;
+}
+/* Responsividade geral */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe,
+table {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  form,
+  .container,
+  .conteudo,
+  .espaco,
+  .quadrado {
+    max-width: 100%;
+  }
 }
