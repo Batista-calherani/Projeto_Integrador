@@ -3,75 +3,54 @@ http_response_code(404);
 require_once 'Partials/access.php';
 ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found 404 </title>
-    <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/Global.css">
-    <link rel="stylesheet" href="./CSS/footer.css">
-    <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
-    <style>
-        /* Estilo rápido para o botão de som */
-        .audio-control {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: #ff0055;
-            color: #fff;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
-            transition: transform 0.2s;
-        }
-        .audio-control:hover {
-            transform: scale(1.05);
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Página não encontrada</title>
+    <link rel="stylesheet" href="CSS/404.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
 </head>
 
 <body>
-    <?php include_once "Partials/header.php"; ?>
-    <div class="banner">
-        <img src="./Img/index.png" alt="">
-        <div class="conteudo">
-            <div class="linha"></div>
-            <div>
-                <h1><span>Construindo o futuro,</span> Somente não nessa página.</h1>
-                <p>Parece que você tentou acessar uma página que no momento não existe.<br>Porém deixamos esse jingle pelo seu esforço! </p>
-                <div class="botoes">
-                    <audio id="meuJingle" src="audio/Help! (with Intro).mp3" loop></audio>
-                    <button id="btnSom" class="audio-control">🔊 Play Jingle</button>
-                </div>
+
+    <nav class="navbar">
+        <a class="HeadBut" href="index.php#home">Home</a>
+        <a class="HeadBut" href="index.php#quemsomos">Quem somos</a>
+        <a class="HeadBut" href="index.php#servicos">Serviços</a>
+    </nav>
+
+    <div class="hero">
+        <div class="bg-overlay"></div>
+        <div class="big-number">404</div>
+
+        <div class="left-bar"></div>
+        <div class="content">
+            <div class="badge">Erro do sistema</div>
+            <div class="title">Página<br><span>não encontrada</span></div>
+            <div class="divider"></div>
+            <p class="desc">
+                A página que você está procurando pode ter sido removida, teve seu nome
+                alterado ou está temporariamente indisponível. Verifique o endereço
+                digitado ou retorne ao início.
+            </p>
+            <div class="buttons">
+                <a href="index.php" class="btn-primary">Voltar ao início</a>
             </div>
         </div>
-    <?php include_once 'Partials/footer.php';?>
-    <script>
-        const audio = document.getElementById('meuJingle');
-        const btn = document.getElementById('btnSom');
+    </div>
 
-        // Tenta tocar o áudio assim que o usuário clicar em qualquer lugar da página
-        // ou especificamente no botão
-        btn.addEventListener('click', () => {
-            if (audio.paused) {
-                audio.play()
-                    .then(() => {
-                        btn.innerText = "⏸️ Pausar Jingle";
-                    })
-                    .catch(error => {
-                        console.log("O navegador bloqueou o autoplay:", error);
-                    });
-            } else {
-                audio.pause();
-                btn.innerText = "🔊 Play Jingle";
-            }
-        });
-    </script>
-    <?php include_once "Partials/footer.php";?>
-</html>
+    <div class="footer-bar">
+        <div class="status-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-orange"></div>
+            <div class="dot dot-gray"></div>
+            <span style="margin-left:6px;">Código de erro: 404</span>
+        </div>
+    </div>
+
+     <?php include_once "Partials/footer.php";?>
 </body>
 </html>
