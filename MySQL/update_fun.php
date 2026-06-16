@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ){
         'cargo' => $_POST['cargo'],
         'Local' => $_POST['Local'],
         'contrato' => $_POST['contrato'],
+        'Obra_Local' => $_POST['Local_Obra'],
         'Salario' => $_POST['Salario'],
         'Tefone' => $_POST['tefone'],
         'Email' => $_POST['email'],

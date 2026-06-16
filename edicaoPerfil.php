@@ -219,7 +219,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>Local Da Obra</p>
                             </b>
-                            <input class="idade" name="Local" placeholder="null" type="text" name="Obra_Local">
+                            <input class="idade" name="Local_Obra" placeholder="'.$funcionario['Obra_Local'].'" type="text" name="Obra_Local">
                         </div>
 
                         <div class="idade">
