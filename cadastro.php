@@ -88,6 +88,6 @@ if(isset($_POST['user'])){
     })();
     </script>
     <script src="Partials/Top.js"></script>
-    <?php include_once "Partials/footer.php";?>
+   
 </body>
 </html>

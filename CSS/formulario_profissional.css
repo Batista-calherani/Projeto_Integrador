@@ -1,3 +1,7 @@
+:root{
+    --fonte-principal: Arial, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -72,17 +76,20 @@ a {
 .nome,
 .telefone {
     width: 100%;
+    font-family: var(--fonte-principal);
 }
 
 .email_endereco {
     /* background: #bbb2b2; */
     display: flex;
     gap: 20px;
+    font-family: var(--fonte-principal);
 }
 
 .email,
 .endereco {
     width: 100%;
+    font-family: var(--fonte-principal);
 }
 
 .campo_1 {
@@ -107,6 +114,7 @@ a {
     /* background: #bbb2b2; */
     display: flex;
     gap: 20px;
+    font-family: var(--fonte-principal);
 }
 
 .data,
@@ -184,6 +192,8 @@ a {
     margin-left: 850px;
 }
 
+
+
 .sair{
     /* background:  #ff751f; */
     height: 35px;
@@ -201,6 +211,14 @@ a {
 .sair:hover{
     /* background-color: #5e5d5c6e; */
     transform: translateX(5px);
+}
+
+p{
+    font-family: var(--fonte-principal);
+}
+
+h1{
+    font-family: var(--fonte-principal);
 }
 
 /* ================= RESPONSIVIDADE ================= */
@@ -248,7 +266,7 @@ a {
     .data_orcamento,
     .tipo_servico {
         flex-direction: column;
-        gap: 15px;
+        gap: 15px;  
     }
 
     .servico_,
