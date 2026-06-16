@@ -93,6 +93,7 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
                         <input class="campo_1" type="text" placeholder="Digite seu nome completo">
                     </div>
 
+
                     <div class="telefone">
                         <p><b>Telefone</b></p>
                         <input class="campo_1" type="number" placeholder="(11) 99999-9999">
@@ -154,7 +155,8 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
                         <option value="">Pix</option>
                     </select>
                 </div>
-
+                <input name='email' type="hidden" value='<?php echo $profissionais['Email'] ?>' >
+                <input name='user' type="hidden" value='<?php echo $profissionais['Nome'] ?>' >
                 <div class="botao">
                     <button  class="servico_" type='submit' >
                         <img src="./Img/select.png" alt="">
