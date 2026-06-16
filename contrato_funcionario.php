@@ -137,6 +137,7 @@ if($_SESSION['user'] != 'Administrador'){
                     <img class="icone_funcionario" src="./Img/user.png" alt="">
                     <div class="informa"><?php $totalAtivos = readTotal($pdo, 'profissionais', 'contrato = 1 and Ativo = 1');?>
                         <h1><span><?php echo $totalAtivos['total']; ?></span></h1>
+                        <h3>Ativos</h3>
                         <p>Funcionáios ativos</p>
                     </div>
                 </div>
@@ -154,30 +155,6 @@ if($_SESSION['user'] != 'Administrador'){
 
                     <div class="filtros">
                         <p><b>Cargos</b></p>
-                        <select class="campo_1" type="servicos" placeholder="Ex:30">
-                            <option selected disabled>
-                                Escolha sua área
-                            </option>
-                            <option value="">Servente</option>
-                            <option value="">Pedreiro</option>
-                            <option value="">Mestre de Obra</option>
-                        </select>
-                    </div>
-
-                    <div class="filtros">
-                        <p><b>Status</b></p>
-                        <select class="campo_1" type="servicos" placeholder="Ex:30">
-                            <option selected disabled>
-                                Escolha sua área
-                            </option>
-                            <option value="">Servente</option>
-                            <option value="">Pedreiro</option>
-                            <option value="">Mestre de Obra</option>
-                        </select>
-                    </div>
-
-                    <div class="filtros">
-                        <p><b>Periodo</b></p>
                         <select class="campo_1" type="servicos" placeholder="Ex:30">
                             <option selected disabled>
                                 Escolha sua área

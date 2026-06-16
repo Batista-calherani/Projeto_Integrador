@@ -37,7 +37,7 @@ $legal = 0
                         <img class="cargo_img" src="./Img/cargo.png" alt="">
                         <p>'.$funcionarios['cargo'].'</p>
                     </div>
-                    <div class="descricao">
+                    <div class="descricao" minlength="20" maxlength="70">
                         <p>'.$funcionarios['descri'].'</p>
                     </div>
                 </div>

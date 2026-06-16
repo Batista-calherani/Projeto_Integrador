@@ -368,7 +368,7 @@ h3{
 }
 
 .filtro h3{
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .filtro a{
@@ -376,19 +376,26 @@ h3{
 }
 
 .botao_filtro{
-    border: 1px solid black;
+    /* border: 1px solid rgb(255, 30, 30); */
+    background: #ff6200;
     border-radius: 5px;
     padding: 3px;
     cursor: pointer;
     transition: 0.3s ease;
     margin-bottom:10px;
     box-shadow: 5px 2px 10px rgba(2,2,0,0.1);
+  
 }
 
 .botao_filtro:hover{
-    background-color: #5e5d5c6e;
+    background-color: #f8b470;
     transform: translateX(5px);
 }
+
+.filtro h3:hover{
+    color: rgb(0, 0, 0);
+}
+
 /* Responsividade geral */
 * {
   box-sizing: border-box;
