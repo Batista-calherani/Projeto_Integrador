@@ -165,8 +165,6 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
 
         </form>
 
-<?php require_once 'Partials/footer.php';?>
-
 </body>
-
+<?php require_once 'Partials/footer.php';?>
 </html>
