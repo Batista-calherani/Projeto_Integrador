@@ -7,21 +7,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($email === '' || $pass === '') {
         echo '<div style="color:red;">Preencha todos os campos.</div>';
     } else {
-        $stmt = $conn->prepare("SELECT user, pass FROM access WHERE email = ?");
+        $stmt = $conn->prepare("SELECT acesso, pass FROM access WHERE email = ?");
         $stmt->bind_param('s', $email);
         $stmt->execute();
         $stmt->store_result();
 
         if ($stmt->num_rows === 1) {
-            $stmt->bind_result($user, $hash);
+            $stmt->bind_result($acess, $hash);
             $stmt->fetch();
 
             if (password_verify($pass, $hash)) {
-                $_SESSION['user'] = $user;
-                if ($_SESSION['user'] == 'Administrador') {
+                $_SESSION['user'] = $acess;
+                if ($_SESSION['user'] == 'ADM') {
                     header('Location: coiso.php');
                     exit;
-                } else {
+                 }  // elseif ($_SESSION['user'] == 'Funcionario') {
+                    //     header('Location: perfilProfissional.php?email='.$email.'');
+                    //     exit;} 
+                else {
                     header("Location: index.php");
                     exit;
                 }
