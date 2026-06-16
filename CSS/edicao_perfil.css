@@ -509,3 +509,326 @@ button {
     max-width: 100%;
   }
 }
+
+/* Responsividade especifica da tela edicaoPerfil.php */
+body {
+  min-height: 100vh;
+  background: #f7f7f7;
+  color: #1f1f1f;
+}
+
+.dentro,
+.cabecalho {
+  z-index: 10;
+}
+
+.espaco {
+  min-width: 0;
+  padding-bottom: 32px;
+}
+
+.cabecalho {
+  left: 300px;
+  right: 0;
+}
+
+.pagina {
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagina h3 {
+  overflow-wrap: anywhere;
+}
+
+.entrada,
+.informacoes,
+.segundo_dados {
+  width: min(1180px, calc(100% - 48px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entrada {
+  gap: 24px;
+  align-items: center;
+}
+
+.entrada > div:first-child {
+  min-width: 0;
+}
+
+.entrada h1,
+.entrada p {
+  overflow-wrap: anywhere;
+}
+
+.nova_contratacao {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.botao_contratacao,
+.botao_cancelar {
+  min-height: 38px;
+  height: auto;
+}
+
+.botao_contratacao button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.botao_contratacao button h3 {
+  color: #fff;
+}
+
+.informacoes {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.parte_foto,
+.dados_profissional,
+.dados_servico {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background: #fff;
+}
+
+.parte_foto {
+  min-height: 0;
+  align-items: center;
+}
+
+.parte_foto input[type="file"] {
+  width: 100%;
+}
+
+.foto_funcionario {
+  width: min(190px, 100%);
+  aspect-ratio: 1;
+  height: auto;
+  margin-left: 0;
+  object-fit: cover;
+}
+
+.dados_profissional {
+  min-height: 0;
+  padding: 24px;
+  transform: none;
+}
+
+.dados_profissional h3 {
+  margin-top: 0;
+}
+
+.campos,
+.dados_funcionario {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0 0;
+  transform: none;
+}
+
+.campo_nome,
+.idade,
+.select_funcao {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+}
+
+.nomeCompleto,
+.idade_,
+.idade input,
+.job {
+  width: 100%;
+  min-height: 34px;
+  height: auto;
+  padding: 6px 8px;
+}
+
+.segundo_dados {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.dados_servico {
+  min-height: 320px;
+  padding: 24px;
+}
+
+.dados_servico h3 {
+  margin: 0;
+}
+
+.titulo_ {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icone_dado {
+  flex: 0 0 auto;
+  margin-right: 0;
+}
+
+.biografia {
+  padding: 0;
+  align-items: center;
+}
+
+.sobre {
+  flex: 1;
+  min-height: 0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 220px;
+  margin-left: 0;
+  padding: 10px;
+}
+
+@media (max-width: 1180px) {
+  .dentro {
+    width: 250px;
+  }
+
+  .espaco {
+    padding-left: 250px;
+  }
+
+  .cabecalho {
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  .botao {
+    width: 220px;
+  }
+}
+
+@media (max-width: 980px) {
+  aside,
+  .dentro {
+    display: none;
+  }
+
+  .espaco {
+    padding-left: 0;
+  }
+
+  .cabecalho {
+    left: 0;
+    width: 100%;
+  }
+
+  .entrada {
+    margin-top: 105px;
+  }
+
+  .informacoes,
+  .segundo_dados {
+    grid-template-columns: 1fr;
+  }
+
+  .parte_foto {
+    align-items: flex-start;
+  }
+
+  .foto_funcionario {
+    width: 170px;
+  }
+}
+
+@media (max-width: 700px) {
+  .cabecalho {
+    height: auto;
+    min-height: 77px;
+    padding: 12px 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .linha_ {
+    display: none;
+  }
+
+  .pagina {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .perfil {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    justify-content: flex-start;
+    border-left: 0;
+    border-top: 1px solid rgba(59, 56, 53, 0.5);
+    padding: 12px 0 0;
+  }
+
+  .entrada,
+  .informacoes,
+  .segundo_dados {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .entrada {
+    margin-top: 160px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nova_contratacao {
+    justify-content: stretch;
+  }
+
+  .botao_cancelar,
+  .botao_contratacao {
+    width: 100%;
+  }
+
+  .campos,
+  .dados_funcionario {
+    grid-template-columns: 1fr;
+  }
+
+  .dados_profissional,
+  .dados_servico,
+  .parte_foto {
+    padding: 18px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    width: 76px;
+  }
+
+  .entrada h1 {
+    font-size: 1.45rem;
+  }
+
+  .titulo_ {
+    font-size: 17px;
+  }
+
+  .dados_usuario {
+    align-items: flex-start;
+  }
+}

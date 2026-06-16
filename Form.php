@@ -10,6 +10,7 @@ require_once "MySQL/crud.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edite seu Dados</title>
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 </head>
 <body>
 

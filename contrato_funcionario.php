@@ -23,6 +23,7 @@ if($_SESSION['user'] != 'Administrador'){
     <title>Gestão de Contratações</title>
     <link rel="stylesheet" href="./CSS/contrato_funcionario.css">
     <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 </head>
 
 <body>

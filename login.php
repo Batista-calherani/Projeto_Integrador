@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login</title>
     <link rel="stylesheet" href="CSS/login.css">
     <link rel="stylesheet" href="CSS/Global.css">
+    <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 </head>
 
 <body>

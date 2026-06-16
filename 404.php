@@ -11,6 +11,7 @@ require_once 'Partials/access.php';
     <title>404 - Página não encontrada</title>
     <link rel="stylesheet" href="CSS/404.css">
     <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 
 </head>
 
