@@ -1,7 +1,25 @@
 <?php
 require_once 'MySQL/crud.php';
-$cargo = $_GET['cargo'] ?? '';
-$pedidos = readAll($pdo, 'profissionais','Ativo = 0 order by Nome asc');
+$nomeFiltro = trim($_GET['nome'] ?? '');
+$cargoFiltro = trim($_GET['cargo'] ?? '');
+
+$where = ['Ativo = 0'];
+$params = [];
+
+if ($nomeFiltro !== '') {
+    $where[] = 'Nome LIKE :nome';
+    $params[':nome'] = '%' . $nomeFiltro . '%';
+}
+
+if ($cargoFiltro !== '') {
+    $where[] = 'cargo = :cargo';
+    $params[':cargo'] = $cargoFiltro;
+}
+
+$sql = 'SELECT * FROM profissionais WHERE ' . implode(' AND ', $where) . ' ORDER BY Nome ASC';
+$stmt = $pdo->prepare($sql);
+$stmt->execute($params);
+$pedidos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 session_start();
 if (!isset($_SESSION['user'])) {
     header('Location: login.php');
@@ -81,17 +99,14 @@ if($_SESSION['user'] != 'ADM'){
                         <h3><span>Gestão de contratação</span></h3>
                     </div>
 
-                    <h3>Visão geral do sistema</h3>
-                    <div></div>
-
                 </div>
 
                 <div class="perfil">
                     <img class="foto_perfil" src="./Img/perfil.png" alt="Foto do usuário">
 
                     <div class="dados_usuario">
-                        <h3>Jorge Silva</h3>
-                        <p>Administradora</p>
+                        <h3><?php print $_SESSION['user']?></h3>
+                        <p>Administrador(a)</p>
                     </div>
                 </div>
             </div>
@@ -145,45 +160,45 @@ if($_SESSION['user'] != 'ADM'){
 
             <div class="filtro_funcionario">
 
-                <div class="filter">
+                <form class="filter" method="GET" action="contrato_funcionario.php">
                     <div class="filtro_nome">
                         <div class="campo_1">
                             <p><b>Nome Funcionário</b></p>
-                            <input class="campo_2" type="text" placeholder="Ex:Jorge Silva">
+                            <input class="campo_2" type="text" name="nome" value="<?php echo htmlspecialchars($nomeFiltro, ENT_QUOTES, 'UTF-8'); ?>" placeholder="Ex:Jorge Silva">
                         </div>
                     </div>
 
                     <div class="filtros">
                         <p><b>Cargos</b></p>
-                        <select class="campo_1" type="servicos" placeholder="Ex:30">
-                            <option selected disabled>
+                        <select class="campo_1" name="cargo">
+                            <option value="" <?php echo $cargoFiltro === '' ? 'selected' : ''; ?>>
                                 Escolha sua área
                             </option>
-                            <option value="">Servente</option>
-                            <option value="">Pedreiro</option>
-                            <option value="">Mestre de Obra</option>
+                            <option value="Servente" <?php echo $cargoFiltro === 'Servente' ? 'selected' : ''; ?>>Servente</option>
+                            <option value="Pedreiro" <?php echo $cargoFiltro === 'Pedreiro' ? 'selected' : ''; ?>>Pedreiro</option>
+                            <option value="Mestre" <?php echo $cargoFiltro === 'Mestre' ? 'selected' : ''; ?>>Mestre de Obra</option>
                         </select>
                     </div>
 
                     <div class="buscar">
                         <div class="botao_buscar">
-                            <a href="#">
+                            <button type="submit">
                                 <img class="icone_buscar" src="./Img/buscar.png" alt="">
                                 <h3>Buscar</h3>
-                            </a>
+                            </button>
                         </div>
                     </div>
 
                     <div class="buscar">
                         <div class="botao_buscar">
-                            <a href="#">
+                            <a href="contrato_funcionario.php">
                                 <img class="icone_buscar" src="./Img/limpar.png" alt="">
                                 <h3>Limpar</h3>
                             </a>
                         </div>
                     </div>
 
-                </div>
+                </form>
 
             </div>
 
@@ -200,16 +215,20 @@ if($_SESSION['user'] != 'ADM'){
                     <h3>Ações</h3>
                 </div>
 
-                <?php foreach($pedidos as $pedido){
+                <?php if (count($pedidos) === 0) {
+                    echo '<div class="conteudo"><p>Nenhum funcionÃ¡rio encontrado.</p></div>';
+                }
+
+                foreach($pedidos as $pedido){
                     echo '<div class="conteudo">
                     <div class="coluna_nome">
-                        <img class="foto_profissional" src="'.$pedido['Foto'].'" alt="">
-                        <p>'.$pedido['Nome'].'</p>
+                        <img class="foto_profissional" src="'.htmlspecialchars($pedido['Foto'], ENT_QUOTES, 'UTF-8').'" alt="">
+                        <p>'.htmlspecialchars($pedido['Nome'], ENT_QUOTES, 'UTF-8').'</p>
                     </div>
 
-                    <p>'.$pedido['cargo'].'</p>
-                    <p>'.$pedido['cargo'].'</p>
-                    <p>'.$pedido['Agenda'].'</p>
+                    <p>'.htmlspecialchars($pedido['cargo'], ENT_QUOTES, 'UTF-8').'</p>
+                    <p>'.htmlspecialchars($pedido['Local'], ENT_QUOTES, 'UTF-8').'</p>
+                    <p>'.htmlspecialchars($pedido['Agenda'], ENT_QUOTES, 'UTF-8').'</p>
 
                     <div class="status_funcionario_pendente">
                         Pendentes
@@ -217,7 +236,7 @@ if($_SESSION['user'] != 'ADM'){
 
                     <div class="acoes">
 
-                        <a href="edicao.php?id='.$pedido['id_Prof'].'"><img src="./Img/OLHO.png" alt=""></a>
+                        <a href="edicao.php?id='.intval($pedido['id_Prof']).'"><img src="./Img/OLHO.png" alt=""></a>
 
                     </div>
                 </div>';};?>

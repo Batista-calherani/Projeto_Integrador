@@ -76,9 +76,6 @@ if($_SESSION['user'] != 'ADM'){
                         <h3><span>Funcionários</span></h3>
                     </div>
 
-                    <h3>Visão geral do sistema</h3>
-                    <div></div>
-
                 </div>
 
                 <div class="perfil">

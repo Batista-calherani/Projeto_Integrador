@@ -7,17 +7,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($email === '' || $pass === '') {
         echo '<div style="color:red;">Preencha todos os campos.</div>';
     } else {
-        $stmt = $conn->prepare("SELECT acesso, pass FROM access WHERE email = ?");
+        $stmt = $conn->prepare("SELECT acesso, user, Foto_perfil, pass FROM access WHERE email = ?");
         $stmt->bind_param('s', $email);
         $stmt->execute();
         $stmt->store_result();
 
         if ($stmt->num_rows === 1) {
-            $stmt->bind_result($acess, $hash);
+            $stmt->bind_result($acess, $nomeUsuario, $fotoPerfil, $hash);
             $stmt->fetch();
 
             if (password_verify($pass, $hash)) {
                 $_SESSION['user'] = $acess;
+                $_SESSION['nome_usuario'] = $nomeUsuario;
+                $_SESSION['foto'] = $fotoPerfil ?: 'Img/perfil_user.png';
                 if ($_SESSION['user'] == 'ADM') {
                     header('Location: coiso.php');
                     exit;

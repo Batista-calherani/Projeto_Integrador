@@ -76,10 +76,6 @@ if($_SESSION['user'] != 'ADM'){
                     <div class="page_select">
                         <h3><span>Dashboard</span></h3>
                     </div>
-
-                    <h3>Visão geral do sistema</h3>
-                    <div></div>
-
                 </div>
 
                 <div class="perfil">
