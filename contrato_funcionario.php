@@ -78,7 +78,7 @@ if($_SESSION['user'] != 'ADM'){
                 <div class="linha_"></div>
                 <div class="pagina">
                     <div class="page_select">
-                        <h3><span>Dashboard</span></h3>
+                        <h3><span>Gestão de contratação</span></h3>
                     </div>
 
                     <h3>Visão geral do sistema</h3>

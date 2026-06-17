@@ -73,7 +73,7 @@ if($_SESSION['user'] != 'ADM'){
                 <div class="linha_"></div>
                 <div class="pagina">
                     <div class="page_select">
-                        <h3><span>Dashboard</span></h3>
+                        <h3><span>Funcionários</span></h3>
                     </div>
 
                     <h3>Visão geral do sistema</h3>
@@ -93,7 +93,7 @@ if($_SESSION['user'] != 'ADM'){
 
             <div class="entrada">
                 <h1>Bem-vindo, <span>Administrador!</span></h1>
-                <P>Aqui está o resumo da gestão de funcionários e obras.</P>
+                <P>Aqui mostra todos os profissionais.</P>
             </div>
 
             <div class="filtro">
