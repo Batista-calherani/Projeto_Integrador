@@ -11,6 +11,10 @@
 </head>
 <body>
     <div class="cor_fundo">
+        <div class="voltar_index">
+            <a href="index.php">Voltar</a>
+        </div>
+
         <div class="titulo">
             <h1>Contratar <span>profissionais</span></h1>
             <p>Preencha os dados abaixo para solicitar a contratação deste Profissional</p>
@@ -45,11 +49,17 @@
                 </div>
             </div>
 
-            
-            <div class="email_endereco">
-                <div class="email">
-                    <p><b>Idade</b></p>
-                    <input class="campo_1" name="Idade" type="number" placeholder="Ex:30" required>
+            <div class="tipo_servico">
+                <div class="cargo">
+                    <p><b>Cargos</b></p>
+                    <select class="servico" name="cargo" id="servicos" required>
+                        <option value="" selected disabled>
+                            Escolha sua área
+                        </option>
+                        <option value="Servente">Servente</option>
+                        <option value="Pedreiro">Pedreiro</option>
+                        <option value="Mestre">Mestre de Obra</option>
+                    </select>
                 </div>
 
                 <div class="endereco">
@@ -58,17 +68,11 @@
                 </div>
             </div>
 
-            <div class="tipo_servico">
-
-                <p><b>Cargos</b></p>
-                <select class="servico" name="cargo" id="servicos" required>
-                    <option value="" selected disabled>
-                        Escolha sua área
-                    </option>
-                    <option value="Servente">Servente</option>
-                    <option value="Pedreiro">Pedreiro</option>
-                    <option value="Mestre">Mestre de Obra</option>
-                </select>
+            <div class="email_endereco">
+                <div class="email">
+                    <p><b>Idade</b></p>
+                    <input class="campo_1" name="Idade" type="number" placeholder="Ex:30" required>
+                </div>
 
                 <div class="endereco">
                     <p><b>Expectativa salárial</b></p>
@@ -95,9 +99,7 @@
         </form>
 
     </div>
-    </div>
 
-    <footer class="rodape"></footer>
 <script src="Partials/Top.js"></script>
 <?php include_once "Partials/footer.php";?>
 </body>

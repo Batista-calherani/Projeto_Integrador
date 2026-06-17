@@ -212,10 +212,6 @@ $pedidos = readAll($pdo, 'profissionais','id_Prof = ' . $id);
 
             <div class="parte_escolha">
                 <div class="escolha">
-                    <div class="categoria_">
-                        <img class="icone_dados_" src="./Img/send.png" alt="">
-                        <h3 class="titulo_escolha">Documentos Enviados</h3>
-                    </div>
                     <div class="botao_escolha">
                         <div class="nova_contratacao">
 
@@ -247,6 +243,5 @@ $pedidos = readAll($pdo, 'profissionais','id_Prof = ' . $id);
 
 </body>
 
-<?php include_once "Partials/footer.php";?>
 
 </html>

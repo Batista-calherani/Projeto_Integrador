@@ -2,14 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
+body,
+input,
+select,
+textarea,
+button {
+    font-family: Arial, sans-serif;
+}
 
 
 .cor_fundo {
     /* a seção cresce automaticamente conforme adicionar conteúdo. */
     min-height: 88.9vh;
     width: 100%;
+    padding-bottom: 80px;
     background: linear-gradient(-45deg, #000000, #494949, #000000);
     background-size: 400% 400%;
     animation: moverGradiente 10s ease infinite;
@@ -19,12 +28,10 @@
 }
 
 a {
-    transform: scale(1.2);
-    margin: 50px;
     text-decoration: none;
     color: white;
     cursor: pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 
@@ -109,6 +116,7 @@ span {
 .perfil_profissional {
     height: auto;
     width: 350px;
+    flex: 0 0 350px;
 
     background: #ffffff;
     border-radius: 15px;
@@ -160,11 +168,18 @@ span {
 }
 
 .informa {
-    width: 150px;
+    width: 100%;
     /* background: #ff751f; */
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    gap: 8px;
+}
+
+.informa h2 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .dados {
@@ -175,6 +190,22 @@ span {
     padding: 25px;
     border-top: 2px solid rgb(190, 190, 190);
     border-bottom: 2px solid rgb(190, 190, 190);
+}
+
+.dados_nome {
+    display: none;
+}
+
+.dados_nome span {
+    color: #ff751f;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.dados_nome strong {
+    color: #222;
+    font-size: 1.1rem;
+    overflow-wrap: anywhere;
 }
 
 .icone {
@@ -213,12 +244,14 @@ span {
     padding-right: 100px;
     padding-left: 100px;
     gap: 25px;
+    align-items: flex-start;
 }
 
 /* formulario */
 
 .form {
     width: 100%;
+    flex: 1;
     background: white;
     border-radius: 15px;
     padding: 50px;
@@ -250,15 +283,44 @@ span {
 }
 
 .campo_1 {
-    height: 35px;
+    height: 42px;
     width: 100%;
-   
+    padding: 0 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    background: #fbfbfb;
+    color: #222;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.campo_1::placeholder,
+.servico::placeholder {
+    color: #777;
+}
+
+.campo_1:focus,
+.servico:focus {
+    border-color: #ff751f;
+    box-shadow: 0 0 0 3px rgba(255, 117, 31, 0.18);
+}
 
 .servico{
-    height: 35px;
+    height: 42px;
     width: 100%;
+    padding: 0 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    background: #fbfbfb;
+    color: #222;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea.servico {
+    min-height: 120px;
+    padding: 12px 14px;
+    resize: none;
 }
 
 .data_orcamento{
@@ -268,7 +330,6 @@ span {
 }
 
 .data, .orcamento{
-     height: 35px;
     width: 100%;
 }
 
@@ -294,7 +355,15 @@ span {
     background: #ff751f;
     border: none;
     border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
     
+}
+
+.botao .servico_:hover {
+    background: #e86412;
+    transform: translateY(-1px);
 }
 
 .botao img{
@@ -314,6 +383,10 @@ span {
     align-items: center;
     color: white;
 
+}
+
+.titulo {
+    max-width: 680px;
 }
 
 .voltar a{
@@ -351,8 +424,87 @@ button {
   max-width: 100%;
 }
 
+@media (max-width: 1180px) {
+  .espaco {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .quadrado {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 980px) {
+  .espaco {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .voltar {
+    align-self: flex-end;
+  }
+
+  .quadrado {
+    flex-direction: column;
+  }
+
+  .perfil_profissional,
+  .form {
+    width: 100%;
+    flex: none;
+  }
+
+  .foto_nome {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+    text-align: left;
+  }
+
+  .foto {
+    width: 150px;
+    height: 150px;
+    flex: 0 0 150px;
+  }
+
+  .informa {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
 @media (max-width: 768px) {
   body {
+    width: 100%;
+  }
+
+  .cor_fundo {
+    padding-bottom: 60px;
+  }
+
+  .espaco,
+  .quadrado {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .form {
+    padding: 28px;
+  }
+
+  .nome_telefone,
+  .email_endereco,
+  .data_orcamento {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tipo_servico,
+  .Forma_pagamento,
+  .Descricao {
     width: 100%;
   }
 
@@ -368,5 +520,58 @@ button {
   .espaco,
   .quadrado {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .espaco {
+    margin-top: 16px;
+  }
+
+  .titulo h1,
+  .form h1 {
+    font-size: 1.7rem;
+  }
+
+  .voltar {
+    align-self: flex-start;
+  }
+
+  .voltar a {
+    font-size: 0.95rem;
+  }
+
+  .foto_nome {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .informa {
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto {
+    width: 130px;
+    height: 130px;
+    flex-basis: 130px;
+  }
+
+  .dados {
+    padding: 18px;
+  }
+
+  .infor {
+    gap: 14px;
+  }
+
+  .form {
+    padding: 22px;
+    gap: 24px;
+  }
+
+  .servico_ p {
+    font-size: 16px;
   }
 }

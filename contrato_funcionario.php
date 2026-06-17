@@ -200,9 +200,8 @@ if($_SESSION['user'] != 'ADM'){
                     <h3>Ações</h3>
                 </div>
 
-                <div class="conteudo">
-                    <?php foreach($pedidos as $pedido){
-                    echo '
+                <?php foreach($pedidos as $pedido){
+                    echo '<div class="conteudo">
                     <div class="coluna_nome">
                         <img class="foto_profissional" src="'.$pedido['Foto'].'" alt="">
                         <p>'.$pedido['Nome'].'</p>
@@ -221,12 +220,12 @@ if($_SESSION['user'] != 'ADM'){
                         <a href="edicao.php?id='.$pedido['id_Prof'].'"><img src="./Img/OLHO.png" alt=""></a>
 
                     </div>
-                
-                    ';};?>
-                </div>
+                </div>';};?>
 
 
             </div>
+        </div>
+    </div>
 
 </body>
 

@@ -54,6 +54,10 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
                 </div>
 
                 <div class="dados">
+                    <div class="dados_nome">
+                        <span>Profissional</span>
+                        <strong>'.$profissionais['Nome'].'</strong>
+                    </div>
 
                     <div class="infor">
                         <img class="icone" src="Img/localização.png" alt="">
@@ -163,10 +167,11 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
                         <p>Confirmar contratação</p>
                     </button>
                 </div>
-            </div>
 
-        </form>
+            </form>
+        </div>
+    </div>
 
-</body>
 <?php require_once 'Partials/footer.php';?>
+</body>
 </html>
