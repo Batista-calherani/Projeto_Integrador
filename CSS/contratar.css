@@ -1,3 +1,64 @@
+﻿/* Base responsiva global */
+:root {
+  --fonte-principal: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+}
+
+img,
+video,
+iframe,
+table {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  form,
+  .container,
+  .conteudo,
+  .content,
+  .espaco,
+  .quadrado,
+  .login,
+  .formulario,
+  .form,
+  .card {
+    max-width: 100%;
+  }
+}
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +76,7 @@ button {
 
 
 .cor_fundo {
-    /* a seção cresce automaticamente conforme adicionar conteúdo. */
+    /* a seÃ§Ã£o cresce automaticamente conforme adicionar conteÃºdo. */
     min-height: 88.9vh;
     width: 100%;
     padding-bottom: 80px;
@@ -575,3 +636,4 @@ button {
     font-size: 16px;
   }
 }
+

@@ -1,3 +1,64 @@
+﻿/* Base responsiva global */
+:root {
+  --fonte-principal: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+}
+
+img,
+video,
+iframe,
+table {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  form,
+  .container,
+  .conteudo,
+  .content,
+  .espaco,
+  .quadrado,
+  .login,
+  .formulario,
+  .form,
+  .card {
+    max-width: 100%;
+  }
+}
 
 *{
     margin: 0;
@@ -341,11 +402,11 @@ h3{
 
     grid-template-columns:
     2fr      /* Nome */
-    1.5fr    /* Função */
+    1.5fr    /* FunÃ§Ã£o */
     2fr      /* Obra */
     1.5fr    /* Data */
     1fr      /* Status */
-    1fr;     /* Ações */
+    1fr;     /* AÃ§Ãµes */
 
     align-items: center;
 
@@ -609,3 +670,4 @@ button {
     align-items: flex-start;
   }
 }
+

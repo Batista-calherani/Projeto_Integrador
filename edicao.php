@@ -76,11 +76,11 @@ $pedidos = readAll($pdo, 'profissionais','id_Prof = ' . $id);
 
                 <div class="perfil">
                 
-                    <img class="foto_perfil" src="" alt="Foto do usuário">
+                    <img class="foto_perfil" src="./Img/perfil.png" alt="Foto do usuário">
 
                     <div class="dados_usuario">
-                        <h3></h3>
-                        <p>Administradora</p>
+                        <h3><?php print $_SESSION['user'] ?></h3>
+                        <p>Administrador(a)</p>
                     </div>
                 </div>
             </div>

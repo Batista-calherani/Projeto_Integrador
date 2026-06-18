@@ -1,3 +1,64 @@
+﻿/* Base responsiva global */
+:root {
+  --fonte-principal: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+}
+
+img,
+video,
+iframe,
+table {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  form,
+  .container,
+  .conteudo,
+  .content,
+  .espaco,
+  .quadrado,
+  .login,
+  .formulario,
+  .form,
+  .card {
+    max-width: 100%;
+  }
+}
 :root{
     --fonte-principal: Arial, sans-serif;
 }
@@ -60,7 +121,7 @@ header {
     margin: 50px;
     text-decoration: none;
     color: white;
-    font-family: var(--fonte-principal);
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -89,7 +150,7 @@ header {
     margin: 50px;
     text-decoration: none;
     color: white;
-    font-family: var(--fonte-principal);
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,12 +183,12 @@ header {
 .empresa_nome{
     margin-top: 30px;
     font-size: 35px;
-    font-family: var(--fonte-principal);
+    font-family: Arial, sans-serif;
 }
 
 span{
     color: #ff751f;
-    font-family: var(--fonte-principal);
+    font-family: Arial, sans-serif;
 
 }
 
@@ -181,3 +242,4 @@ button {
     max-width: 100%;
   }
 }
+

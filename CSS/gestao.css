@@ -1,3 +1,64 @@
+﻿/* Base responsiva global */
+:root {
+  --fonte-principal: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+}
+
+img,
+video,
+iframe,
+table {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  form,
+  .container,
+  .conteudo,
+  .content,
+  .espaco,
+  .quadrado,
+  .login,
+  .formulario,
+  .form,
+  .card {
+    max-width: 100%;
+  }
+}
 *{
     margin: 0;
     padding: 0;
@@ -293,9 +354,9 @@ h3{
     width: 90%;
     /* margin-top: 12px; */
     margin-left: 80px;
-    /* background: #c9c7c7c0;*/
+    background: #ffffff;
     /* border: 2px solid rgba(128, 128, 128, 0.404);*/
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
     border-radius: 10px;
     margin-bottom: 30px;
     display: flex;
@@ -317,9 +378,14 @@ h3{
     margin-top: 10px;
     margin-left: 30px;
     margin-right: 35px;
+    width: 180px;
     height: 180px;
     max-width: 180px;
+    border-radius: 50%;
     object-fit: cover;
+    display: block;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
    
 }
 
@@ -355,7 +421,7 @@ h3{
     min-height: 100px;
     width: 300px;
     /* background: #f8a100; */
-    border-left: 2px solid rgba(153, 152, 152, 0.397);
+    border-left: 1px solid rgba(218, 218, 218, 0.9);
     display: flex;
     gap: 25px;
     flex-direction: column;
@@ -368,6 +434,7 @@ h3{
 .fone, .email, .endereco{
     display: flex;
     gap: 10px;
+    overflow-wrap: anywhere;
 }
 
 .icone_contato{
@@ -382,11 +449,11 @@ h3{
 .informacoes_profissional{
     min-height: 320px;
     width: 100%;
-    /* background: #3a3838a9 */
-    /* border: 2px solid #ffffff62; */
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
-    filter: invert();
+    overflow: hidden;
 }
 
 .quadrado{
@@ -401,7 +468,8 @@ h3{
     /* border-bottom: 2px solid white; */
     padding: 10px;
     display: flex;
-    /* color: #000000; */
+    color: #242424;
+    font-family: Arial, sans-serif;
 }
 
 .titulo_escolha{
@@ -415,14 +483,13 @@ h3{
     padding: 5px;
     margin-left: 10px;
     width: 50%;
-    border-bottom:2px solid rgba(0, 118, 228, 0.452) ;
+    border-bottom:2px solid rgba(255, 117, 31, 0.32) ;
     display: flex;
 }
 
 .icone_dados{
     margin-left: 10px;
     margin-top: 5px;
-    filter: invert();
     height: 30px;
 }
 
@@ -439,12 +506,13 @@ h3{
     margin-left: 10px;  
     width: 88%;
     padding: 15px;
-    border-bottom: 2px solid rgba(145, 140, 140, 0.5);
+    border-bottom: 1px solid #eeeeee;
     
 }
 
 .nome_profissional p {
-    color: white;
+    color: #2f2f2f;
+    font-family: Arial, sans-serif;
 }
 
 .bio{
@@ -457,7 +525,8 @@ h3{
 
 .bio p{
     padding: 10px;
-    color: white;
+    color: #2f2f2f;
+    font-family: Arial, sans-serif;
 }
 
 .escolha{
@@ -560,7 +629,8 @@ textarea{
 }
 
 .nome_profissional .informacaos{
-    color: #807c79;
+    color: #8a8a8a;
+    font-weight: 700;
 }
 
 .entrada {
@@ -818,3 +888,4 @@ button {
     align-items: flex-start;
   }
 }
+

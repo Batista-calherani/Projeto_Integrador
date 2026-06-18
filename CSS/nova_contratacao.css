@@ -1,7 +1,77 @@
+﻿/* Base responsiva global */
+:root {
+  --fonte-principal: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+}
+
+img,
+video,
+iframe,
+table {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  form,
+  .container,
+  .conteudo,
+  .content,
+  .espaco,
+  .quadrado,
+  .login,
+  .formulario,
+  .form,
+  .card {
+    max-width: 100%;
+  }
+}
 *{
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
+    font-family: Arial, sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: Arial, sans-serif;
 }
 
 
@@ -281,13 +351,13 @@ h3{
     }
  
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: Arial, sans-serif;
       background: var(--body-bg);
       color: var(--text-primary);
       min-height: 100vh;
     }
  
-    /* ── SIDEBAR ── */
+    /* â”€â”€ SIDEBAR â”€â”€ */
     .sidebar {
       position: fixed;
       top: 0; left: 0;
@@ -389,7 +459,7 @@ h3{
     }
     .btn-sair:hover { background: rgba(255,255,255,0.13); color: #fff; }
  
-    /* ── HEADER ── */
+    /* â”€â”€ HEADER â”€â”€ */
     .header {
       position: fixed;
       top: 0; left: var(--sidebar-w); right: 0;
@@ -439,7 +509,7 @@ h3{
     .profile-name { font-size: 0.8rem; font-weight: 600; color: #fff; }
     .profile-role { font-size: 0.7rem; color: rgba(255,255,255,0.4); }
  
-    /* ── MAIN ── */
+    /* â”€â”€ MAIN â”€â”€ */
     .main {
       margin-left: var(--sidebar-w);
       padding-top: var(--header-h);
@@ -447,53 +517,53 @@ h3{
     }
  
     .content {
-      padding: 36px 40px;
-      max-width: 1000px;
+      padding: 42px 48px;
+      max-width: 1180px;
     }
  
-    /* ── PAGE TITLE ── */
-    .page-title { margin-bottom: 28px; }
+    /* â”€â”€ PAGE TITLE â”€â”€ */
+    .page-title { margin-bottom: 32px; }
     .page-title h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 700;
       color: var(--text-primary);
       line-height: 1.2;
     }
     .page-title h2 span { color: var(--orange); }
     .page-title p {
-      margin-top: 4px;
-      font-size: 0.85rem;
+      margin-top: 8px;
+      font-size: 1rem;
       color: var(--text-secondary);
     }
  
-    /* ── FORM CARD ── */
+    /* â”€â”€ FORM CARD â”€â”€ */
     .card {
       background: var(--card-bg);
       border-radius: 14px;
       border: 1px solid var(--border);
-      padding: 32px 36px 36px;
+      padding: 42px 46px 46px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
  
     .form-layout {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 28px 32px;
+      gap: 34px 40px;
       align-items: start;
     }
  
-    .form-fields { display: flex; flex-direction: column; gap: 22px; }
+    .form-fields { display: flex; flex-direction: column; gap: 26px; }
  
-    /* ── FORM ROWS ── */
-    .form-row { display: grid; gap: 16px; }
+    /* â”€â”€ FORM ROWS â”€â”€ */
+    .form-row { display: grid; gap: 20px; }
     .row-1 { grid-template-columns: 1fr; }
     .row-2 { grid-template-columns: 1fr 1fr; }
     .row-3 { grid-template-columns: 1fr 1fr 1fr; }
  
-    /* ── FIELD ── */
-    .field { display: flex; flex-direction: column; gap: 6px; }
+    /* â”€â”€ FIELD â”€â”€ */
+    .field { display: flex; flex-direction: column; gap: 8px; }
     .field label {
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--text-primary);
       letter-spacing: 0.01em;
@@ -503,12 +573,12 @@ h3{
     .field select,
     .field textarea {
       width: 100%;
-      padding: 10px 13px;
+      padding: 14px 15px;
       border: 1.5px solid var(--border);
       border-radius: 8px;
       background: var(--input-bg);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.82rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
       color: var(--text-primary);
       transition: border-color 0.2s, box-shadow 0.2s;
       outline: none;
@@ -540,38 +610,38 @@ h3{
  
     .field textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 130px;
       line-height: 1.5;
     }
  
-    /* ── PHOTO SECTION ── */
+    /* â”€â”€ PHOTO SECTION â”€â”€ */
     .photo-section {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 12px;
       padding-top: 2px;
-      min-width: 140px;
+      min-width: 170px;
     }
  
     .photo-label {
-      font-size: 0.78rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--text-primary);
       align-self: flex-start;
     }
  
     .photo-preview {
-      width: 110px; height: 110px;
+      width: 130px; height: 130px;
       border-radius: 50%;
       border: 3px solid var(--orange);
       background: #f0f2f5;
       overflow: hidden;
       display: flex; align-items: center; justify-content: center;
     }
-    .photo-preview svg { width: 70px; height: 70px; }
+    .photo-preview svg { width: 84px; height: 84px; }
  
-    /* "Escolher Foto" — label styled as button, wraps the file input */
+    /* "Escolher Foto" â€” label styled as button, wraps the file input */
     .btn-foto {
       display: inline-flex;
       align-items: center;
@@ -581,8 +651,8 @@ h3{
       border-radius: 7px;
       background: transparent;
       color: var(--orange);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
@@ -600,7 +670,7 @@ h3{
       white-space: nowrap;
     }
  
-    /* ── SUBMIT BUTTON ── */
+    /* â”€â”€ SUBMIT BUTTON â”€â”€ */
     .form-footer { margin-top: 4px; }
  
     .btn-submit {
@@ -612,8 +682,8 @@ h3{
       color: white;
       border: none;
       border-radius: 8px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.875rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
@@ -627,7 +697,7 @@ h3{
     .btn-submit:active { transform: translateY(0); }
     .btn-submit svg { width: 15px; height: 15px; stroke: white; fill: none; }
  
-    /* ── RESPONSIVE ── */
+    /* â”€â”€ RESPONSIVE â”€â”€ */
     @media (max-width: 900px) {
       .row-3 { grid-template-columns: 1fr 1fr; }
     }
@@ -721,7 +791,7 @@ button {
   }
 
   .card {
-    padding: 26px;
+    padding: 34px;
   }
 }
 
@@ -818,3 +888,4 @@ button {
     white-space: normal;
   }
 }
+

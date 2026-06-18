@@ -37,12 +37,17 @@ if(isset($_POST['user'])){
     <link rel="icon" type="image/x-icon" href="Img/logo_laranja.ico">
 </head>
 <body>
+    <div class="nome_empresa">
+        <img class="img" src="./Img/logo_laranja.png" alt="">
+        <h1>Con<span>Group</span></h1>
+    </div>
+
      <div class="login">
         <div class="line"><img class="img" src="./Img/logo_laranja.png" alt=""></div>
         <div class="imagem"></div>
         <form class="formulario" action="" method="POST" id="meuFormulario" >
             <?php if(!empty($error)) echo '<p class="error">'.htmlspecialchars($error).'</p>'; ?>
-            <div class="centro"><h1>CADASTRO<div class="linha"></div></h1><div>
+            <div class="centro"><h1>CADASTRO<div class="linha"></div></h1></div>
          
                 <div class="input_grup">
                  <h2>Nome Completo</h2>
