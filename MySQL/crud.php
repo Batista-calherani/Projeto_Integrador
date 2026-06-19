@@ -18,8 +18,7 @@ try {
 
         $sql = "INSERT INTO $table ($columns) VALUES ($placeholders)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(array_values($da
-        ta));
+        $stmt->execute(array_values($data));
         return $pdo->lastInsertId();
     }
 
