@@ -26,7 +26,7 @@ $legal = 0
             </div>
 
 <?php foreach($profissionais as $funcionarios){ 
-    if($funcionarios['cargo'] == $_GET['cargo'] && $funcionarios['contrato'] == $legal){
+    if($funcionarios['cargo'] == $_GET['cargo'] && $funcionarios['contrato'] == $legal && $funcionarios['Ativo'] == 1){
     echo '
         <div class="espaco">
             <div class="perfil_profissional">

@@ -73,6 +73,7 @@ $stmtObra->execute($obra);
 
 $dadosAtualizados = [
     'contrato' => 1,
+    'Ativo' => 0,
     'Obra_Local' => $obra['endereco_obra']
 ];
 
