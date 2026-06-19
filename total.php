@@ -6,12 +6,12 @@ session_start();
 if (!isset($_SESSION['user'])) {
     header('Location: login.php');
     exit;
-    }
-if($_SESSION['user'] != 'ADM'){
-    echo "<script> if(confirm('Somente pessoal autorizado, deseja retornar?')){
-        window.location.href = 'index.php';} else {
-        window.location.href = 'login.php';};</script>";
 }
+
+if($_SESSION['user'] != 'ADM'){
+    header('Location: 404.php');
+}
+
 
 ?>
 <!DOCTYPE html>

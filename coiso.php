@@ -7,9 +7,7 @@ if (!isset($_SESSION['user'])) {
     exit;
     }
 if($_SESSION['user'] != 'ADM'){
-    echo "<script> if(confirm('Somente pessoal autorizado, deseja retornar?')){
-        window.location.href = 'index.php';} else {
-        window.location.href = 'login.php';};</script>";
+    header('Location: 404.php');
 }
 
 ?>
@@ -60,7 +58,7 @@ if($_SESSION['user'] != 'ADM'){
 
                 <div class="sair">
                     <div class="user">
-                        <a href="Login.php">
+                        <a href="login.php">
                             <h1>sair</h1>
                         </a>
                     </div>

@@ -126,14 +126,14 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>Nome completo</p>
                             </b>
-                            <input class="nomeCompleto" placeholder="'.$funcionario['Nome'].'" name="Nome" type="text">
+                            <input class="nomeCompleto" value="'.$funcionario['Nome'].'" name="Nome" type="text">
                         </div>
 
                         <div class="idade">
                             <b>
                                 <p>Idade</p>
                             </b>
-                            <input placeholder="'.$funcionario['Idade'].'" class="idade_" name="Idade" type="text">
+                            <input value="'.$funcionario['Idade'].'" class="idade_" name="Idade" type="text">
                         </div>
 
                     </div>
@@ -143,14 +143,14 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>Endereço</p>
                             </b>
-                            <input class="nomeCompleto" placeholder="'.$funcionario['Local'].'" name="Endereco" type="text">
+                            <input class="nomeCompleto" value="'.$funcionario['Local'].'" name="Endereco" type="text">
                         </div>
 
                         <div class="idade">
                             <b>
                                 <p>Telefone</p>
                             </b>
-                            <input class="idade_" type="text" placeholder="'.$funcionario['Tefone'].'" name="tefone">
+                            <input class="idade_" type="text" value="'.$funcionario['Tefone'].'" name="tefone">
                         </div>
 
                     </div>
@@ -161,14 +161,14 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>Email</p>
                             </b>
-                            <input class="nomeCompleto" placeholder="'.$funcionario['Email'].'" type="email" name="email">
+                            <input class="nomeCompleto" value="'.$funcionario['Email'].'" type="email" name="email">
                         </div>
 
                         <div class="idade">
                             <b>
                                 <p>CPF</p>
                             </b>
-                            <input class="idade_" placeholder="'.$funcionario['cpf'].'" type="text" name="cpf">
+                            <input class="idade_" value="'.$funcionario['cpf'].'" type="text" name="cpf">
                         </div>
 
                     </div>
@@ -209,7 +209,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>Data de Admissão</p>
                             </b>
-                            <input class="idade" type="text" disabled placeholder="'.$funcionario['Agenda'].'">
+                            <input class="idade" type="text" disabled value="'.$funcionario['Agenda'].'">
                         </div>
 
                     </div>
@@ -219,14 +219,14 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>Local Da Obra</p>
                             </b>
-                            <input class="idade" name="Local_Obra" placeholder="'.$funcionario['Obra_Local'].'" type="text" name="Obra_Local">
+                            <input class="idade" name="Local_Obra" value="'.$funcionario['Obra_Local'].'" type="text" name="Obra_Local">
                         </div>
 
                         <div class="idade">
                             <b>
                                 <p>Salario</p>
                             </b>
-                            <input class="idade" name="Salario" placeholder="'.$funcionario['Salario'].'" type="text">
+                            <input class="idade" name="Salario" value="'.$funcionario['Salario'].'" type="text">
                         </div>
 
                     </div>  
@@ -254,7 +254,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                             <b>
                                 <p>Tempo de experincia</p>
                             </b>
-                            <input class="idade" type="text" placeholder="'.$funcionario['tempo'].' ano(s)" name="tempo">
+                            <input class="idade" type="text" value="'.$funcionario['tempo'].' ano(s)" name="tempo">
                         </div>
                     </div>
 
@@ -269,7 +269,7 @@ $funcionarios = readAll($pdo, 'profissionais','id_Prof = ' . $id);
                     </div>
 
                     <div class="sobre">
-                        <textarea maxlength="500" placeholder="'.$funcionario['descri'].'" name="descri" id=""></textarea>
+                        <textarea maxlength="500" value="'.$funcionario['descri'].'" name="descri" id=""></textarea>
                     </div>
 
                 </div>

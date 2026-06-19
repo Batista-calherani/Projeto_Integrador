@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ){
     $dadosAtualizados = [
         'Nome' => $_POST['Nome'],
         'cargo' => $_POST['cargo'],
-        'Local' => $_POST['Local'],
+        'Local' => $_POST['Endereco'],
         'contrato' => $_POST['contrato'],
         'Obra_Local' => $_POST['Local_Obra'],
         'Salario' => $_POST['Salario'],
@@ -60,28 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' ){
         }
     }
 
-    if($linhasAfetadas > 0) {
-        echo 'Dados atualizados com sucesso!';
-    } else {
-        echo 'Um Erro Ocorreu!';
+    if($linhasAfetadas >= 0) {
+    header("Location: ../total.php");
+    exit();
     }
 }
 ?>
-?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualização de Dados</title>
-    <link rel="stylesheet" href="../CSS/cadastro.css">
-    <link rel="stylesheet" href="../CSS/Global.css">
-</head>
-<body>
-    <div class="login">
-        <div class="line"><img class="img" src="../Img/logo_laranja.png" alt=""></div>
-        <div class="imagem"></div>
-       <script src="../Partials/Top.js"></script>
-    </div>
-</body>
-</html>
