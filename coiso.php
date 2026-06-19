@@ -157,7 +157,7 @@ if($_SESSION['user'] != 'ADM'){
                     </div>
 
                     <div class="acoes">
-                        <img onclick="window.location.href=\'edicaoPerfil.php?id='.$funcionario['id_Prof'].'\'" src="./Img/edit.png" alt="">
+                        <img onclick="window.location.href=\'informacao_obra.php?id='.$funcionario['id_Prof'].'\'" src="./Img/contrato.png" alt="">
                         <img onclick=" if(confirm(\'Tem certeza que deseja excluir este funcionário?\')){window.location.href=\'MySQL/delete.php?id='.$funcionario['id_Prof'].'\';} 
                         else {exit;};"  src="./Img/LIXO.png" alt="">
                     </div>

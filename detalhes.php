@@ -94,20 +94,20 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
                 <div class="nome_telefone">
                     <div class="nome">
                         <p><b>Nome completo</b></p>
-                        <input class="campo_1" type="text" placeholder="Digite seu nome completo">
+                        <input class="campo_1" type="text" name="cliente_nome" placeholder="Digite seu nome completo" required>
                     </div>
 
 
                     <div class="telefone">
                         <p><b>Telefone</b></p>
-                        <input class="campo_1" type="number" placeholder="(11) 99999-9999">
+                        <input class="campo_1" type="text" name="cliente_telefone" placeholder="(11) 99999-9999" required>
                     </div>
                 </div>
 
                 <div class="email_endereco">
                     <div class="email">
                         <p><b>E-mail</b></p>
-                        <input class="campo_1" type="email" placeholder="exemplo@email.com">
+                        <input class="campo_1" type="email" name="cliente_email" placeholder="exemplo@email.com" required>
                     </div>
 
                     <div class="endereco">
@@ -120,43 +120,43 @@ $profissionais = read($pdo, 'profissionais','id_Prof='.$id);
 
                     <p><b>Tipo de serviços</b></p>
                     <select class="servico" name="servicos" id="servicos">
-                        <option selected disabled>
+                        <option value="" selected disabled>
                             Escolha um serviço
                         </option>
-                        <option value="">Reforma residencial</option>
-                        <option value="">Construção de casas</option>
-                        <option value="">Construção de muros</option>
-                        <option value="">Ampliação de ambientes</option>
-                        <option value="">Fundação e alicerce</option>
+                        <option value="Reforma residencial">Reforma residencial</option>
+                        <option value="Construção de casas">Construção de casas</option>
+                        <option value="Construção de muros">Construção de muros</option>
+                        <option value="Ampliação de ambientes">Ampliação de ambientes</option>
+                        <option value="Fundação e alicerce">Fundação e alicerce</option>
                     </select>
                 </div>
 
                 <div class="Descricao">
                     <p><b>Descrição do projeto</b></p>
-                    <textarea class="servico" name="" id="" placeholder="Descreva seu projeto, detalhes importantes, tamanho da obra, etc..."></textarea>
+                    <textarea class="servico" name="descricao_projeto" id="" placeholder="Descreva seu projeto, detalhes importantes, tamanho da obra, etc..." required></textarea>
                 </div>
 
                 <div class="data_orcamento">
                     <div class="data">
                         <p><b>Data desejada para início</b></p>
-                        <input class="campo_1" type="date" name="" id="">
+                        <input class="campo_1" type="date" name="data_inicio" id="" required>
                     </div>
 
                     <div class="orcamento">
                         <p><b>Orçamento estimado</b></p>
-                        <input class="campo_1" type="text" placeholder="Ex: R$ 5.000,00">
+                        <input class="campo_1" type="text" name="orcamento" placeholder="Ex: R$ 5.000,00">
                     </div>
                 </div>
 
                 <div class="Forma_pagamento">
                     <p><b>Forma de pagamento</b></p>
-                    <select class="servico" name="" id="">
+                    <select class="servico" name="forma_pagamento" id="" required>
                         <option value="" selected disabled>
                             Selecione a forma de pagamento
                         </option>
-                        <option value="">Cartão de Crédito</option>
-                        <option value="">Cartão de Débito</option>
-                        <option value="">Pix</option>
+                        <option value="Cartão de Crédito">Cartão de Crédito</option>
+                        <option value="Cartão de Débito">Cartão de Débito</option>
+                        <option value="Pix">Pix</option>
                     </select>
                 </div>
                 <input name='email' type="hidden" value='<?php echo $profissionais['Email'] ?>' >
